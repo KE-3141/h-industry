@@ -3,10 +3,10 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm install
+        - npm ci
     build:
       commands:
-        - npm run generate
+        - npm run build
   artifacts:
     baseDirectory: .output/public
     files:
