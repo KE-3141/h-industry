@@ -1,0 +1,60 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+  /* Primary — Navy Blue（信頼・誠実・安定） */
+  --color-primary-50:  #eef2f8;
+  --color-primary-100: #d5e0ee;
+  --color-primary-200: #adc2de;
+  --color-primary-300: #7a9bc7;
+  --color-primary-400: #4e77af;
+  --color-primary-500: #2d5a96;
+  --color-primary-600: #1f4478;
+  --color-primary-700: #173460;
+  --color-primary-800: #112649;
+  --color-primary-900: #0c1b36;
+  --color-primary-950: #070f1e;
+
+  /* Accent — Steel Orange（建設業・安全・エネルギー） */
+  --color-accent-50:  #fff4ed;
+  --color-accent-100: #ffe3cc;
+  --color-accent-200: #ffc499;
+  --color-accent-300: #ff9d5c;
+  --color-accent-400: #ff7620;
+  --color-accent-500: #e85d0a;
+  --color-accent-600: #c44806;
+  --color-accent-700: #9e3708;
+  --color-accent-800: #7e2d0e;
+  --color-accent-900: #67270f;
+  --color-accent-950: #3a1005;
+
+  /* Neutral — Steel Gray（工業的素材感） */
+  --color-neutral-50:  #f6f7f8;
+  --color-neutral-100: #ebedf0;
+  --color-neutral-200: #d3d7dc;
+  --color-neutral-300: #b0b7bf;
+  --color-neutral-400: #8a939e;
+  --color-neutral-500: #6b7583;
+  --color-neutral-600: #545e6b;
+  --color-neutral-700: #434b57;
+  --color-neutral-800: #383f49;
+  --color-neutral-900: #31363f;
+  --color-neutral-950: #1e2229;
+
+  /* Typography */
+  --font-sans:
+    'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans',
+    'Yu Gothic', 'Meiryo', sans-serif;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-neutral-700);
+  background-color: #fff;
+  line-height: 1.7;
+}
