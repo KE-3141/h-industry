@@ -3,8 +3,9 @@ interface Props {
   label: string
   title: string
   description: string
-  to: string
-  linkText: string
+  to?: string
+  linkText?: string
+  items?: string[]
   imageSrc?: string
   imageAlt?: string
   variant?: 'primary' | 'neutral'
@@ -51,7 +52,34 @@ withDefaults(defineProps<Props>(), {
       <p class="text-neutral-300 text-sm leading-relaxed">
         {{ description }}
       </p>
+      <!-- 箇条書きモード -->
+      <ul v-if="items?.length" class="mt-auto pt-8 space-y-3">
+        <li
+          v-for="item in items"
+          :key="item"
+          class="flex items-start gap-3 text-sm text-neutral-300"
+        >
+          <span
+            class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-accent-500/20
+                   flex items-center justify-center"
+          >
+            <svg
+              class="w-3 h-3 text-accent-400"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+          </span>
+          {{ item }}
+        </li>
+      </ul>
+      <!-- テキストリンクモード -->
       <SlideLink
+        v-else-if="to && linkText"
         :to="to"
         class="inline-flex items-center text-white font-semibold text-sm mt-auto pt-8"
       >

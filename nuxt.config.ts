@@ -30,7 +30,6 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/fonts',
     '@nuxt/image',
-    '@nuxtjs/sitemap',
     '@vueuse/nuxt',
   ],
 

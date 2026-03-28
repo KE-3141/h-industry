@@ -3,6 +3,7 @@ const heroImageUrl = usePublicUrl('/images/hero_1.png')
 const rebarWorkUrl = usePublicUrl('/images/rebar_work.png')
 const strengthsImageUrl = usePublicUrl('/images/strengths.png')
 const { company, strengths, workTypes } = useSiteContent()
+const strengthItems = strengths.map(s => ({ ...s, to: `/about/#${s.key}` }))
 
 const companyRows = [
   { label: '社名', value: company.name },
@@ -122,60 +123,16 @@ const companyRows = [
     </section>
 
     <!-- ===== 3. 平山工業の強み ===== -->
-    <section class="relative py-20 md:py-28 overflow-hidden">
-      <!-- 背景画像 -->
-      <div class="absolute inset-0">
-        <img
-          :src="strengthsImageUrl"
-          alt="平山工業の強み"
-          aria-hidden="true"
-          class="w-full h-full object-cover object-[center_35%]"
-        />
-      </div>
-      <!-- オーバーレイ -->
-      <div class="absolute inset-0 bg-primary-950/48" />
-
-      <div class="relative z-10 max-w-6xl mx-auto px-6">
-        <div class="md:grid md:grid-cols-2 md:gap-16 md:items-center">
-          <!-- 左：見出し＋リンク -->
-          <div class="mb-12 md:mb-0">
-            <SectionHeading
-              label="Our Strengths"
-              title="平山工業の強み"
-              title-class="text-white"
-              align="left"
-              class="mb-6"
-            />
-            <p class="text-white/80 text-sm leading-relaxed max-w-xs mb-8">
-              50年超の施工実績が培った技術・対応力・品質安全。3つの強みをご紹介します。
-            </p>
-            <SlideLink to="/about/" class="inline-flex items-center text-white font-semibold text-sm">
-              強みをくわしく見る
-            </SlideLink>
-          </div>
-
-          <!-- 右：縦積みリスト -->
-          <div>
-            <SlideLink
-              v-for="(strength, index) in strengths"
-              :key="strength.key"
-              :to="`/about/#${strength.key}`"
-              class="flex w-full items-center gap-5 py-6 border-b border-white/40 text-white last:border-0"
-            >
-              <template #prefix>
-                <span class="text-white font-black text-xl leading-none w-8 flex-shrink-0 select-none">
-                  {{ String(index + 1).padStart(2, '0') }}
-                </span>
-              </template>
-              <div class="flex-1 min-w-0">
-                <p class="text-white font-black text-base mb-1">{{ strength.title }}</p>
-                <p class="text-white/80 text-sm leading-relaxed">{{ strength.shortDescription }}</p>
-              </div>
-            </SlideLink>
-          </div>
-        </div>
-      </div>
-    </section>
+    <SplitListSection
+      :image-src="strengthsImageUrl"
+      image-alt="平山工業の強み"
+      label="Our Strengths"
+      title="平山工業の強み"
+      description="50年超の施工実績が培った技術・対応力・品質安全。3つの強みをご紹介します。"
+      link-to="/about/"
+      link-text="強みをくわしく見る"
+      :items="strengthItems"
+    />
 
     <!-- ===== 4. 事業紹介ダイジェスト ===== -->
     <section class="py-20 md:py-28 bg-primary-900">
@@ -217,14 +174,13 @@ const companyRows = [
           対応工種・施工実績
         </p>
         <div class="flex flex-wrap justify-center gap-3">
-          <span
+          <TagBadge
             v-for="work in workTypes"
             :key="work"
-            class="bg-transparent border border-white rounded-sm px-4 py-2
-                   text-sm text-white font-medium"
+            variant="ghost"
           >
             {{ work }}
-          </span>
+          </TagBadge>
         </div>
       </div>
     </section>

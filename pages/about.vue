@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { strengths, stats, clients, workTypes } = useSiteContent()
+const { strengths, stats, workTypes } = useSiteContent()
 </script>
 
 <template>
@@ -118,36 +118,20 @@ const { strengths, stats, clients, workTypes } = useSiteContent()
     </section>
 
     <!-- ===== 4. 主要取引先 ===== -->
-    <section class="py-16 md:py-20 bg-neutral-50">
-      <div class="max-w-4xl mx-auto px-6 text-center">
-        <SectionHeading label="Clients" title="主要取引先" class="mb-10" />
-        <ul class="flex flex-wrap justify-center gap-3">
-          <li
-            v-for="client in clients"
-            :key="client"
-            class="bg-white border border-neutral-200 rounded-sm px-5 py-3
-                   text-sm text-neutral-700 font-medium
-                   shadow-[0_1px_3px_0_rgb(0_0_0_/0.05)]"
-          >
-            {{ client }}
-          </li>
-        </ul>
-      </div>
-    </section>
+    <ClientsSection />
 
     <!-- ===== 5. 対応工種 ===== -->
     <section class="py-16 md:py-20 bg-white">
       <div class="max-w-6xl mx-auto px-6 text-center">
         <SectionHeading label="Work Types" title="対応工種・施工実績" class="mb-10" />
         <div class="flex flex-wrap justify-center gap-3">
-          <span
+          <TagBadge
             v-for="work in workTypes"
             :key="work"
-            class="bg-primary-50 border border-primary-100 rounded-sm px-4 py-2
-                   text-sm text-primary-700 font-medium"
+            variant="neutral"
           >
             {{ work }}
-          </span>
+          </TagBadge>
         </div>
         <div class="mt-12">
           <AppButton to="/business/" size="lg" variant="secondary">
