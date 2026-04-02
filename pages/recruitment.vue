@@ -66,7 +66,7 @@ const rebarWorkUrl = usePublicUrl('/images/rebar_work.png')
           >
             <template #icon>
               <svg
-                class="w-6 h-6"
+                class="w-12 h-12"
                 fill="none"
                 stroke="currentColor"
                 stroke-width="1.75"

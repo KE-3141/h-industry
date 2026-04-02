@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { strengths, stats, workTypes } = useSiteContent()
+const placeholderImageUrl = usePublicUrl('/images/hero_1.png')
 </script>
 
 <template>
@@ -22,40 +23,14 @@ const { strengths, stats, workTypes } = useSiteContent()
             class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center scroll-mt-20"
             :class="{ 'md:[&>*:first-child]:order-last': index % 2 === 1 }"
           >
-            <!-- アイコン＋番号パネル -->
-            <div
-              class="relative bg-primary-950 rounded-sm overflow-hidden
-                     flex flex-col items-center justify-center py-16 px-8 text-center"
-            >
-              <!-- 背景装飾 -->
-              <div
-                class="absolute inset-0 opacity-[0.06] pointer-events-none"
-                style="background-image: linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px); background-size: 48px 48px;"
+            <!-- 画像 -->
+            <div class="relative rounded-sm overflow-hidden aspect-[4/3]">
+              <img
+                :src="placeholderImageUrl"
+                :alt="strength.title"
+                class="w-full h-full object-cover"
+                loading="lazy"
               />
-              <div
-                class="absolute top-0 left-0 w-1 h-full bg-accent-500"
-              />
-              <div class="relative">
-                <p class="text-accent-500 text-6xl font-black leading-none mb-6 select-none">
-                  0{{ index + 1 }}
-                </p>
-                <div
-                  class="w-14 h-14 rounded-full bg-accent-500/15 flex items-center justify-center
-                         mx-auto mb-4"
-                >
-                  <svg
-                    class="w-7 h-7 text-accent-400"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.75"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path stroke-linecap="round" stroke-linejoin="round" :d="strength.iconPath" />
-                  </svg>
-                </div>
-                <h2 class="text-white text-xl font-black">{{ strength.title }}</h2>
-              </div>
             </div>
 
             <!-- テキスト -->
