@@ -2,7 +2,41 @@
 const heroImageUrl = usePublicUrl('/images/hero_1.png')
 const rebarWorkUrl = usePublicUrl('/images/rebar_work.png')
 const strengthsImageUrl = usePublicUrl('/images/strengths.png')
-const { company, strengths, workTypes } = useSiteContent()
+const { company, strengths, workTypes, projects } = useSiteContent()
+const featuredProjects = projects.slice(0, 4)
+
+const historySteps = [
+  {
+    step: '1974',
+    title: '有限会社平山工業 設立',
+    description: '東京都江東区にて有限会社平山工業を設立。鉄筋工事業を中心に関東圏での施工を開始する。',
+  },
+  {
+    step: '1980',
+    title: '杭頭補強筋の半自動溶接化技術を開発',
+    description: '従来は熟練溶接工のみが担っていた杭頭補強筋溶接を半自動化。施工品質の均一化と工期短縮を同時に実現し、業界に先駆けた独自技術として注目を集める。',
+  },
+  {
+    step: '1990',
+    title: '関東全域への対応エリア拡大',
+    description: '東京都内にとどまらず神奈川・埼玉・千葉など関東全域の現場に対応。高速道路・高架橋・地下鉄拡幅工事など大型インフラ案件の受注が増加する。',
+  },
+  {
+    step: '2001',
+    title: '平山工業株式会社 増資設立',
+    description: '事業規模の拡大に伴い株式会社化。資本金1,000万円にて平山工業株式会社を設立し、組織体制をさらに強化する。',
+  },
+  {
+    step: '2010',
+    title: 'J-BAR溶接・エンクローズ溶接（CB工法）を本格導入',
+    description: '新工法の積極的な採用により、従来工法では困難だった複雑な継手や狭所施工にも対応。多様化する現場ニーズへの対応力をさらに高める。',
+  },
+  {
+    step: '現在',
+    title: '従業員39名体制で関東全域を支える',
+    description: '鉄筋工・溶接工・管理職を含む39名の体制で、あらゆる規模・工種の現場に対応。創業50年超の実績と技術力を次世代へ継承しながら、さらなる品質向上に取り組んでいる。',
+  },
+]
 const strengthItems = strengths.map(s => ({ ...s, to: `/about/#${s.key}` }))
 
 const companyRows = [
@@ -168,7 +202,7 @@ const companyRows = [
     </section>
 
     <!-- ===== 5. 対応工種ハイライト ===== -->
-    <section class="pb-16 bg-primary-900">
+    <section class="pt-16 pb-16 bg-primary-900">
       <div class="max-w-6xl mx-auto px-6">
         <p class="text-center text-white text-sm font-medium mb-8 tracking-wide">
           対応工種・施工実績
@@ -185,7 +219,54 @@ const companyRows = [
       </div>
     </section>
 
-    <!-- ===== 6. 会社概要スニペット ===== -->
+    <!-- ===== 6. 施工実績 ===== -->
+    <section class="py-20 md:py-24 bg-neutral-50">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex items-end justify-between mb-10">
+          <SectionHeading label="Achievements" title="施工実績" align="left" class="mb-0" />
+          <SlideLink
+            to="/achievements/"
+            class="hidden sm:inline-flex items-center text-primary-600 font-semibold text-sm
+                   hover:text-primary-800 transition-colors"
+          >
+            施工実績を全て見る
+          </SlideLink>
+        </div>
+        <ul class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <li
+            v-for="project in featuredProjects"
+            :key="project.key"
+            class="group"
+          >
+            <div class="relative overflow-hidden rounded-xl aspect-[4/3] mb-3 bg-neutral-200">
+              <div class="absolute inset-0 bg-primary-900/20 group-hover:bg-primary-900/10 transition-colors duration-300" />
+              <div class="absolute top-2.5 left-2.5">
+                <span class="bg-primary-900/80 text-white text-[10px] font-medium px-2 py-1 rounded-full leading-none">
+                  {{ project.category }}
+                </span>
+              </div>
+            </div>
+            <p class="text-sm font-bold text-primary-900 leading-snug mb-1">{{ project.name }}</p>
+            <p class="text-xs text-neutral-400">{{ project.period }}</p>
+          </li>
+        </ul>
+        <div class="mt-8 text-center sm:hidden">
+          <AppButton to="/achievements/" variant="secondary">
+            施工実績を全て見る
+            <IconArrow />
+          </AppButton>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 7. 会社沿革 ===== -->
+    <StepsSection
+      label="History"
+      title="会社沿革"
+      :steps="historySteps"
+    />
+
+    <!-- ===== 7. 会社概要スニペット ===== -->
     <section class="py-20 md:py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
@@ -241,7 +322,7 @@ const companyRows = [
       </div>
     </section>
 
-    <!-- ===== 7. 求人バナー ===== -->
+    <!-- ===== 8. 求人バナー ===== -->
     <section class="py-16 md:py-20 bg-primary-800 text-white">
       <div class="max-w-6xl mx-auto px-6">
         <div class="md:flex items-center justify-between gap-8">
@@ -267,7 +348,7 @@ const companyRows = [
       </div>
     </section>
 
-    <!-- ===== 8. お問い合わせCTA ===== -->
+    <!-- ===== 9. お問い合わせCTA ===== -->
     <CtaSection />
   </main>
 </template>

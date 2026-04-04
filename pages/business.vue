@@ -4,7 +4,7 @@ useSeoMeta({
   description: '平山工業の事業紹介。鉄筋工事・溶接工事を関東全域で一貫提供。杭頭補強筋の半自動溶接化など独自技術と豊富な施工実績をご紹介します。',
 })
 
-const { businesses, workTypes } = useSiteContent()
+const { businesses, workTypes, weldingMethods } = useSiteContent()
 const placeholderImageUrl = usePublicUrl('/images/hero_1.png')
 </script>
 
@@ -75,24 +75,20 @@ const placeholderImageUrl = usePublicUrl('/images/hero_1.png')
                   {{ point }}
                 </li>
               </ul>
+              <!-- 対応工種タグ（鉄筋工事） -->
+              <div v-if="biz.key === 'rebar'" class="mt-6 flex flex-wrap gap-2">
+                <TagBadge v-for="work in workTypes" :key="work" variant="neutral">
+                  {{ work }}
+                </TagBadge>
+              </div>
+              <!-- 対応溶接工法タグ（溶接工事） -->
+              <div v-if="biz.key === 'welding'" class="mt-6 flex flex-wrap gap-2">
+                <TagBadge v-for="method in weldingMethods" :key="method.key" variant="primary">
+                  {{ method.title }}
+                </TagBadge>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 3. 施工実績・対応工種 ===== -->
-    <section class="py-16 md:py-20 bg-neutral-50">
-      <div class="max-w-4xl mx-auto px-6 text-center">
-        <SectionHeading label="Work Types" title="対応工種・施工実績" class="mb-10" />
-        <div class="flex flex-wrap justify-center gap-3">
-          <TagBadge
-            v-for="work in workTypes"
-            :key="work"
-            variant="neutral"
-          >
-            {{ work }}
-          </TagBadge>
         </div>
       </div>
     </section>

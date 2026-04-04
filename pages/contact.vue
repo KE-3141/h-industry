@@ -5,6 +5,39 @@ useSeoMeta({
 })
 
 const { company } = useSiteContent()
+
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mnjogknd'
+
+const status = ref<'idle' | 'submitting' | 'success' | 'error'>('idle')
+const errorMessage = ref('')
+
+async function handleSubmit(event: Event) {
+  const form = event.target as HTMLFormElement
+  const data = new FormData(form)
+
+  status.value = 'submitting'
+  errorMessage.value = ''
+
+  try {
+    const res = await fetch(FORMSPREE_ENDPOINT, {
+      method: 'POST',
+      body: data,
+      headers: { Accept: 'application/json' },
+    })
+
+    if (res.ok) {
+      status.value = 'success'
+      form.reset()
+    } else {
+      const json = await res.json().catch(() => ({}))
+      errorMessage.value = json?.errors?.[0]?.message ?? '送信に失敗しました。時間をおいて再度お試しください。'
+      status.value = 'error'
+    }
+  } catch {
+    errorMessage.value = 'ネットワークエラーが発生しました。時間をおいて再度お試しください。'
+    status.value = 'error'
+  }
+}
 </script>
 
 <template>
@@ -24,7 +57,17 @@ const { company } = useSiteContent()
           <!-- 左：お問い合わせフォーム -->
           <div class="lg:col-span-3">
             <h2 class="text-xl font-black text-primary-900 mb-8">お問い合わせフォーム</h2>
-            <form class="space-y-6" @submit.prevent>
+
+            <!-- 送信完了メッセージ -->
+            <div
+              v-if="status === 'success'"
+              class="rounded-lg bg-green-50 border border-green-200 px-6 py-8 text-center"
+            >
+              <p class="text-green-800 font-bold text-base mb-1">送信が完了しました</p>
+              <p class="text-green-700 text-sm">お問い合わせいただきありがとうございます。内容を確認のうえ、担当者よりご連絡いたします。</p>
+            </div>
+
+            <form v-else class="space-y-6" @submit.prevent="handleSubmit">
               <!-- お名前 -->
               <div>
                 <label class="block text-sm font-medium text-neutral-700 mb-1.5" for="name">
@@ -36,6 +79,7 @@ const { company } = useSiteContent()
                   name="name"
                   autocomplete="name"
                   placeholder="例：山田 太郎"
+                  required
                   class="w-full border border-neutral-300 rounded-lg px-4 py-3 text-sm text-neutral-800
                          placeholder:text-neutral-400
                          focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent
@@ -72,6 +116,7 @@ const { company } = useSiteContent()
                   name="email"
                   autocomplete="email"
                   placeholder="例：info@example.com"
+                  required
                   class="w-full border border-neutral-300 rounded-lg px-4 py-3 text-sm text-neutral-800
                          placeholder:text-neutral-400
                          focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent
@@ -105,15 +150,16 @@ const { company } = useSiteContent()
                 <select
                   id="type"
                   name="type"
+                  required
                   class="w-full border border-neutral-300 rounded-lg px-4 py-3 text-sm text-neutral-800
                          focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent
                          transition duration-150 bg-white"
                 >
                   <option value="" disabled selected>選択してください</option>
-                  <option value="rebar">鉄筋工事のご依頼・ご相談</option>
-                  <option value="welding">溶接工事のご依頼・ご相談</option>
-                  <option value="recruitment">採用に関するお問い合わせ</option>
-                  <option value="other">その他</option>
+                  <option value="鉄筋工事のご依頼・ご相談">鉄筋工事のご依頼・ご相談</option>
+                  <option value="溶接工事のご依頼・ご相談">溶接工事のご依頼・ご相談</option>
+                  <option value="採用に関するお問い合わせ">採用に関するお問い合わせ</option>
+                  <option value="その他">その他</option>
                 </select>
               </div>
 
@@ -127,6 +173,7 @@ const { company } = useSiteContent()
                   name="message"
                   rows="6"
                   placeholder="お問い合わせ内容をご記入ください"
+                  required
                   class="w-full border border-neutral-300 rounded-lg px-4 py-3 text-sm text-neutral-800
                          placeholder:text-neutral-400 resize-none
                          focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent
@@ -134,13 +181,19 @@ const { company } = useSiteContent()
                 />
               </div>
 
+              <!-- エラーメッセージ -->
+              <p v-if="status === 'error'" class="text-red-600 text-sm bg-red-50 border border-red-200 rounded-lg px-4 py-3">
+                {{ errorMessage }}
+              </p>
+
               <!-- 送信ボタン -->
               <button
                 type="submit"
-                class="w-full bg-primary-900 hover:bg-primary-800 text-white font-bold
-                       py-4 px-8 rounded-lg transition duration-150 text-sm tracking-wide"
+                :disabled="status === 'submitting'"
+                class="w-full bg-primary-900 hover:bg-primary-800 disabled:opacity-60 disabled:cursor-not-allowed
+                       text-white font-bold py-4 px-8 rounded-lg transition duration-150 text-sm tracking-wide"
               >
-                送信する
+                {{ status === 'submitting' ? '送信中…' : '送信する' }}
               </button>
             </form>
           </div>

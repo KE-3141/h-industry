@@ -41,8 +41,6 @@ export const useSiteContent = () => {
   const navItems = [
     { label: '平山工業の強み', to: '/about/' },
     { label: '事業紹介', to: '/business/' },
-    { label: '技術紹介', to: '/technology/' },
-    { label: '品質と安全', to: '/quality/' },
     { label: '施工実績', to: '/achievements/' },
     { label: '会社概要', to: '/company/' },
     { label: '求人情報', to: '/recruitment/' },

@@ -29,7 +29,7 @@ defineProps<Props>()
           aria-hidden="true"
         />
         <li
-          v-for="(step, index) in steps"
+          v-for="step in steps"
           :key="step.step"
           class="relative flex gap-8 pb-10 last:pb-0"
         >
@@ -38,7 +38,7 @@ defineProps<Props>()
             class="relative z-10 flex-shrink-0 w-14 h-14 rounded-full bg-primary-800
                    flex items-center justify-center"
           >
-            <span class="text-white text-base leading-none">{{ index + 1 }}</span>
+            <span class="text-white text-xs font-bold leading-none text-center">{{ step.step }}</span>
           </div>
           <!-- 内容 -->
           <div class="pt-3 pb-2">
