@@ -4,7 +4,7 @@ useSeoMeta({
   description: '平山工業株式会社の会社概要。所在地・代表者・設立・資本金・建設業許可番号など基本情報をご紹介します。',
 })
 
-const { company, stats } = useSiteContent()
+const { company } = useSiteContent()
 
 const companyRows = [
   { label: '社名', value: company.name },
@@ -80,31 +80,7 @@ const companyRows = [
       </div>
     </section>
 
-    <!-- ===== 3. 実績数値 ===== -->
-    <section class="py-16 md:py-20 bg-primary-950 text-white">
-      <div class="max-w-6xl mx-auto px-6">
-        <p class="text-center text-accent-400 text-xs font-medium tracking-[0.2em] uppercase mb-10">
-          Numbers
-        </p>
-        <dl class="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div
-            v-for="stat in stats"
-            :key="stat.label"
-            class="text-center"
-          >
-            <dd class="text-4xl md:text-5xl font-black text-white leading-none mb-1">
-              {{ stat.value }}<span class="text-xl md:text-2xl ml-0.5">{{ stat.unit }}</span>
-            </dd>
-            <dt class="text-neutral-400 text-xs mt-2">{{ stat.label }}</dt>
-          </div>
-        </dl>
-      </div>
-    </section>
-
-    <!-- ===== 4. 主要取引先 ===== -->
-    <ClientsSection />
-
-    <!-- ===== 5. CTA ===== -->
+    <!-- ===== 3. CTA ===== -->
     <CtaSection />
   </main>
 </template>
