@@ -28,7 +28,7 @@ const companyRows = [
   { label: 'FAX', value: company.fax },
   { label: '受付時間', value: `${company.hours}（${company.holidays}定休）` },
   { label: '営業エリア', value: `${company.area}全域` },
-  { label: '事業内容', value: company.businessTypes },
+  { label: '事業内容', value: company.businessServices.join(' / ') },
   { label: '建設業許可', value: company.license },
 ]
 </script>

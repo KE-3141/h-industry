@@ -24,13 +24,21 @@ export const useSiteContent = () => {
     hoursLabel: '受付時間 8:00〜17:00（日・祝定休）',
     established: '1974年（昭和49年）4月23日 有限会社平山工業設立<br>2001年（平成13年）12月23日 平山工業株式会社として増資設立',
     capital: '1,000万円',
-    employees: '39',
-    area: '関東',
-    license: '東京都知事（般－28）第71065号（鉄筋工事業）',
+    employees: '26',
+    area: '全国',
+    license: '東京都知事 許可（般-4）第71065号',
     ceo: '平山 和彦',
-    executive: '平山 勉',
+    executive: '平山 輝邦',
     officeAddress: '東京都江東区北砂5-17-37 福原マンション1階',
-    businessTypes: '鉄筋工事業・溶接工事業（関東全域）',
+    businessServices: [
+      'コンクリート打設工事',
+      '鉄筋工事',
+      '大工工事',
+      '足場工事',
+      '型枠支保工工事',
+      '溶接工事',
+      '鍛冶工事',
+    ] as readonly string[],
   } as const
 
   // ─────────────────────────────────────────
