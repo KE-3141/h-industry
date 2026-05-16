@@ -29,7 +29,6 @@ export const useSiteContent = () => {
     license: '東京都知事 許可（般-4）第71065号',
     ceo: '平山 和彦',
     executive: '平山 輝邦',
-    officeAddress: '東京都江東区北砂5-17-37 福原マンション1階',
     businessServices: [
       'コンクリート打設工事',
       '鉄筋工事',

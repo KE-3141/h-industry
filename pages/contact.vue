@@ -228,10 +228,6 @@ async function handleSubmit(event: Event) {
                   <dd class="text-neutral-800 leading-relaxed">{{ company.addressFull }}</dd>
                 </div>
                 <div>
-                  <dt class="text-neutral-500 text-xs mb-0.5">営業所</dt>
-                  <dd class="text-neutral-800 leading-relaxed">{{ company.officeAddress }}</dd>
-                </div>
-                <div>
                   <dt class="text-neutral-500 text-xs mb-0.5">FAX</dt>
                   <dd class="text-neutral-800">{{ company.fax }}</dd>
                 </div>

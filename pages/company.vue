@@ -18,10 +18,6 @@ const companyRows = [
     value: `〒${company.postalCode}<br>${company.address}`,
   },
   {
-    label: '所在地（営業所）',
-    value: company.officeAddress,
-  },
-  {
     label: 'TEL',
     value: `<a href="tel:${company.telRaw}" class="text-primary-600 hover:text-primary-800 font-medium transition-colors duration-150">${company.tel}</a>`,
   },
