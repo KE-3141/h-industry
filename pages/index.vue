@@ -2,7 +2,7 @@
 const heroImageUrl = usePublicUrl('/images/hero_1.png')
 const rebarWorkUrl = usePublicUrl('/images/rebar_work.png')
 const strengthsImageUrl = usePublicUrl('/images/strengths.png')
-const { company, strengths, workTypes, projects } = useSiteContent()
+const { company, strengths, workTypes, projects, businesses } = useSiteContent()
 const featuredProjects = projects.slice(0, 4)
 
 const historySteps = [
@@ -95,7 +95,7 @@ const companyRows = [
         </h1>
         <p class="text-neutral-300 text-base md:text-lg max-w-xl mb-10 leading-relaxed">
           関東全域の建設現場で50年超の実績。<br>
-          鉄筋工事・溶接工事の専門集団として、<br class="hidden sm:block">
+          鉄筋・土木・溶接・圧接工事の専門集団として、<br class="hidden sm:block">
           あらゆる規模・工種の現場に対応します。
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
@@ -178,24 +178,17 @@ const companyRows = [
           class="mb-14"
         />
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <BusinessCard
-            label="Rebar Work"
-            title="鉄筋工事業"
-            description="鉄筋の加工・運搬・組立を一貫して対応。ベース配筋から柱・梁配筋まで、あらゆる規模・工種に対応できる体制と実績があります。"
+            v-for="biz in businesses"
+            :key="biz.key"
+            :label="biz.label"
+            :title="biz.title"
+            :description="biz.shortDescription"
             to="/business/"
             link-text="詳しく見る"
             :image-src="rebarWorkUrl"
-            image-alt="鉄筋工事の施工現場"
-          />
-          <BusinessCard
-            label="Welding Work"
-            title="溶接工事"
-            description="フレア溶接・杭頭筋溶接・J-BAR溶接など高度な溶接技術に対応。杭頭補強筋の半自動溶接化は平山工業が先駆けて開発し、業界標準となった独自技術です。"
-            to="/technology/"
-            link-text="技術紹介を見る"
-            :image-src="rebarWorkUrl"
-            image-alt="鉄筋工事の施工現場"
+            image-alt="施工現場"
           />
         </div>
       </div>

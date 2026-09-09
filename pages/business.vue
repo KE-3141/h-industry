@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useHead({ title: '事業紹介 | 平山工業株式会社' })
 useSeoMeta({
-  description: '平山工業の事業紹介。鉄筋工事・溶接工事を関東全域で一貫提供。杭頭補強筋の半自動溶接化など独自技術と豊富な施工実績をご紹介します。',
+  description: '平山工業の事業紹介。鉄筋工事・土木工事・溶接工事・圧接工事を関東全域で一貫提供。創業50年超の実績と独自技術をご紹介します。',
 })
 
 const { businesses, workTypes, weldingMethods } = useSiteContent()
@@ -14,7 +14,7 @@ const placeholderImageUrl = usePublicUrl('/images/hero_1.png')
     <PageHero
       label="Business"
       title="事業紹介"
-      description="鉄筋工事・溶接工事を自社一貫で提供。創業50年超の実績と独自技術で、関東全域の建設現場を支えます。"
+      description="鉄筋工事・土木工事・溶接工事・圧接工事を自社一貫で提供。創業50年超の実績と独自技術で、関東全域の建設現場を支えます。"
     />
 
     <!-- ===== 2. 事業内容（交互レイアウト） ===== -->
@@ -87,6 +87,13 @@ const placeholderImageUrl = usePublicUrl('/images/hero_1.png')
                   {{ method.title }}
                 </TagBadge>
               </div>
+              <!-- 施工実績リンク -->
+              <SlideLink
+                :to="`/achievements/?type=${biz.key}`"
+                class="inline-flex items-center mt-8 text-primary-600 font-semibold text-sm hover:text-primary-800 transition-colors"
+              >
+                {{ biz.title }}の施工実績を見る
+              </SlideLink>
             </div>
           </div>
         </div>
