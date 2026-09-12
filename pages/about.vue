@@ -110,7 +110,7 @@ const placeholderImageUrl = usePublicUrl('/images/hero_1.png')
         </div>
         <div class="mt-12">
           <AppButton to="/business/" size="lg" variant="secondary">
-            事業紹介を見る
+            事業内容を見る
             <IconArrow />
           </AppButton>
         </div>

@@ -1,42 +1,11 @@
 <script setup lang="ts">
 useHead({ title: '施工実績 | 平山工業株式会社' })
 useSeoMeta({
-  description: '平山工業の施工実績。鉄筋工事・土木工事・溶接工事・圧接工事など、関東全域での豊富な施工実績をご覧ください。',
+  description: '平山工業の施工実績。鉄筋工事・型枠工事・溶接工事・圧接工事など、関東全域での豊富な施工実績をご覧ください。',
 })
 
-const { projects, stats, businesses } = useSiteContent()
+const { projects, stats } = useSiteContent()
 const placeholderImageUrl = usePublicUrl('/images/hero_1.png')
-
-// ─── フィルター ───────────────────────────────
-const route = useRoute()
-const router = useRouter()
-
-const activeType = computed(() => (route.query.type as string) || null)
-
-const filteredProjects = computed(() =>
-  activeType.value
-    ? projects.filter(p => p.businessTypes.includes(activeType.value!))
-    : projects
-)
-
-const countByType = computed(() =>
-  Object.fromEntries(
-    businesses.map(b => [b.key, projects.filter(p => p.businessTypes.includes(b.key)).length])
-  )
-)
-
-function setFilter(type: string | null) {
-  router.replace({ query: type ? { type } : {} })
-}
-
-const activeLabel = computed(
-  () => businesses.find(b => b.key === activeType.value)?.title ?? null
-)
-
-// 工事種別キー → 表示名のマップ
-const businessLabelMap = computed(() =>
-  Object.fromEntries(businesses.map(b => [b.key, b.title]))
-)
 
 // ─── ライトボックス ───────────────────────────
 type Project = typeof projects[number]
@@ -96,46 +65,9 @@ watch(lightboxProject, val => {
       <div class="max-w-7xl mx-auto px-6">
         <SectionHeading label="Projects" title="施工実績一覧" class="mb-10" />
 
-        <!-- フィルター -->
-        <div class="flex flex-wrap gap-2 mb-8">
-          <button
-            type="button"
-            class="px-4 py-2 rounded-full text-sm font-medium transition-colors"
-            :class="!activeType
-              ? 'bg-primary-900 text-white'
-              : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200'"
-            @click="setFilter(null)"
-          >
-            すべて
-            <span class="ml-1.5 text-xs opacity-70">{{ projects.length }}</span>
-          </button>
-          <button
-            v-for="biz in businesses"
-            :key="biz.key"
-            type="button"
-            class="px-4 py-2 rounded-full text-sm font-medium transition-colors"
-            :class="activeType === biz.key
-              ? 'bg-primary-900 text-white'
-              : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200'"
-            @click="setFilter(biz.key)"
-          >
-            {{ biz.title }}
-            <span class="ml-1.5 text-xs opacity-70">{{ countByType[biz.key] }}</span>
-          </button>
-        </div>
-
-        <!-- 件数表示 -->
-        <p v-if="activeType" class="text-sm text-neutral-500 mb-6">
-          {{ activeLabel }}の施工実績：{{ filteredProjects.length }}件
-        </p>
-
-        <!-- グリッド -->
-        <ul
-          v-if="filteredProjects.length"
-          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5"
-        >
+        <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
           <li
-            v-for="project in filteredProjects"
+            v-for="project in projects"
             :key="project.key"
             class="group"
           >
@@ -171,31 +103,24 @@ watch(lightboxProject, val => {
             </button>
 
             <!-- テキスト -->
-            <p class="text-sm font-bold text-primary-900 leading-snug mb-1">
-              {{ project.name }}
-            </p>
-            <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
-              <p class="text-xs text-neutral-400 shrink-0">{{ project.period }}</p>
-              <div class="flex flex-wrap gap-1">
-                <span
-                  v-for="type in project.businessTypes"
-                  :key="type"
-                  class="text-[10px] font-medium px-1.5 py-0.5 rounded bg-primary-50 text-primary-700 leading-none"
-                >
-                  {{ businessLabelMap[type] }}
-                </span>
-              </div>
+            <div class="flex items-baseline justify-between gap-2 mb-0.5">
+              <p class="text-sm font-bold text-primary-900 leading-snug">
+                {{ project.name }}
+              </p>
+              <p class="text-xs text-neutral-400 shrink-0">{{ project.location }}</p>
+            </div>
+            <p class="text-xs text-neutral-400 mb-1.5">{{ project.client }}</p>
+            <div class="flex flex-wrap gap-1">
+              <span
+                v-for="type in project.businessTypes"
+                :key="type"
+                class="text-xs font-medium px-2 py-0.5 rounded bg-primary-50 text-primary-700"
+              >
+                {{ type.replace('工事', '') }}
+              </span>
             </div>
           </li>
         </ul>
-
-        <!-- 0件 -->
-        <div
-          v-else
-          class="py-20 text-center text-neutral-400"
-        >
-          <p class="text-sm">該当する施工実績がありません。</p>
-        </div>
       </div>
     </section>
 
@@ -252,7 +177,8 @@ watch(lightboxProject, val => {
                 <p class="text-white font-bold text-sm md:text-base">
                   {{ lightboxProject.name }}
                 </p>
-                <p class="text-white/50 text-xs mt-1">{{ lightboxProject.period }}</p>
+                <p class="text-white/50 text-xs mt-1">{{ lightboxProject.location }}</p>
+                <p class="text-white/50 text-xs">{{ lightboxProject.client }}</p>
               </div>
               <div class="flex flex-wrap gap-1.5">
                 <span
@@ -260,7 +186,7 @@ watch(lightboxProject, val => {
                   :key="type"
                   class="text-xs font-medium px-2 py-1 rounded bg-white/10 text-white/80"
                 >
-                  {{ businessLabelMap[type] }}
+                  {{ type.replace('工事', '') }}
                 </span>
               </div>
             </div>

@@ -24,13 +24,13 @@ export const useSiteContent = () => {
     hoursLabel: '受付時間 8:00〜17:00（日・祝定休）',
     established: '1974年（昭和49年）4月23日 有限会社平山工業設立<br>2001年（平成13年）12月23日 平山工業株式会社として増資設立',
     capital: '1,000万円',
-    employees: '39',
+    employees: '25',
     area: '関東',
     license: '東京都知事（般－28）第71065号（鉄筋工事業）',
     ceo: '平山 和彦',
     executive: '平山 勉',
     officeAddress: '東京都江東区北砂5-17-37 福原マンション1階',
-    businessTypes: '鉄筋工事業・土木工事・溶接工事業・圧接工事（関東全域）',
+    businessTypes: '躯体構築工事一式・土木工事全般',
   } as const
 
   // ─────────────────────────────────────────
@@ -40,7 +40,7 @@ export const useSiteContent = () => {
   /** グローバルヘッダー用ナビ（ロゴ＝トップ、お問い合わせ=CTAボタンのため除く） */
   const navItems = [
     { label: '平山工業の強み', to: '/about/' },
-    { label: '事業紹介', to: '/business/' },
+    { label: '事業内容', to: '/business/' },
     { label: '施工実績', to: '/achievements/' },
     { label: '会社概要', to: '/company/' },
     { label: '求人情報', to: '/recruitment/' },
@@ -115,9 +115,9 @@ export const useSiteContent = () => {
   /** 実績数値（強みページ・トップページで共用） */
   const stats = [
     { value: '50', unit: '年超', label: '創業からの実績' },
-    { value: '39', unit: '名', label: '従業員数' },
-    { value: '6', unit: '名', label: '施工管理技士' },
-    { value: '6', unit: '名', label: '2級建築士' },
+    { value: '25', unit: '名', label: '従業員数' },
+    { value: '4', unit: '名', label: '施工管理技士' },
+    { value: '3', unit: '名', label: '2級建築士' },
   ]
 
   /** 主要取引先 */
@@ -248,24 +248,24 @@ export const useSiteContent = () => {
 
   /** 施工実績一覧 */
   const projects = [
-    { key: 'p01', name: '○○マンション 新築躯体工事', category: 'マンション', period: '2024年1月〜2024年11月', businessTypes: ['rebar'] },
-    { key: 'p02', name: '首都高速道路 高架橋鉄筋工事', category: '高速道路', period: '2023年9月〜2024年8月', businessTypes: ['civil', 'rebar'] },
-    { key: 'p03', name: '○○物流センター 基礎工事', category: '商業施設', period: '2023年6月〜2024年2月', businessTypes: ['rebar'] },
-    { key: 'p04', name: '○○小学校 耐震補強工事', category: '耐震補強工事', period: '2023年4月〜2023年12月', businessTypes: ['rebar', 'pressure_welding'] },
-    { key: 'p05', name: '○○駅前複合ビル 基礎・躯体工事', category: '商業施設', period: '2023年2月〜2024年3月', businessTypes: ['rebar', 'pressure_welding'] },
-    { key: 'p06', name: '○○浄水場 増設工事', category: '浄水場', period: '2022年10月〜2023年9月', businessTypes: ['civil', 'rebar'] },
-    { key: 'p07', name: '○○マンション 新築工事', category: 'マンション', period: '2022年8月〜2023年7月', businessTypes: ['rebar', 'pressure_welding'] },
-    { key: 'p08', name: '地下鉄○○線 拡幅工事', category: '地下鉄拡幅工事', period: '2022年5月〜2023年4月', businessTypes: ['civil', 'rebar'] },
-    { key: 'p09', name: '○○高架橋 鉄筋・溶接工事', category: '高架橋', period: '2022年3月〜2023年2月', businessTypes: ['civil', 'welding'] },
-    { key: 'p10', name: '○○公民館 新築工事', category: '公共施設', period: '2021年11月〜2022年8月', businessTypes: ['rebar'] },
-    { key: 'p11', name: '○○マンション 杭頭補強溶接工事', category: 'マンション', period: '2021年9月〜2022年6月', businessTypes: ['welding'] },
-    { key: 'p12', name: '○○トンネル 鉄筋工事', category: 'トンネル工事', period: '2021年6月〜2022年5月', businessTypes: ['civil', 'rebar'] },
-    { key: 'p13', name: '○○病院 耐震補強工事', category: '耐震補強工事', period: '2021年4月〜2022年1月', businessTypes: ['rebar', 'pressure_welding'] },
-    { key: 'p14', name: '○○ショッピングモール 基礎工事', category: '商業施設', period: '2021年1月〜2021年11月', businessTypes: ['rebar'] },
-    { key: 'p15', name: '首都高速道路 鉄筋・溶接工事', category: '高速道路', period: '2020年10月〜2021年9月', businessTypes: ['civil', 'welding'] },
-    { key: 'p16', name: '○○マンション 新築躯体工事', category: 'マンション', period: '2020年7月〜2021年6月', businessTypes: ['rebar', 'pressure_welding'] },
-    { key: 'p17', name: '○○区役所 改修工事', category: '公共施設', period: '2020年4月〜2021年1月', businessTypes: ['rebar'] },
-    { key: 'p18', name: '○○高架橋 補強溶接工事', category: '高架橋', period: '2020年2月〜2020年12月', businessTypes: ['civil', 'welding'] },
+    { key: 'p01', name: '○○マンション 新築躯体工事', category: 'マンション', location: '東京都江東区', client: '株式会社フジタ', businessTypes: ['鉄筋工事', '型枠工事', 'コンクリート打設工事'] },
+    { key: 'p02', name: '首都高速道路 高架橋鉄筋工事', category: '高速道路', location: '東京都（首都高速）', client: '飛島建設株式会社', businessTypes: ['鉄筋工事', '溶接工事'] },
+    { key: 'p03', name: '○○物流センター 基礎工事', category: '商業施設', location: '埼玉県さいたま市', client: '株式会社フジタ', businessTypes: ['鉄筋工事', '型枠工事'] },
+    { key: 'p04', name: '○○小学校 耐震補強工事', category: '耐震補強工事', location: '東京都世田谷区', client: 'アイサワ工業株式会社', businessTypes: ['鉄筋工事', '圧接工事'] },
+    { key: 'p05', name: '○○駅前複合ビル 基礎・躯体工事', category: '商業施設', location: '神奈川県横浜市', client: '株式会社竹中土木', businessTypes: ['鉄筋工事', '型枠工事', '圧接工事'] },
+    { key: 'p06', name: '○○浄水場 増設工事', category: '浄水場', location: '千葉県千葉市', client: 'エコシビックエンジニアリング株式会社', businessTypes: ['鉄筋工事', '型枠工事', 'コンクリート打設工事'] },
+    { key: 'p07', name: '○○マンション 新築工事', category: 'マンション', location: '東京都港区', client: '株式会社フジタ', businessTypes: ['鉄筋工事', '圧接工事', 'コンクリート打設工事'] },
+    { key: 'p08', name: '地下鉄○○線 拡幅工事', category: '地下鉄拡幅工事', location: '東京都（地下鉄工事）', client: '飛島建設株式会社', businessTypes: ['鉄筋工事', '型枠工事', '支保工事'] },
+    { key: 'p09', name: '○○高架橋 鉄筋・溶接工事', category: '高架橋', location: '神奈川県川崎市', client: '株式会社竹中土木', businessTypes: ['鉄筋工事', '溶接工事'] },
+    { key: 'p10', name: '○○公民館 新築工事', category: '公共施設', location: '東京都葛飾区', client: 'アイサワ工業株式会社', businessTypes: ['鉄筋工事', '型枠工事'] },
+    { key: 'p11', name: '○○マンション 杭頭補強溶接工事', category: 'マンション', location: '東京都江戸川区', client: '株式会社フジタ', businessTypes: ['溶接工事'] },
+    { key: 'p12', name: '○○トンネル 鉄筋工事', category: 'トンネル工事', location: '東京都（トンネル工事）', client: 'エコシビックエンジニアリング株式会社', businessTypes: ['鉄筋工事', '支保工事'] },
+    { key: 'p13', name: '○○病院 耐震補強工事', category: '耐震補強工事', location: '埼玉県川口市', client: '飛島建設株式会社', businessTypes: ['鉄筋工事', '圧接工事'] },
+    { key: 'p14', name: '○○ショッピングモール 基礎工事', category: '商業施設', location: '千葉県船橋市', client: '株式会社フジタ', businessTypes: ['鉄筋工事', '型枠工事'] },
+    { key: 'p15', name: '首都高速道路 鉄筋・溶接工事', category: '高速道路', location: '東京都（首都高速）', client: '飛島建設株式会社', businessTypes: ['鉄筋工事', '溶接工事'] },
+    { key: 'p16', name: '○○マンション 新築躯体工事', category: 'マンション', location: '東京都墨田区', client: '株式会社竹中土木', businessTypes: ['鉄筋工事', '型枠工事', '圧接工事'] },
+    { key: 'p17', name: '○○区役所 改修工事', category: '公共施設', location: '東京都北区', client: 'アイサワ工業株式会社', businessTypes: ['鉄筋工事'] },
+    { key: 'p18', name: '○○高架橋 補強溶接工事', category: '高架橋', location: '神奈川県横浜市', client: 'エコシビックエンジニアリング株式会社', businessTypes: ['溶接工事'] },
   ]
 
   // ─────────────────────────────────────────
@@ -363,18 +363,23 @@ export const useSiteContent = () => {
   /** 事業一覧 */
   const businesses = [
     {
-      key: 'rebar',
-      label: 'Rebar Work',
-      title: '鉄筋工事',
+      key: 'structure',
+      label: 'Structure Work',
+      title: '躯体構築工事一式',
       shortDescription:
-        '鉄筋の加工・運搬・組立を一貫して対応。ベース配筋から柱・梁配筋まで、あらゆる規模・工種に対応できる体制と実績があります。',
+        '鉄筋・型枠・足場・支保・コンクリート打設を中心に、躯体構築に必要な工事を一式で対応。スポットでの個別依頼にもお応えします。',
       description:
-        '設計図・施工図に基づき、鉄筋の加工・運搬・組立・配筋を一貫して行います。基礎から柱・梁・スラブまで、建物の骨格を正確に組み上げる技術が私たちの核心です。',
-      highlights: [
-        '鉄筋の加工・運搬・組立・配筋を一貫して自社対応',
-        'ベース配筋・柱配筋・梁配筋・スラブ配筋に対応',
-        '職長による工程ごとの自主検査を全工程で実施',
-        '小規模住宅から大型インフラまで対応',
+        '建物の骨格をつくる躯体構築工事を一式で請け負います。主力の鉄筋・型枠・足場・支保・コンクリート打設に加え、左官・鍛冶・圧接・溶接にも対応。一式でのご依頼はもちろん、必要な工種だけのスポット対応も可能です。',
+      services: [
+        { name: '鉄筋工事', primary: true },
+        { name: '型枠工事', primary: true },
+        { name: '足場工事', primary: true },
+        { name: '支保工事', primary: true },
+        { name: 'コンクリート打設工事', primary: true },
+        { name: '左官工事', primary: false },
+        { name: '鍛冶工事', primary: false },
+        { name: '圧接工事', primary: false },
+        { name: '溶接工事', primary: false },
       ],
       iconPath:
         'M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z',
@@ -382,53 +387,14 @@ export const useSiteContent = () => {
     {
       key: 'civil',
       label: 'Civil Work',
-      title: '土木工事',
+      title: '土木工事全般',
       shortDescription:
-        '高速道路・地下鉄・橋梁・トンネルなど社会インフラの鉄筋工事を担当。大型土木案件での豊富な施工実績と機動力が強みです。',
+        '高速道路・地下鉄・橋梁・トンネルなど社会インフラを含む土木工事全般に対応。大型案件での豊富な施工実績と機動力が強みです。',
       description:
-        '道路・橋梁・河川・トンネルなど社会インフラを支える土木構造物の鉄筋工事を担当します。高速道路や地下鉄拡幅工事など大型案件での豊富な施工実績を背景に、規模・難度を問わず関東全域に対応します。',
-      highlights: [
-        '高速道路・地下鉄拡幅・橋梁・トンネルなどインフラ工事に対応',
-        '大型土木案件での豊富な施工実績',
-        '関東全域への機動力ある現場対応',
-        '鉄筋工事・溶接工事との一貫施工で工期を最適化',
-      ],
+        '道路・橋梁・河川・トンネルなど社会インフラを支える土木工事全般に対応します。高速道路や地下鉄拡幅工事など大型案件での豊富な施工実績を背景に、規模・難度を問わず関東全域でお手伝いします。',
+      services: [] as readonly { name: string; primary: boolean }[],
       iconPath:
         'M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z',
-    },
-    {
-      key: 'welding',
-      label: 'Welding Work',
-      title: '溶接工事',
-      shortDescription:
-        'フレア溶接・杭頭筋溶接・J-BAR溶接など高度な溶接技術に対応。杭頭補強筋の半自動溶接化は平山工業が先駆けて開発し、業界標準となった独自技術です。',
-      description:
-        '杭頭補強筋の半自動溶接化を業界に先駆けて開発した平山工業独自の技術力で、多彩な溶接工法に対応します。鉄筋工事と組み合わせることで、工期短縮とコスト最適化を実現します。',
-      highlights: [
-        '杭頭補強筋の半自動溶接（業界標準を先駆けて開発）',
-        'フレア溶接・J-BAR溶接・エンクローズ溶接（CB工法）に対応',
-        '鋼管杭ズレ止溶接など特殊工法にも対応',
-        '半自動溶接免許 SA-2V 保有者が施工',
-      ],
-      iconPath:
-        'M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z',
-    },
-    {
-      key: 'pressure_welding',
-      label: 'Pressure Welding',
-      title: '圧接工事',
-      shortDescription:
-        '鉄筋のガス圧接による高強度継手工事。有資格者が熱と圧力で鉄筋を一体化し、母材と同等の接合強度を確保します。',
-      description:
-        'ガス圧接は鉄筋端面を高温に加熱しながら軸方向に圧力をかけて接合する工法です。継手部が母材と同等の強度を持つため、柱・梁などの主要部材に広く採用されています。有資格者による確実な施工で品質と安全を保証します。',
-      highlights: [
-        'ガス圧接による高強度・高品質な鉄筋継手',
-        '圧接工（有資格者）が施工を担当',
-        '柱・梁・杭など主要部材の継手に対応',
-        '鉄筋工事との一貫施工で工期を最適化',
-      ],
-      iconPath:
-        'M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244',
     },
   ]
 

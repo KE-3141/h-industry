@@ -52,7 +52,7 @@ pages/          Nuxt の pages/ ディレクトリ
 | `IconPhone` | 電話アイコン |
 | `SectionHeading` | セクション見出し（英語ラベル + h2） |
 | `FeatureCard` | アイコン付き特長カード |
-| `BusinessCard` | 事業紹介カード（画像・タイトル・説明・リンク） |
+| `BusinessCard` | 事業内容カード（画像・タイトル・説明・リンク） |
 | `PageHero` | 内部ページ共通ヒーロー（ダーク背景 + h1 + 説明文） |
 | `CtaSection` | ページ末尾 CTA（電話番号 + お問い合わせボタン） |
 | `AppHeader` | グローバルヘッダー |

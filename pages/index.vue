@@ -33,8 +33,8 @@ const historySteps = [
   },
   {
     step: '現在',
-    title: '従業員39名体制で関東全域を支える',
-    description: '鉄筋工・溶接工・管理職を含む39名の体制で、あらゆる規模・工種の現場に対応。創業50年超の実績と技術力を次世代へ継承しながら、さらなる品質向上に取り組んでいる。',
+    title: '従業員25名体制で関東全域を支える',
+    description: '鉄筋工・溶接工・管理職を含む25名の体制で、あらゆる規模・工種の現場に対応。創業50年超の実績と技術力を次世代へ継承しながら、さらなる品質向上に取り組んでいる。',
   },
 ]
 const strengthItems = strengths.map(s => ({ ...s, to: `/about/#${s.key}` }))
@@ -104,7 +104,7 @@ const companyRows = [
             <IconArrow />
           </AppButton>
           <AppButton to="/business/" size="lg" variant="ghost">
-            事業紹介を見る
+            事業内容を見る
           </AppButton>
         </div>
       </div>
@@ -168,12 +168,12 @@ const companyRows = [
       :items="strengthItems"
     />
 
-    <!-- ===== 4. 事業紹介ダイジェスト ===== -->
+    <!-- ===== 4. 事業内容ダイジェスト ===== -->
     <section class="py-20 md:py-28 bg-primary-900">
       <div class="max-w-6xl mx-auto px-6">
         <SectionHeading
           label="Our Business"
-          title="事業紹介"
+          title="事業内容"
           title-class="text-white"
           class="mb-14"
         />

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-useHead({ title: '事業紹介 | 平山工業株式会社' })
+useHead({ title: '事業内容 | 平山工業株式会社' })
 useSeoMeta({
-  description: '平山工業の事業紹介。鉄筋工事・土木工事・溶接工事・圧接工事を関東全域で一貫提供。創業50年超の実績と独自技術をご紹介します。',
+  description: '平山工業の事業内容。躯体構築工事一式・土木工事全般に対応。鉄筋・型枠・足場など一式対応からスポット工事までご相談ください。',
 })
 
-const { businesses, workTypes, weldingMethods } = useSiteContent()
+const { businesses } = useSiteContent()
 const placeholderImageUrl = usePublicUrl('/images/hero_1.png')
 </script>
 
@@ -13,8 +13,8 @@ const placeholderImageUrl = usePublicUrl('/images/hero_1.png')
     <!-- ===== 1. ページヒーロー ===== -->
     <PageHero
       label="Business"
-      title="事業紹介"
-      description="鉄筋工事・土木工事・溶接工事・圧接工事を自社一貫で提供。創業50年超の実績と独自技術で、関東全域の建設現場を支えます。"
+      title="事業内容"
+      description="躯体構築工事一式と土木工事全般。一式でのご依頼はもちろん、必要な工種だけのスポット対応も可能です。"
     />
 
     <!-- ===== 2. 事業内容（交互レイアウト） ===== -->
@@ -51,48 +51,42 @@ const placeholderImageUrl = usePublicUrl('/images/hero_1.png')
               <p class="text-neutral-600 leading-relaxed mb-8">
                 {{ biz.description }}
               </p>
-              <ul class="space-y-3">
-                <li
-                  v-for="point in biz.highlights"
-                  :key="point"
-                  class="flex items-start gap-3 text-sm text-neutral-700"
-                >
-                  <span
-                    class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-accent-500/10
-                           flex items-center justify-center"
+              <!-- 含まれる工種（躯体構築工事） -->
+              <div v-if="biz.services.length" class="mt-6 space-y-3">
+                <p class="text-xs font-medium text-neutral-500 tracking-wide">含まれる工種</p>
+                <!-- 主要工種 -->
+                <div class="flex flex-wrap gap-2">
+                  <TagBadge
+                    v-for="service in biz.services.filter(s => s.primary)"
+                    :key="service.name"
+                    variant="primary"
                   >
-                    <svg
-                      class="w-3 h-3 text-accent-500"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
+                    {{ service.name }}
+                  </TagBadge>
+                </div>
+                <!-- その他工種 -->
+                <div
+                  v-if="biz.services.some(s => !s.primary)"
+                  class="flex items-baseline gap-2"
+                >
+                  <span class="text-xs text-neutral-400 shrink-0">その他</span>
+                  <div class="flex flex-wrap gap-1.5">
+                    <span
+                      v-for="service in biz.services.filter(s => !s.primary)"
+                      :key="service.name"
+                      class="text-xs text-neutral-500 border border-neutral-200 rounded-sm px-2 py-0.5"
                     >
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                    </svg>
-                  </span>
-                  {{ point }}
-                </li>
-              </ul>
-              <!-- 対応工種タグ（鉄筋工事） -->
-              <div v-if="biz.key === 'rebar'" class="mt-6 flex flex-wrap gap-2">
-                <TagBadge v-for="work in workTypes" :key="work" variant="neutral">
-                  {{ work }}
-                </TagBadge>
-              </div>
-              <!-- 対応溶接工法タグ（溶接工事） -->
-              <div v-if="biz.key === 'welding'" class="mt-6 flex flex-wrap gap-2">
-                <TagBadge v-for="method in weldingMethods" :key="method.key" variant="primary">
-                  {{ method.title }}
-                </TagBadge>
+                      {{ service.name }}
+                    </span>
+                  </div>
+                </div>
               </div>
               <!-- 施工実績リンク -->
               <SlideLink
-                :to="`/achievements/?type=${biz.key}`"
+                to="/achievements/"
                 class="inline-flex items-center mt-8 text-primary-600 font-semibold text-sm hover:text-primary-800 transition-colors"
               >
-                {{ biz.title }}の施工実績を見る
+                施工実績を見る
               </SlideLink>
             </div>
           </div>
