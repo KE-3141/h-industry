@@ -103,12 +103,10 @@ watch(lightboxProject, val => {
             </button>
 
             <!-- テキスト -->
-            <div class="flex items-baseline justify-between gap-2 mb-0.5">
-              <p class="text-sm font-bold text-primary-900 leading-snug">
-                {{ project.name }}
-              </p>
-              <p class="text-xs text-neutral-400 shrink-0">{{ project.location }}</p>
-            </div>
+            <p class="text-sm font-bold text-primary-900 leading-snug mb-0.5">
+              {{ project.name }}
+            </p>
+            <p class="text-xs text-neutral-400 mb-0.5">{{ project.location }}</p>
             <p class="text-xs text-neutral-400 mb-1.5">{{ project.client }}</p>
             <div class="flex flex-wrap gap-1">
               <span
