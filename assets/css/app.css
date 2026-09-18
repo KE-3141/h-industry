@@ -41,15 +41,24 @@
   --color-neutral-900: #31363f;
   --color-neutral-950: #1e2229;
 
+  /* Brand */
+  --color-logo: #4c8fcd;
+
   /* Typography */
   --font-sans:
-    'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans',
+    'BIZ UDPGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans',
     'Yu Gothic', 'Meiryo', sans-serif;
+  --font-serif:
+    'Shippori Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
 }
 
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
 }
 
 body {

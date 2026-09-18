@@ -37,9 +37,14 @@ export default defineNuxtConfig({
   fonts: {
     families: [
       {
-        name: 'Noto Sans JP',
+        name: 'BIZ UDPGothic',
         provider: 'google',
-        weights: [400, 700, 900],
+        weights: [400, 700],
+      },
+      {
+        name: 'Shippori Mincho',
+        provider: 'google',
+        weights: [400, 700, 800],
       },
     ],
   },

@@ -126,7 +126,7 @@ const companyRows = [
           label="About Us"
           class="mb-6"
         >
-          機械ではできない。<br>人にしかできない。
+          良い製品は<br>良い人がつくる。
         </SectionHeading>
         <p class="text-neutral-600 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
           {{ company.description }}
