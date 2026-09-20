@@ -39,6 +39,7 @@ const historySteps = [
 ]
 const strengthItems = strengths.map(s => ({ ...s, to: `/about/#${s.key}` }))
 
+
 const companyRows = [
   { label: '社名', value: company.name },
   { label: '所在地', value: `〒${company.postalCode}<br>${company.address}` },
@@ -121,7 +122,7 @@ const companyRows = [
 
     <!-- ===== 2. 会社について ===== -->
     <section class="py-20 md:py-28 bg-white">
-      <div class="max-w-4xl mx-auto px-6 text-center">
+      <div v-reveal class="max-w-4xl mx-auto px-6 text-center">
         <SectionHeading
           label="About Us"
           class="mb-6"
@@ -133,7 +134,7 @@ const companyRows = [
           地下鉄・高速道路・浄水場など社会インフラを担う現場で、
           確かな技術と安全管理で信頼に応えてきました。
         </p>
-        <dl class="mt-12 grid grid-cols-3 gap-6 max-w-md mx-auto">
+        <dl v-reveal class="mt-12 grid grid-cols-3 gap-6 max-w-md mx-auto">
           <div class="text-center">
             <dd class="text-3xl md:text-4xl font-black text-primary-700">
               50<span class="text-xl">年超</span>
@@ -225,7 +226,7 @@ const companyRows = [
             施工実績を全て見る
           </SlideLink>
         </div>
-        <ul class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <ul v-reveal class="grid grid-cols-2 md:grid-cols-4 gap-4">
           <li
             v-for="project in featuredProjects"
             :key="project.key"

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const { strengths, stats, workTypes } = useSiteContent()
 const placeholderImageUrl = usePublicUrl('/images/hero_1.png')
+
 </script>
 
 <template>
@@ -24,7 +25,10 @@ const placeholderImageUrl = usePublicUrl('/images/hero_1.png')
             :class="{ 'md:[&>*:first-child]:order-last': index % 2 === 1 }"
           >
             <!-- 画像 -->
-            <div class="relative rounded-sm overflow-hidden aspect-[4/3]">
+            <div
+              v-reveal="index % 2 === 0 ? 'from-left' : 'from-right'"
+              class="relative rounded-sm overflow-hidden aspect-[4/3]"
+            >
               <img
                 :src="placeholderImageUrl"
                 :alt="strength.title"
@@ -34,7 +38,7 @@ const placeholderImageUrl = usePublicUrl('/images/hero_1.png')
             </div>
 
             <!-- テキスト -->
-            <div>
+            <div v-reveal="index % 2 === 0 ? 'from-right' : 'from-left'">
               <h2 class="text-2xl md:text-3xl font-black text-primary-900 mb-5">
                 {{ strength.title }}
               </h2>
@@ -67,7 +71,7 @@ const placeholderImageUrl = usePublicUrl('/images/hero_1.png')
         <p class="text-center text-accent-400 text-xs font-medium tracking-[0.2em] uppercase mb-10">
           Numbers
         </p>
-        <dl class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <dl v-reveal class="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div
             v-for="stat in stats"
             :key="stat.label"

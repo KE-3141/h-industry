@@ -29,8 +29,9 @@ defineProps<Props>()
           aria-hidden="true"
         />
         <li
-          v-for="step in steps"
+          v-for="(step, i) in steps"
           :key="step.step"
+          v-reveal="{ delay: i * 100 }"
           class="relative flex gap-8 pb-10 last:pb-0"
         >
           <!-- ステップ番号 -->

@@ -67,8 +67,9 @@ watch(lightboxProject, val => {
 
         <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
           <li
-            v-for="project in projects"
+            v-for="(project, i) in projects"
             :key="project.key"
+            v-reveal="{ delay: (i % 4) * 80 }"
             class="group"
           >
             <!-- 写真（クリックでライトボックス） -->

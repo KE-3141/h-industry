@@ -28,7 +28,10 @@ const placeholderImageUrl = usePublicUrl('/images/hero_1.png')
             :class="{ 'md:[&>*:first-child]:order-last': index % 2 === 1 }"
           >
             <!-- 画像 -->
-            <div class="relative rounded-2xl overflow-hidden aspect-[4/3]">
+            <div
+              v-reveal="index % 2 === 0 ? 'from-left' : 'from-right'"
+              class="relative rounded-2xl overflow-hidden aspect-[4/3]"
+            >
               <img
                 :src="placeholderImageUrl"
                 :alt="biz.title"
@@ -44,7 +47,7 @@ const placeholderImageUrl = usePublicUrl('/images/hero_1.png')
             </div>
 
             <!-- テキスト -->
-            <div>
+            <div v-reveal="index % 2 === 0 ? 'from-right' : 'from-left'">
               <h2 class="text-2xl md:text-3xl font-black text-primary-900 mb-5">
                 {{ biz.title }}
               </h2>

@@ -17,6 +17,7 @@ withDefaults(defineProps<Props>(), {
 
 <template>
   <div
+    v-reveal
     class="relative text-white rounded-sm overflow-hidden flex flex-col"
     :class="variant === 'primary' ? 'bg-primary-900' : 'bg-neutral-800'"
   >

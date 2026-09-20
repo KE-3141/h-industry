@@ -1,8 +1,4 @@
 <script setup lang="ts">
-/**
- * 2カラムセクション：左に見出し・説明・リンク、右に番号付き縦積みリスト。
- * theme で明暗を切り替え、imageSrc を渡すと背景画像＋オーバーレイになる。
- */
 interface Item {
   key: string
   title: string
@@ -55,7 +51,7 @@ withDefaults(defineProps<Props>(), {
     <div class="max-w-6xl mx-auto px-6" :class="imageSrc ? 'relative z-10' : ''">
       <div class="md:grid md:grid-cols-2 md:gap-16 md:items-center">
         <!-- 左：見出し＋説明＋任意リンク -->
-        <div class="mb-12 md:mb-0">
+        <div v-reveal="'from-left'" class="mb-12 md:mb-0">
           <SectionHeading
             :label="label"
             :title="title"
@@ -84,7 +80,7 @@ withDefaults(defineProps<Props>(), {
         </div>
 
         <!-- 右：縦積みリスト -->
-        <div>
+        <div v-reveal="'from-right'">
           <template v-for="(item, index) in items" :key="item.key">
             <!-- リンクあり -->
             <SlideLink

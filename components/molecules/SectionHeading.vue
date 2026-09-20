@@ -1,8 +1,4 @@
 <script setup lang="ts">
-/**
- * セクション見出しブロック。
- * 英語ラベル（小文字 uppercase）+ 日本語 h2 の組み合わせ。
- */
 interface Props {
   label?: string
   title: string
@@ -18,6 +14,7 @@ withDefaults(defineProps<Props>(), {
 
 <template>
   <div
+    v-reveal
     :class="{
       'text-left': align === 'left',
       'text-center': align === 'center',
