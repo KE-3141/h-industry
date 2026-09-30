@@ -233,15 +233,15 @@ const companyRows = [
             class="group"
           >
             <div class="relative overflow-hidden rounded-xl aspect-[4/3] mb-3 bg-neutral-200">
-              <div class="absolute inset-0 bg-primary-900/20 group-hover:bg-primary-900/10 transition-colors duration-300" />
-              <div class="absolute top-2.5 left-2.5">
-                <span class="bg-primary-900/80 text-white text-[10px] font-medium px-2 py-1 rounded-full leading-none">
-                  {{ project.category }}
-                </span>
-              </div>
+              <img
+                :src="project.images[0]"
+                :alt="project.name"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+              />
             </div>
             <p class="text-sm font-bold text-primary-900 leading-snug mb-1">{{ project.name }}</p>
-            <p class="text-xs text-neutral-400">{{ project.period }}</p>
+            <p class="text-xs text-neutral-400">{{ project.location }}</p>
           </li>
         </ul>
         <div class="mt-8 text-center sm:hidden">

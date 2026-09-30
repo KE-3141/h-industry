@@ -5,13 +5,24 @@ useSeoMeta({
 })
 
 const { projects, stats } = useSiteContent()
-const placeholderImageUrl = usePublicUrl('/images/hero_1.png')
+
+function tagLabel(type: string) {
+  return type.replace('工事', '')
+}
 
 // ─── ライトボックス ───────────────────────────
 type Project = typeof projects[number]
 const lightboxProject = ref<Project | null>(null)
+const lightboxIndex = ref(0)
+
+const lightboxImage = computed(() => {
+  const project = lightboxProject.value
+  if (!project) return ''
+  return project.images[lightboxIndex.value] ?? project.images[0]
+})
 
 function openLightbox(project: Project) {
+  lightboxIndex.value = 0
   lightboxProject.value = project
 }
 
@@ -19,8 +30,30 @@ function closeLightbox() {
   lightboxProject.value = null
 }
 
+function showPrev() {
+  const project = lightboxProject.value
+  if (!project || project.images.length < 2) return
+  const count = project.images.length
+  lightboxIndex.value = (lightboxIndex.value - 1 + count) % count
+}
+
+function showNext() {
+  const project = lightboxProject.value
+  if (!project || project.images.length < 2) return
+  lightboxIndex.value = (lightboxIndex.value + 1) % project.images.length
+}
+
 function handleKeydown(e: KeyboardEvent) {
+  if (!lightboxProject.value) return
   if (e.key === 'Escape') closeLightbox()
+  if (e.key === 'ArrowLeft') {
+    e.preventDefault()
+    showPrev()
+  }
+  if (e.key === 'ArrowRight') {
+    e.preventDefault()
+    showNext()
+  }
 }
 
 onMounted(() => window.addEventListener('keydown', handleKeydown))
@@ -80,7 +113,7 @@ watch(lightboxProject, val => {
               @click="openLightbox(project)"
             >
               <img
-                :src="placeholderImageUrl"
+                :src="project.images[0]"
                 :alt="project.name"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 loading="lazy"
@@ -113,10 +146,8 @@ watch(lightboxProject, val => {
               <span
                 v-for="type in project.businessTypes"
                 :key="type"
-                class="text-xs font-medium px-2 py-0.5 rounded bg-primary-50 text-primary-700"
-              >
-                {{ type.replace('工事', '') }}
-              </span>
+                class="text-[11px] text-neutral-500 border border-neutral-300 rounded px-1.5 py-0.5 leading-none"
+              >{{ tagLabel(type) }}</span>
             </div>
           </li>
         </ul>
@@ -165,10 +196,35 @@ watch(lightboxProject, val => {
 
             <!-- 画像 -->
             <img
-              :src="placeholderImageUrl"
-              :alt="lightboxProject.name"
-              class="w-full max-h-[75vh] object-contain rounded-lg"
+              :src="lightboxImage"
+              :alt="`${lightboxProject.name}の施工写真 ${lightboxIndex + 1}`"
+              class="w-full max-h-[75vh] object-contain rounded-lg bg-black"
             />
+
+            <template v-if="lightboxProject.images.length > 1">
+              <button
+                type="button"
+                class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full
+                       bg-white/15 hover:bg-white/25 flex items-center justify-center transition-colors"
+                aria-label="前の写真"
+                @click="showPrev"
+              >
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full
+                       bg-white/15 hover:bg-white/25 flex items-center justify-center transition-colors"
+                aria-label="次の写真"
+                @click="showNext"
+              >
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+              </button>
+            </template>
 
             <!-- キャプション -->
             <div class="mt-4 flex flex-wrap items-start justify-between gap-3">
@@ -183,10 +239,8 @@ watch(lightboxProject, val => {
                 <span
                   v-for="type in lightboxProject.businessTypes"
                   :key="type"
-                  class="text-xs font-medium px-2 py-1 rounded bg-white/10 text-white/80"
-                >
-                  {{ type.replace('工事', '') }}
-                </span>
+                  class="text-[11px] text-white/60 border border-white/25 rounded px-1.5 py-0.5 leading-none"
+                >{{ tagLabel(type) }}</span>
               </div>
             </div>
           </div>

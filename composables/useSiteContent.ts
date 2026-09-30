@@ -249,27 +249,129 @@ export const useSiteContent = () => {
   // 施工実績
   // ─────────────────────────────────────────
 
-  /** 施工実績一覧 */
+  /**
+   * 施工実績一覧。
+   * 画像ファイルがある実績のみ。images は public/images/projects/ のパス。
+   */
   const projects = [
-    { key: 'p01', name: '○○マンション 新築躯体工事', category: 'マンション', location: '東京都江東区', client: '株式会社フジタ', businessTypes: ['鉄筋工事', '型枠工事', 'コンクリート打設工事'] },
-    { key: 'p02', name: '首都高速道路 高架橋鉄筋工事', category: '高速道路', location: '東京都（首都高速）', client: '飛島建設株式会社', businessTypes: ['鉄筋工事', '溶接工事'] },
-    { key: 'p03', name: '○○物流センター 基礎工事', category: '商業施設', location: '埼玉県さいたま市', client: '株式会社フジタ', businessTypes: ['鉄筋工事', '型枠工事'] },
-    { key: 'p04', name: '○○小学校 耐震補強工事', category: '耐震補強工事', location: '東京都世田谷区', client: 'アイサワ工業株式会社', businessTypes: ['鉄筋工事', '圧接工事'] },
-    { key: 'p05', name: '○○駅前複合ビル 基礎・躯体工事', category: '商業施設', location: '神奈川県横浜市', client: '株式会社竹中土木', businessTypes: ['鉄筋工事', '型枠工事', '圧接工事'] },
-    { key: 'p06', name: '○○浄水場 増設工事', category: '浄水場', location: '千葉県千葉市', client: 'エコシビックエンジニアリング株式会社', businessTypes: ['鉄筋工事', '型枠工事', 'コンクリート打設工事'] },
-    { key: 'p07', name: '○○マンション 新築工事', category: 'マンション', location: '東京都港区', client: '株式会社フジタ', businessTypes: ['鉄筋工事', '圧接工事', 'コンクリート打設工事'] },
-    { key: 'p08', name: '地下鉄○○線 拡幅工事', category: '地下鉄拡幅工事', location: '東京都（地下鉄工事）', client: '飛島建設株式会社', businessTypes: ['鉄筋工事', '型枠工事', '支保工事'] },
-    { key: 'p09', name: '○○高架橋 鉄筋・溶接工事', category: '高架橋', location: '神奈川県川崎市', client: '株式会社竹中土木', businessTypes: ['鉄筋工事', '溶接工事'] },
-    { key: 'p10', name: '○○公民館 新築工事', category: '公共施設', location: '東京都葛飾区', client: 'アイサワ工業株式会社', businessTypes: ['鉄筋工事', '型枠工事'] },
-    { key: 'p11', name: '○○マンション 杭頭補強溶接工事', category: 'マンション', location: '東京都江戸川区', client: '株式会社フジタ', businessTypes: ['溶接工事'] },
-    { key: 'p12', name: '○○トンネル 鉄筋工事', category: 'トンネル工事', location: '東京都（トンネル工事）', client: 'エコシビックエンジニアリング株式会社', businessTypes: ['鉄筋工事', '支保工事'] },
-    { key: 'p13', name: '○○病院 耐震補強工事', category: '耐震補強工事', location: '埼玉県川口市', client: '飛島建設株式会社', businessTypes: ['鉄筋工事', '圧接工事'] },
-    { key: 'p14', name: '○○ショッピングモール 基礎工事', category: '商業施設', location: '千葉県船橋市', client: '株式会社フジタ', businessTypes: ['鉄筋工事', '型枠工事'] },
-    { key: 'p15', name: '首都高速道路 鉄筋・溶接工事', category: '高速道路', location: '東京都（首都高速）', client: '飛島建設株式会社', businessTypes: ['鉄筋工事', '溶接工事'] },
-    { key: 'p16', name: '○○マンション 新築躯体工事', category: 'マンション', location: '東京都墨田区', client: '株式会社竹中土木', businessTypes: ['鉄筋工事', '型枠工事', '圧接工事'] },
-    { key: 'p17', name: '○○区役所 改修工事', category: '公共施設', location: '東京都北区', client: 'アイサワ工業株式会社', businessTypes: ['鉄筋工事'] },
-    { key: 'p18', name: '○○高架橋 補強溶接工事', category: '高架橋', location: '神奈川県横浜市', client: 'エコシビックエンジニアリング株式会社', businessTypes: ['溶接工事'] },
-  ]
+    {
+      key: 'hitachiomiya',
+      name: '常陸大宮2太陽光発電所工事',
+      location: '茨城県常陸大宮市',
+      client: '株式会社フジタ',
+      businessTypes: ['鉄筋工事'],
+      images: [
+        '/images/projects/常陸大宮2太陽光発電所工事_1.JPG',
+        '/images/projects/常陸大宮2太陽光発電所工事_2.JPG',
+      ],
+    },
+    {
+      key: 'mishima',
+      name: '三島ダム洪水吐改修工事',
+      location: '千葉県君津市',
+      client: '五洋建設株式会社',
+      businessTypes: ['鉄筋工事', '型枠工事', '足場工事', 'コンクリート打設工事'],
+      images: [
+        '/images/projects/三島ダム洪水吐改修工事_1.JPG',
+        '/images/projects/三島ダム洪水吐改修工事_2.jpg',
+        '/images/projects/三島ダム洪水吐改修工事_3.JPG',
+      ],
+    },
+    {
+      key: 'ukima',
+      name: '浮間水再生センター導水渠耐震補強工事',
+      location: '東京都北区',
+      client: 'アイサワ工業株式会社',
+      businessTypes: ['鉄筋工事', '型枠工事', '足場工事', 'コンクリート打設工事'],
+      images: [
+        '/images/projects/浮間水再生センター導水渠耐震補強工事_1.JPG',
+        '/images/projects/浮間水再生センター導水渠耐震補強工事_2.JPG',
+      ],
+    },
+    {
+      key: 'nomikawa',
+      name: '呑川防潮堤耐震補強工事',
+      location: '東京都大田区',
+      client: 'アイサワ工業株式会社',
+      businessTypes: ['鉄筋工事', '型枠工事', '足場工事', 'コンクリート打設工事'],
+      images: [
+        '/images/projects/呑川防潮堤耐震補強工事_1.JPG',
+        '/images/projects/呑川防潮堤耐震補強工事_2.png',
+      ],
+    },
+    {
+      key: 'otomi',
+      name: '大富橋維持工事',
+      location: '東京都江東区',
+      client: '千代田建設興業株式会社',
+      businessTypes: ['鉄筋工事', '型枠工事', 'コンクリート打設工事'],
+      images: [
+        '/images/projects/大富橋維持工事_1.JPG',
+        '/images/projects/大富橋維持工事_2.JPG',
+      ],
+    },
+    {
+      key: 'oyama',
+      name: '小山市大行寺雨水ポンプ場建設工事',
+      location: '栃木県小山市',
+      client: '株式会社トーヨー冨士工',
+      businessTypes: ['鉄筋工事', '足場工事', 'コンクリート打設工事'],
+      images: [
+        '/images/projects/小山市大行寺雨水ポンプ場建設工事_1.JPG',
+      ],
+    },
+    {
+      key: 'hydrogen',
+      name: '液化水素サプライチェーンの商用化実証における国内基地建設工事',
+      location: '神奈川県川崎市',
+      client: '大成建設株式会社',
+      businessTypes: ['躯体一式'],
+      images: [
+        '/images/projects/液化水素サプライチェーンの商用化実証における国内基地建設工事_1.JPG',
+        '/images/projects/液化水素サプライチェーンの商用化実証における国内基地建設工事_2.JPG',
+        '/images/projects/液化水素サプライチェーンの商用化実証における国内基地建設工事_3.JPG',
+      ],
+    },
+    {
+      key: 'tateyama',
+      name: '館山電源室新設建築その他工事',
+      location: '千葉県館山市',
+      client: '株式会社トーヨー冨士工',
+      businessTypes: ['鉄筋工事', '型枠工事', 'コンクリート打設工事'],
+      images: [
+        '/images/projects/館山電源室新設建築その他工事_1.JPG',
+        '/images/projects/館山電源室新設建築その他工事_2.JPG',
+        '/images/projects/館山電源室新設建築その他工事_3.JPG',
+      ],
+    },
+    {
+      key: 'ariake',
+      name: 'R7国道357号有明橋山側下部工事',
+      location: '東京都江東区',
+      client: 'RN建設株式会社',
+      businessTypes: ['躯体一式'],
+      images: [
+        '/images/projects/R7国道357号有明橋山側下部工事_1.JPG',
+        '/images/projects/R7国道357号有明橋山側下部工事_2.JPG',
+        '/images/projects/R7国道357号有明橋山側下部工事_3.JPG',
+      ],
+    },
+    {
+      key: 'twin-city',
+      name: 'ツインシティ大神地区調整池築造工事',
+      location: '神奈川県平塚市',
+      client: '飛島建設株式会社',
+      businessTypes: ['足場工事', '支保工事', 'コンクリート打設工事'],
+      images: [
+        '/images/projects/ツインシティ大神地区調整池築造工事_1.JPG',
+        '/images/projects/ツインシティ大神地区調整池築造工事_2.JPG',
+        '/images/projects/ツインシティ大神地区調整池築造工事_3.JPG',
+      ],
+    },
+  ].map(project => ({
+    ...project,
+    images: project.images.map(src => usePublicUrl(src)),
+  }))
 
   // ─────────────────────────────────────────
   // 品質と安全
