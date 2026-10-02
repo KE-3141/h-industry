@@ -1,7 +1,10 @@
 <script setup lang="ts">
-const heroImageUrl = usePublicUrl('/images/hero_1.png')
-const rebarWorkUrl = usePublicUrl('/images/rebar_work.png')
+const heroImageUrl = usePublicUrl('/images/hero_1.JPG')
+const rebarWorkUrl = usePublicUrl('/images/kutai.JPG')
 const strengthsImageUrl = usePublicUrl('/images/strengths.png')
+const presidentSignUrl = usePublicUrl('/images/president_sign.png')
+const presidentFaceUrl = usePublicUrl('/images/president_face.png')
+const presidentBgUrl = usePublicUrl('/images/president_bg.png')
 const { company, strengths, workTypes, projects, businesses } = useSiteContent()
 const featuredProjects = projects.slice(0, 4)
 
@@ -57,7 +60,7 @@ const companyRows = [
   <main>
     <!-- ===== 1. ヒーロー ===== -->
     <section
-      class="relative min-h-[600px] md:min-h-[700px] flex items-center overflow-hidden
+      class="relative min-h-[90svh] flex items-center overflow-hidden
              bg-primary-950"
     >
       <!-- ヒーロー写真（超大容量PNGはIPX経由だとdevでメモリ不足→IPC切断になりやすいため直配信） -->
@@ -70,10 +73,10 @@ const companyRows = [
           loading="eager"
         />
       </div>
-      <!-- 可読性用オーバーレイ（左寄せコピー向け） -->
+      <!-- 可読性用オーバーレイ（モバイル：下暗め縦グラデ / デスクトップ：左暗め横グラデ） -->
       <div
-        class="absolute inset-0 bg-gradient-to-r from-primary-950/85 from-[35%] via-primary-950/65
-               to-primary-900/30 md:from-[28%] md:via-primary-950/50 md:to-primary-900/15"
+        class="absolute inset-0 bg-gradient-to-b from-primary-950/30 via-primary-950/50 to-primary-950/85
+               md:bg-gradient-to-r md:from-primary-950/85 md:from-[28%] md:via-primary-950/50 md:to-primary-900/15"
       />
       <!-- グリッド装飾 -->
       <div
@@ -94,7 +97,7 @@ const companyRows = [
         <h1 class="text-4xl md:text-5xl lg:text-[3.5rem] font-black leading-tight mb-7">
           {{ company.tagline }}
         </h1>
-        <p class="text-neutral-300 text-base md:text-lg max-w-xl mb-10 leading-relaxed">
+        <p class="text-neutral-200 text-base md:text-lg max-w-xl mb-10 leading-relaxed">
           関東全域の建設現場で50年超の実績。<br>
           鉄筋・土木・溶接・圧接工事の専門集団として、<br class="hidden sm:block">
           あらゆる規模・工種の現場に対応します。
@@ -113,7 +116,7 @@ const companyRows = [
       <!-- スクロールインジケーター -->
       <div
         class="absolute bottom-8 left-1/2 z-10 -translate-x-1/2
-               flex flex-col items-center gap-2 text-white/40 text-xs tracking-widest"
+               flex flex-col items-center gap-2 text-white/70 text-xs tracking-widest"
       >
         <span>SCROLL</span>
         <div class="w-px h-8 bg-gradient-to-b from-white/40 to-transparent" />
@@ -154,6 +157,44 @@ const companyRows = [
             <dt class="text-xs text-neutral-400 mt-1">対応エリア</dt>
           </div>
         </dl>
+      </div>
+    </section>
+
+    <!-- ===== 2-B. 代表挨拶 ===== -->
+    <section class="py-20 md:py-28 relative overflow-hidden bg-white">
+      <!-- グリッド装飾 -->
+      <div
+        class="absolute inset-0 opacity-[0.08] pointer-events-none"
+        style="background-image: linear-gradient(rgba(0,0,0,1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,1) 1px, transparent 1px); background-size: 64px 64px;"
+      />
+      <div class="relative z-10 max-w-2xl mx-auto px-6 text-center">
+        <h2 v-reveal class="text-2xl md:text-3xl font-bold leading-relaxed mb-8 text-primary-900">
+          人のために、未来のために。
+        </h2>
+        <p v-reveal class="text-neutral-800 text-base leading-relaxed mb-5 text-left">
+          平山工業株式会社は1974年の創業以来、躯体構築一式工事・土木工事を中心に、人々と地域に貢献してまいりました。ダム、発電所、橋——こうした構造物は、見えないところで多くの人々の暮らしを支えています。
+        </p>
+        <p v-reveal class="text-neutral-600 text-base leading-relaxed mb-10 text-left">
+          50年以上こうして事業を続けてこられたのは、信頼して任せてくださったお客様と、現場を守り続けてくれた職人たちのおかげです。「良い製品は良い人がつくる」——創業からのこの言葉を胸に、これからも地域に必要とされる会社であり続けます。
+        </p>
+        <div v-reveal class="flex flex-col items-center gap-3">
+          <!-- アバター -->
+          <div class="w-32 h-32 rounded-full overflow-hidden">
+            <img
+              :src="presidentFaceUrl"
+              alt="代表取締役社長 平山 和彦"
+              class="w-full h-full object-cover object-[50%_15%]"
+              loading="lazy"
+            />
+          </div>
+          <span class="text-neutral-400 text-xs tracking-widest">代表取締役社長</span>
+          <img
+            :src="presidentSignUrl"
+            alt="平山 和彦 署名"
+            class="h-16 w-auto"
+            loading="lazy"
+          />
+        </div>
       </div>
     </section>
 
@@ -291,26 +332,15 @@ const companyRows = [
             </SlideLink>
           </div>
 
-          <!-- 地図プレースホルダー -->
-          <div
-            class="bg-neutral-100 rounded-sm h-72 md:h-full min-h-64 flex items-center
-                   justify-center text-neutral-400 text-sm border border-neutral-200"
-          >
-            <div class="text-center">
-              <svg
-                class="w-10 h-10 mx-auto mb-3 text-neutral-300"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-              </svg>
-              <p>Google Maps</p>
-              <p class="text-xs mt-1 text-neutral-300">{{ company.addressFull }}</p>
-            </div>
+          <!-- 地図 -->
+          <div class="rounded-sm overflow-hidden border border-neutral-200 shadow-sm">
+            <iframe
+              :src="`https://maps.google.com/maps?q=${encodeURIComponent(company.addressFull)}&output=embed&hl=ja`"
+              :title="`${company.name} 所在地マップ`"
+              class="w-full aspect-square"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
       </div>

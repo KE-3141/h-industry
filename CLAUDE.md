@@ -196,7 +196,7 @@ useSeoMeta({
 ```
 
 - タイトル形式: `ページ名 | 平山工業株式会社`
-- トップページのみ: `平山工業株式会社 | 鉄筋工事・溶接工事の専門企業`
+- トップページのみ: `平山工業株式会社 | 躯体構築一式工事・土木工事の専門企業`
 
 ---
 
@@ -227,7 +227,7 @@ useSeoMeta({
 | コンポーネント | PascalCase | `AppButton.vue`, `SectionHeading.vue` |
 | Composable | camelCase, `use` プレフィックス | `useSiteContent.ts`, `usePublicUrl.ts` |
 | ページ | kebab-case（Nuxt 規約） | `index.vue`, `about.vue` |
-| 画像ファイル | snake_case | `hero_1.png`, `rebar_work.png` |
+| 画像ファイル | snake_case | `hero_1.JPG`, `rebar_work.png` |
 
 ---
 

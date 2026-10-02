@@ -14,6 +14,7 @@ function tagLabel(type: string) {
 type Project = typeof projects[number]
 const lightboxProject = ref<Project | null>(null)
 const lightboxIndex = ref(0)
+const imageLoading = ref(false)
 
 const lightboxImage = computed(() => {
   const project = lightboxProject.value
@@ -23,6 +24,7 @@ const lightboxImage = computed(() => {
 
 function openLightbox(project: Project) {
   lightboxIndex.value = 0
+  imageLoading.value = false
   lightboxProject.value = project
 }
 
@@ -30,17 +32,21 @@ function closeLightbox() {
   lightboxProject.value = null
 }
 
+function navigateTo(index: number) {
+  imageLoading.value = true
+  lightboxIndex.value = index
+}
+
 function showPrev() {
   const project = lightboxProject.value
   if (!project || project.images.length < 2) return
-  const count = project.images.length
-  lightboxIndex.value = (lightboxIndex.value - 1 + count) % count
+  navigateTo((lightboxIndex.value - 1 + project.images.length) % project.images.length)
 }
 
 function showNext() {
   const project = lightboxProject.value
   if (!project || project.images.length < 2) return
-  lightboxIndex.value = (lightboxIndex.value + 1) % project.images.length
+  navigateTo((lightboxIndex.value + 1) % project.images.length)
 }
 
 function handleKeydown(e: KeyboardEvent) {
@@ -195,11 +201,36 @@ watch(lightboxProject, val => {
             </button>
 
             <!-- 画像 -->
-            <img
-              :src="lightboxImage"
-              :alt="`${lightboxProject.name}の施工写真 ${lightboxIndex + 1}`"
-              class="w-full max-h-[75vh] object-contain rounded-lg bg-black"
-            />
+            <div class="relative">
+              <img
+                :src="lightboxImage"
+                :alt="`${lightboxProject.name}の施工写真 ${lightboxIndex + 1}`"
+                class="w-full max-h-[75vh] object-contain rounded-lg bg-black"
+                :class="{ 'opacity-0': imageLoading }"
+                @load="imageLoading = false"
+              />
+              <Transition
+                enter-active-class="transition-opacity duration-150"
+                enter-from-class="opacity-0"
+                leave-active-class="transition-opacity duration-150"
+                leave-to-class="opacity-0"
+              >
+                <div
+                  v-if="imageLoading"
+                  class="absolute inset-0 flex items-center justify-center rounded-lg bg-black/60"
+                >
+                  <svg
+                    class="w-8 h-8 text-white/70 animate-spin"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" />
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                  </svg>
+                </div>
+              </Transition>
+            </div>
 
             <template v-if="lightboxProject.images.length > 1">
               <button

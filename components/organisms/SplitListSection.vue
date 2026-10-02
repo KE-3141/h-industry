@@ -44,7 +44,7 @@ withDefaults(defineProps<Props>(), {
       </div>
       <div
         class="absolute inset-0"
-        :class="theme === 'dark' ? 'bg-primary-950/55' : 'bg-white/80'"
+        :class="theme === 'dark' ? 'bg-primary-950/75' : 'bg-white/80'"
       />
     </template>
 

@@ -5,7 +5,7 @@ useSeoMeta({
 })
 
 const { businesses } = useSiteContent()
-const placeholderImageUrl = usePublicUrl('/images/hero_1.png')
+const placeholderImageUrl = usePublicUrl('/images/hero_1.JPG')
 </script>
 
 <template>
