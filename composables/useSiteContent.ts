@@ -16,6 +16,7 @@ export const useSiteContent = () => {
     postalCode: '136-0073',
     address: '東京都江東区北砂6-7-13 ヒラヤマビル2階',
     addressFull: '〒136-0073 東京都江東区北砂6-7-13 ヒラヤマビル2階',
+    addressMap: '東京都江東区北砂6-7-13',
     tel: '03-3646-7450',
     telRaw: '0336467450', // href="tel:" 用
     fax: '03-3615-6522',

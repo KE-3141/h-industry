@@ -283,7 +283,7 @@ const companyRows = [
           <!-- 地図 -->
           <div class="rounded-sm overflow-hidden border border-neutral-200 shadow-sm">
             <iframe
-              :src="`https://maps.google.com/maps?q=${encodeURIComponent(company.addressFull)}&output=embed&hl=ja`"
+              :src="`https://maps.google.com/maps?q=${encodeURIComponent(company.addressMap)}&output=embed&hl=ja`"
               :title="`${company.name} 所在地マップ`"
               class="w-full aspect-square"
               loading="lazy"

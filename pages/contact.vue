@@ -237,7 +237,7 @@ async function handleSubmit(event: Event) {
             <!-- 地図 -->
             <div class="rounded-2xl overflow-hidden border border-neutral-200">
               <iframe
-                :src="`https://maps.google.com/maps?q=${encodeURIComponent(company.addressFull)}&output=embed&hl=ja`"
+                :src="`https://maps.google.com/maps?q=${encodeURIComponent(company.addressMap)}&output=embed&hl=ja`"
                 :title="`${company.name} 所在地マップ`"
                 class="w-full h-56"
                 loading="lazy"
