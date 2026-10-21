@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const { strengths, stats, workTypes } = useSiteContent()
-const placeholderImageUrl = usePublicUrl('/images/hero_1.JPG')
 
 </script>
 
@@ -8,13 +7,12 @@ const placeholderImageUrl = usePublicUrl('/images/hero_1.JPG')
   <main>
     <!-- ===== 1. ページヒーロー ===== -->
     <PageHero
-      label="Our Strengths"
       title="平山工業の強み"
       description="創業50年超の実績が培った技術力・現場対応力・品質安全管理。平山工業が現場で大切にする3つの強みをご紹介します。"
     />
 
     <!-- ===== 2. 3つのこだわり（詳細） ===== -->
-    <section class="py-20 md:py-28 bg-white">
+    <section class="py-20 md:py-28 bg-neutral-50">
       <div class="max-w-6xl mx-auto px-6">
         <div class="space-y-20 md:space-y-28">
           <div
@@ -30,7 +28,7 @@ const placeholderImageUrl = usePublicUrl('/images/hero_1.JPG')
               class="relative rounded-sm overflow-hidden aspect-[4/3]"
             >
               <img
-                :src="placeholderImageUrl"
+                :src="strength.imageSrc"
                 :alt="strength.title"
                 class="w-full h-full object-cover"
                 loading="lazy"
@@ -39,23 +37,18 @@ const placeholderImageUrl = usePublicUrl('/images/hero_1.JPG')
 
             <!-- テキスト -->
             <div v-reveal="index % 2 === 0 ? 'from-right' : 'from-left'">
-              <h2 class="text-2xl md:text-3xl font-black text-primary-900 mb-5">
+              <h2 class="text-2xl md:text-3xl font-black text-primary-900 mb-5 text-balance">
                 {{ strength.title }}
               </h2>
               <p class="text-neutral-600 leading-relaxed mb-8">
                 {{ strength.detail }}
               </p>
-              <ul class="space-y-3">
+              <ul class="space-y-0 border-t border-neutral-200">
                 <li
                   v-for="point in strength.highlights"
                   :key="point"
-                  class="flex items-start gap-3 text-sm text-neutral-700"
+                  class="py-3 border-b border-neutral-200 text-sm text-neutral-700"
                 >
-                  <span
-                    class="flex-shrink-0 text-base font-black leading-none"
-                    style="color: var(--color-logo);"
-                    aria-hidden="true"
-                  >+</span>
                   {{ point }}
                 </li>
               </ul>
@@ -68,9 +61,6 @@ const placeholderImageUrl = usePublicUrl('/images/hero_1.JPG')
     <!-- ===== 3. 実績数値 ===== -->
     <section class="py-16 md:py-20 bg-primary-950 text-white">
       <div class="max-w-6xl mx-auto px-6">
-        <p class="text-center text-accent-400 text-xs font-medium tracking-[0.2em] uppercase mb-10">
-          Numbers
-        </p>
         <dl v-reveal class="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div
             v-for="stat in stats"
@@ -90,18 +80,10 @@ const placeholderImageUrl = usePublicUrl('/images/hero_1.JPG')
     <ClientsSection />
 
     <!-- ===== 5. 対応工種 ===== -->
-    <section class="py-16 md:py-20 bg-white">
+    <section class="py-16 md:py-20 bg-neutral-50">
       <div class="max-w-6xl mx-auto px-6 text-center">
-        <SectionHeading label="Work Types" title="対応工種・施工実績" class="mb-10" />
-        <div class="flex flex-wrap justify-center gap-3">
-          <TagBadge
-            v-for="work in workTypes"
-            :key="work"
-            variant="neutral"
-          >
-            {{ work }}
-          </TagBadge>
-        </div>
+        <SectionHeading title="対応工種・施工実績" class="mb-10" />
+        <TagRows :items="workTypes" variant="neutral" />
         <div class="mt-12">
           <AppButton to="/business/" size="lg" variant="secondary">
             事業内容を見る

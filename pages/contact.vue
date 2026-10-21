@@ -44,7 +44,6 @@ async function handleSubmit(event: Event) {
   <main>
     <!-- ===== 1. ページヒーロー ===== -->
     <PageHero
-      label="Contact"
       title="お問い合わせ"
       description="鉄筋工事・溶接工事のご依頼・ご相談はお気軽にご連絡ください。お電話またはフォームにてお受けしています。"
     />
@@ -203,7 +202,7 @@ async function handleSubmit(event: Event) {
             <!-- お電話 -->
             <div class="bg-primary-950 rounded-2xl p-8 text-white">
               <p class="text-accent-400 text-xs font-medium tracking-[0.2em] uppercase mb-4">
-                Phone
+                お電話
               </p>
               <a
                 :href="`tel:${company.telRaw}`"
@@ -221,16 +220,12 @@ async function handleSubmit(event: Event) {
             <!-- 所在地 -->
             <div class="border border-neutral-200 rounded-2xl p-8">
               <p class="text-primary-900 text-xs font-medium tracking-[0.2em] uppercase mb-4">
-                Address
+                所在地
               </p>
               <dl class="space-y-3 text-sm">
                 <div>
                   <dt class="text-neutral-500 text-xs mb-0.5">本社</dt>
                   <dd class="text-neutral-800 leading-relaxed">{{ company.addressFull }}</dd>
-                </div>
-                <div>
-                  <dt class="text-neutral-500 text-xs mb-0.5">営業所</dt>
-                  <dd class="text-neutral-800 leading-relaxed">{{ company.officeAddress }}</dd>
                 </div>
                 <div>
                   <dt class="text-neutral-500 text-xs mb-0.5">FAX</dt>

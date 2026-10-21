@@ -39,7 +39,7 @@ pages/          Nuxt の pages/ ディレクトリ
 | 1ファイル内に同パターンが2回以上出現する | `v-for` + データ配列に統一する |
 | ページ末尾の CTA ブロック | `<CtaSection />` を使う（直書き禁止） |
 | 内部ページのヒーローヘッダー | `<PageHero />` を使う（直書き禁止） |
-| セクション見出し（英語ラベル + h2） | `<SectionHeading />` を使う（直書き禁止） |
+| セクション見出し（h2） | `<SectionHeading />` を使う（直書き禁止） |
 | コンテンツ内の別ページ誘導リンク | `<SlideLink />` を使う（`NuxtLink` + `IconArrow` 直書き禁止） |
 
 ### 既存の共通コンポーネント
@@ -50,7 +50,7 @@ pages/          Nuxt の pages/ ディレクトリ
 | `SlideLink` | コンテンツ内の別ページ誘導テキストリンク（ホバーで右スライド） |
 | `IconArrow` | 右矢印アイコン |
 | `IconPhone` | 電話アイコン |
-| `SectionHeading` | セクション見出し（英語ラベル + h2） |
+| `SectionHeading` | セクション見出し（h2） |
 | `FeatureCard` | アイコン付き特長カード |
 | `BusinessCard` | 事業内容カード（画像・タイトル・説明・リンク） |
 | `PageHero` | 内部ページ共通ヒーロー（ダーク背景 + h1 + 説明文） |
@@ -245,7 +245,7 @@ h-industry/
       IconArrow.vue             右矢印アイコン
       IconPhone.vue             電話アイコン
     molecules/
-      SectionHeading.vue        セクション見出し（英語ラベル + h2）
+      SectionHeading.vue        セクション見出し（h2）
       FeatureCard.vue           特長カード（アイコン + タイトル + 説明）
       PageHero.vue              内部ページ共通ヒーロー
     organisms/

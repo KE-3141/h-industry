@@ -10,7 +10,6 @@ const { company } = useSiteContent()
 <template>
   <main>
     <PageHero
-      label="Privacy Policy"
       title="プライバシーポリシー"
       description=""
     />

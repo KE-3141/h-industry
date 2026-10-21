@@ -62,7 +62,18 @@ function handleKeydown(e: KeyboardEvent) {
   }
 }
 
-onMounted(() => window.addEventListener('keydown', handleKeydown))
+onMounted(() => {
+  window.addEventListener('keydown', handleKeydown)
+  // ハッシュで指定されたプロジェクトのライトボックスを開く
+  const hash = window.location.hash.slice(1)
+  if (hash) {
+    const target = projects.find((p: Project) => p.key === hash)
+    if (target) {
+      window.scrollTo(0, 0)
+      setTimeout(() => openLightbox(target), 50)
+    }
+  }
+})
 onUnmounted(() => window.removeEventListener('keydown', handleKeydown))
 
 watch(lightboxProject, val => {
@@ -76,7 +87,6 @@ watch(lightboxProject, val => {
   <main>
     <!-- ===== 1. ページヒーロー ===== -->
     <PageHero
-      label="Achievements"
       title="施工実績"
       description="創業50年超にわたり、マンション・インフラ・公共施設・耐震補強工事など関東全域で多様な現場を手がけてきました。"
     />
@@ -102,7 +112,7 @@ watch(lightboxProject, val => {
     <!-- ===== 3. 施工実績グリッド ===== -->
     <section class="py-16 md:py-20 bg-white">
       <div class="max-w-7xl mx-auto px-6">
-        <SectionHeading label="Projects" title="施工実績一覧" class="mb-10" />
+        <SectionHeading title="施工実績一覧" class="mb-10" />
 
         <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
           <li

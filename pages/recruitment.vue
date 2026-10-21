@@ -1,46 +1,58 @@
 <script setup lang="ts">
 useHead({ title: '求人情報 | 平山工業株式会社' })
 useSeoMeta({
-  description: '平山工業株式会社の求人情報。鉄筋工・溶接工を随時募集中。未経験者歓迎・資格取得支援・単身用寮完備。関東全域の建設現場で技術を磨きませんか。',
+  description: '平山工業株式会社の求人情報。鳶工・土工・型枠工・鉄筋工・現場管理を随時募集中。未経験者歓迎・資格取得支援・単身用寮完備。関東全域の建設現場で技術を磨きませんか。',
 })
 
 const { company, jobs, benefits, applicationSteps, recruitmentPoints } = useSiteContent()
-const rebarWorkUrl = usePublicUrl('/images/rebar_work.png')
+const recruitmentBgUrl = usePublicUrl('/images/recruitment_bg.jpg')
 </script>
 
 <template>
   <main>
     <!-- ===== 1. ページヒーロー ===== -->
     <PageHero
-      label="Recruitment"
       title="求人情報"
-      description="「良い製品は良い人がつくる」鉄筋工・溶接工を随時募集しています。未経験者歓迎。あなたの成長を全力でサポートします。"
+      description="「誠実な人が、確かな施工をする」鳶工・土工・型枠工・鉄筋工・現場管理を随時募集しています。未経験者歓迎。あなたの成長を全力でサポートします。"
     />
 
     <!-- ===== 2. 採用メッセージ ===== -->
-    <section class="py-20 md:py-28 bg-white">
-      <div class="max-w-6xl mx-auto px-6">
+    <section class="relative py-20 md:py-28 overflow-hidden">
+      <!-- 背景画像 -->
+      <div class="absolute inset-0">
+        <img
+          :src="recruitmentBgUrl"
+          alt=""
+          aria-hidden="true"
+          class="w-full h-full object-cover object-[center_20%] md:object-[center_25%]"
+          loading="lazy"
+        />
+      </div>
+      <!-- オーバーレイ -->
+      <div class="absolute inset-0 bg-primary-950/70" />
+      <div class="relative z-10 max-w-6xl mx-auto px-6">
         <div class="md:grid md:grid-cols-2 md:gap-16 md:items-center">
           <div class="mb-12 md:mb-0">
             <SectionHeading
-              label="Message"
-              title="一生モノの技術を、ここで身につけよう。"
-              title-class="text-primary-800"
+              title=""
+              title-class="text-white"
               align="left"
               class="mb-6"
-            />
+            >
+              <span class="inline-block">次の50年を、</span><span class="inline-block">ともにつくる人へ。</span>
+            </SectionHeading>
             <SlideLink
               to="/contact/"
-              class="inline-flex items-center font-semibold text-sm text-primary-600 hover:text-primary-800 transition-colors"
+              class="inline-flex items-center font-semibold text-sm text-white"
             >
               お気軽にお問い合わせください
             </SlideLink>
           </div>
           <div>
-            <p class="text-neutral-700 leading-relaxed">
-              平山工業は、経験・未経験を問わず採用しています。大切にしているのは「一緒に現場をつくれるか」という一点です。鉄筋工事の技術はゼロから身につけられます。先輩職人が丁寧に指導しますので、まずは「やってみたい」という気持ちがあれば十分です。
+            <p class="text-neutral-200 leading-relaxed">
+              平山工業は、経験・未経験を問わず採用しています。大切にしているのは「一緒に現場をつくれるか」という一点です。現場の技術はゼロから身につけられます。先輩作業員が丁寧に指導しますので、まずは「やってみたい」という気持ちがあれば十分です。
             </p>
-            <p class="text-neutral-700 leading-relaxed mt-4">
+            <p class="text-neutral-200 leading-relaxed mt-4">
               資格取得支援・単身用寮・社会保険完備など、長く安心して働ける環境も整えています。「話を聞いてみたい」という段階でもお気軽にご連絡ください。
             </p>
           </div>
@@ -50,7 +62,6 @@ const rebarWorkUrl = usePublicUrl('/images/rebar_work.png')
 
     <!-- ===== 3. 求める人物像 ===== -->
     <SplitListSection
-      label="Looking For"
       title="求める人物像"
       description="経験・未経験は問いません。まずは一緒に現場に立てる方を求めています。"
       :theme="'light'"
@@ -62,7 +73,6 @@ const rebarWorkUrl = usePublicUrl('/images/rebar_work.png')
     <section class="py-20 md:py-28 bg-primary-900">
       <div class="max-w-6xl mx-auto px-6">
         <SectionHeading
-          label="Open Positions"
           title="募集職種"
           title-class="text-white"
           class="mb-14"
@@ -71,12 +81,9 @@ const rebarWorkUrl = usePublicUrl('/images/rebar_work.png')
           <BusinessCard
             v-for="job in jobs"
             :key="job.key"
-            :label="job.titleEn"
             :title="job.title"
             :description="job.description"
             :items="job.requirements"
-            :image-src="rebarWorkUrl"
-            image-alt="鉄筋工事の施工現場"
           />
         </div>
       </div>
@@ -85,7 +92,7 @@ const rebarWorkUrl = usePublicUrl('/images/rebar_work.png')
     <!-- ===== 4. 福利厚生 ===== -->
     <section class="py-20 md:py-28 bg-neutral-50">
       <div class="max-w-6xl mx-auto px-6">
-        <SectionHeading label="Benefits" title="福利厚生・待遇" class="mb-14" />
+        <SectionHeading title="福利厚生・待遇" class="mb-14" />
         <div class="space-y-0 divide-y divide-neutral-200 border-y border-neutral-200">
           <div
             v-for="benefit in benefits"
@@ -101,7 +108,6 @@ const rebarWorkUrl = usePublicUrl('/images/rebar_work.png')
 
     <!-- ===== 5. 応募〜入社の流れ ===== -->
     <StepsSection
-      label="Process"
       title="応募から入社の流れ"
       :steps="applicationSteps"
     />
@@ -111,10 +117,7 @@ const rebarWorkUrl = usePublicUrl('/images/rebar_work.png')
       <div class="max-w-6xl mx-auto px-6">
         <div class="md:flex items-center justify-between gap-8">
           <div class="mb-8 md:mb-0">
-            <p class="text-accent-400 text-sm font-medium tracking-[0.2em] uppercase mb-2">
-              Apply Now
-            </p>
-            <h2 class="text-2xl md:text-3xl font-black mb-3">
+            <h2 class="text-2xl md:text-3xl font-black mb-3 text-balance">
               まずはお気軽にご連絡ください
             </h2>
             <p class="text-neutral-300 text-sm md:text-base leading-relaxed max-w-xl">

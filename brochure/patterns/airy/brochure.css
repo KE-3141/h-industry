@@ -1,0 +1,892 @@
+/*
+ * 平山工業 会社案内パンフレット（A4 中綴じ）— パターン B「エアリー」
+ * 白地の表紙に合わせて中面も軽くする：明朝は細め、罫線は細く、紺の塗りは淡い紺に、
+ * オレンジは細い線だけに使う（サイトのデザインからは少し離れる）。
+ * 色は device-cmyk() で指定し、--cmyk ビルドでそのまま CMYK として PDF に出力する。
+ * 対応する Web の色は assets/css/app.css の @theme。
+ */
+
+:root {
+  /* Primary — Navy（≒ primary-900 / 700 / 500 / 100 / 50） */
+  --navy-900: device-cmyk(1 0.85 0.45 0.55);
+  --navy-700: device-cmyk(1 0.8 0.3 0.2);
+  --navy-500: device-cmyk(0.9 0.62 0.1 0);
+  --navy-100: device-cmyk(0.18 0.08 0 0);
+  --navy-50: device-cmyk(0.06 0.02 0 0);
+  /* Accent — Steel Orange（≒ accent-500 / 50） */
+  --orange: device-cmyk(0 0.75 1 0);
+  --orange-50: device-cmyk(0 0.06 0.1 0);
+  /* Neutral — 文字は K 版のみ */
+  --ink: device-cmyk(0 0 0 1);
+  --ink-70: device-cmyk(0 0 0 0.75);
+  --ink-50: device-cmyk(0 0 0 0.5);
+  --line: device-cmyk(0 0 0 0.15);
+  --gray-50: device-cmyk(0 0 0 0.04);
+  --white: device-cmyk(0 0 0 0);
+  /* ロゴのマーク色（logo.svg の #4c8fcd） */
+  --logo-blue: device-cmyk(0.7 0.35 0 0);
+
+  --font-sans: 'BIZ UDPGothic', 'Hiragino Kaku Gothic ProN', sans-serif;
+  --font-serif: 'Shippori Mincho', 'Hiragino Mincho ProN', serif;
+
+  /* 版面 */
+  --bleed: 3mm;
+  --margin-x: 16mm;
+  --margin-top: 20mm;
+  --margin-bottom: 20mm;
+}
+
+@page {
+  size: A4;
+  margin: 0;
+  bleed: 3mm;
+  marks: crop cross;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-sans);
+  font-size: 9pt;
+  line-height: 1.75;
+  color: var(--ink);
+  font-feature-settings: 'palt';
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ─────────────────────────────────────────
+ * ページ枠
+ * ───────────────────────────────────────── */
+
+.page {
+  position: relative;
+  width: 210mm;
+  height: 297mm;
+  overflow: visible;
+  break-after: page;
+}
+
+.page:last-child {
+  break-after: auto;
+}
+
+.content {
+  position: relative;
+  padding: var(--margin-top) var(--margin-x) 0;
+}
+
+.content--below-photo {
+  padding-top: 8mm;
+}
+
+/* 塗り足しまで広げる写真・帯 */
+.bleed,
+.bleed-bottom {
+  position: absolute;
+  left: calc(var(--bleed) * -1);
+  right: calc(var(--bleed) * -1);
+}
+
+.bleed {
+  top: calc(var(--bleed) * -1);
+  bottom: calc(var(--bleed) * -1);
+}
+
+/* 流し込みの先頭に置く写真（上と左右を塗り足しまで） */
+.bleed-top {
+  margin: calc(var(--bleed) * -1) calc(var(--bleed) * -1) 0;
+}
+
+.bleed-bottom {
+  bottom: calc(var(--bleed) * -1);
+}
+
+figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nombre {
+  position: absolute;
+  bottom: 9mm;
+  font-family: var(--font-serif);
+  font-size: 7.5pt;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--ink-50);
+}
+
+.page--left .nombre {
+  left: var(--margin-x);
+}
+
+.page--right .nombre {
+  right: var(--margin-x);
+}
+
+/* ─────────────────────────────────────────
+ * 地紋（代表挨拶の方眼）と小口のセクション名
+ * ───────────────────────────────────────── */
+
+.grid-deco {
+  position: absolute;
+  top: calc(var(--bleed) * -1);
+  left: calc(var(--bleed) * -1);
+  right: calc(var(--bleed) * -1);
+  overflow: hidden;
+}
+
+.grid-deco__v,
+.grid-deco__h {
+  position: absolute;
+  background: var(--gray-50);
+}
+
+.grid-deco__v {
+  top: 0;
+  bottom: 0;
+  width: 0.3mm;
+}
+
+.grid-deco__h {
+  left: 0;
+  right: 0;
+  height: 0.3mm;
+}
+
+.side-label {
+  position: absolute;
+  top: var(--margin-top);
+  writing-mode: vertical-rl;
+  font-size: 7pt;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--navy-100);
+}
+
+/* 頭に短い線 */
+.side-label::before {
+  content: '';
+  display: inline-block;
+  width: 0.25mm;
+  height: 8mm;
+  margin-bottom: 3mm;
+  background: var(--orange);
+}
+
+.page--left .side-label {
+  left: 6mm;
+}
+
+.page--right .side-label {
+  right: 6mm;
+}
+
+/* ─────────────────────────────────────────
+ * 共通パーツ
+ * ───────────────────────────────────────── */
+
+.heading {
+  margin-bottom: 8mm;
+}
+
+.heading__label {
+  display: flex;
+  align-items: center;
+  gap: 3mm;
+  font-size: 7.5pt;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--navy-500);
+}
+
+.heading__label::before {
+  content: '';
+  width: 10mm;
+  height: 0.25mm;
+  background: var(--orange);
+}
+
+.heading__title {
+  margin-top: 2.5mm;
+  font-family: var(--font-serif);
+  font-size: 20pt;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  color: var(--navy-900);
+}
+
+.heading--invert .heading__title {
+  color: var(--white);
+}
+
+.lead {
+  margin-bottom: 7mm;
+  font-size: 10pt;
+  line-height: 1.9;
+  color: var(--ink-70);
+}
+
+.chips,
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5mm;
+}
+
+.chip {
+  padding: 0.6mm 2.5mm;
+  border: 0.25mm solid var(--line);
+  font-size: 8pt;
+  color: var(--ink-70);
+}
+
+.chip--primary {
+  border-color: var(--navy-500);
+  color: var(--navy-700);
+}
+
+.checklist li {
+  position: relative;
+  padding-left: 5mm;
+}
+
+.checklist li::before {
+  content: '';
+  position: absolute;
+  left: 0.5mm;
+  top: 1.6mm;
+  width: 2.4mm;
+  height: 1.3mm;
+  border-left: 0.35mm solid var(--navy-500);
+  border-bottom: 0.35mm solid var(--navy-500);
+  transform: rotate(-45deg);
+}
+
+.logo {
+  display: block;
+  height: auto;
+}
+
+.logo__text {
+  fill: var(--ink);
+}
+
+.logo__mark {
+  fill: none;
+  stroke: var(--logo-blue);
+  stroke-miterlimit: 10;
+  stroke-width: 4px;
+}
+
+/* ─────────────────────────────────────────
+ * P1 表紙
+ * ───────────────────────────────────────── */
+
+/*
+ * 白地に余白を大きくとり、写真は上と小口側だけ塗り足しまで広げる。
+ * キャッチコピーは左の余白に縦組みで小さく置き、言いすぎない表紙にする
+ */
+
+.cover__photo {
+  position: absolute;
+  top: calc(var(--bleed) * -1);
+  right: calc(var(--bleed) * -1);
+  left: 46mm;
+  height: calc(192mm + var(--bleed));
+}
+
+.cover__photo img {
+  object-position: 85% 50%;
+}
+
+.cover__copy {
+  position: absolute;
+  top: 28mm;
+  left: 14mm;
+  writing-mode: vertical-rl;
+  font-family: var(--font-serif);
+  font-size: 19pt;
+  font-weight: 500;
+  line-height: 1.9;
+  letter-spacing: 0.32em;
+  color: var(--navy-900);
+}
+
+.cover__body {
+  position: absolute;
+  left: 46mm;
+  right: var(--margin-x);
+  top: 206mm;
+}
+
+.cover__label {
+  font-size: 8pt;
+  letter-spacing: 0.4em;
+  color: var(--navy-500);
+}
+
+/* 頭に細い線 */
+.cover__label::before {
+  content: '';
+  display: inline-block;
+  width: 10mm;
+  height: 0.25mm;
+  margin-right: 3mm;
+  vertical-align: middle;
+  background: var(--orange);
+}
+
+.cover__business {
+  margin-top: 3mm;
+  font-size: 9.5pt;
+  letter-spacing: 0.2em;
+  color: var(--ink-70);
+}
+
+.cover__foot {
+  position: absolute;
+  left: 46mm;
+  right: var(--margin-x);
+  bottom: 20mm;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-top: 8mm;
+  border-top: 0.25mm solid var(--line);
+}
+
+.cover__foot .logo {
+  width: 58mm;
+}
+
+.cover__area {
+  font-size: 7.5pt;
+  letter-spacing: 0.12em;
+  color: var(--ink-50);
+}
+
+/* ─────────────────────────────────────────
+ * P2 代表挨拶
+ * ───────────────────────────────────────── */
+
+.page--greeting .content {
+  padding-top: 48mm;
+  padding-right: 28mm;
+}
+
+.page--greeting .heading {
+  margin-bottom: 10mm;
+}
+
+.page--greeting .heading__title {
+  font-size: 24pt;
+}
+
+.greeting__body p {
+  margin-bottom: 6mm;
+  font-size: 11pt;
+  line-height: 2.2;
+  text-align: justify;
+}
+
+.greeting__sign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4mm;
+  margin-top: 12mm;
+  text-align: center;
+}
+
+.greeting__face {
+  width: 26mm;
+  height: 26mm;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 15%;
+}
+
+.greeting__role {
+  font-size: 8pt;
+  letter-spacing: 0.15em;
+  color: var(--ink-50);
+}
+
+.greeting__signature {
+  display: block;
+  height: 14mm;
+  width: auto;
+  margin: 1mm auto 0;
+}
+
+.stats {
+  display: flex;
+  height: calc(60mm + var(--bleed));
+  padding: 14mm calc(var(--margin-x) + var(--bleed)) calc(14mm + var(--bleed));
+  background: var(--navy-50);
+  color: var(--navy-900);
+}
+
+.stats__item {
+  flex: 1;
+  text-align: center;
+}
+
+.stats__item + .stats__item {
+  border-left: 0.25mm solid var(--navy-100);
+}
+
+.stats__value {
+  font-family: var(--font-serif);
+  font-size: 30pt;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.stats__value span {
+  margin-left: 1mm;
+  font-size: 10pt;
+  color: var(--navy-500);
+}
+
+.stats__label {
+  margin-top: 2mm;
+  font-size: 8pt;
+  letter-spacing: 0.15em;
+  color: var(--ink-70);
+}
+
+/* ─────────────────────────────────────────
+ * P3 会社沿革（代表挨拶と見開きで揃えるため、見出しの高さを合わせる）
+ * ───────────────────────────────────────── */
+
+.page--history .content {
+  padding-top: 48mm;
+}
+
+.page--history .heading {
+  margin-bottom: 10mm;
+}
+
+.timeline {
+  position: relative;
+}
+
+/* 年の右にある縦線 */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 2mm;
+  bottom: 2mm;
+  left: 27mm;
+  width: 0.25mm;
+  background: var(--navy-100);
+}
+
+.timeline__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 22mm 1fr;
+  gap: 10mm;
+  padding: 8mm 0;
+}
+
+/* 縦線上の丸 */
+.timeline__item::before {
+  content: '';
+  position: absolute;
+  top: 10.3mm;
+  left: 25.9mm;
+  width: 2.4mm;
+  height: 2.4mm;
+  border-radius: 50%;
+  background: var(--white);
+  border: 0.35mm solid var(--orange);
+}
+
+.timeline__year {
+  font-family: var(--font-serif);
+  font-size: 15pt;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+  text-align: right;
+  color: var(--navy-900);
+}
+
+.timeline__title {
+  margin-bottom: 1mm;
+  font-family: var(--font-serif);
+  font-size: 11pt;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--navy-900);
+}
+
+.timeline__desc {
+  font-size: 8.5pt;
+  line-height: 1.8;
+  text-align: justify;
+  color: var(--ink-70);
+}
+
+/* ─────────────────────────────────────────
+ * P4 事業内容
+ * ───────────────────────────────────────── */
+
+.biz {
+  display: flex;
+  gap: 6mm;
+  padding: 7mm 0;
+  border-top: 0.25mm solid var(--line);
+}
+
+.biz__photo {
+  flex: none;
+  width: 76mm;
+  height: 76mm;
+}
+
+.biz__label {
+  font-size: 7pt;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--navy-500);
+}
+
+.biz__title {
+  margin: 1mm 0 2mm;
+  font-family: var(--font-serif);
+  font-size: 14pt;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--navy-900);
+}
+
+.biz__desc {
+  margin-bottom: 3mm;
+  text-align: justify;
+}
+
+.worktypes {
+  margin-top: 8mm;
+  padding: 6mm 7mm;
+  background: var(--navy-50);
+}
+
+.worktypes__title {
+  margin-bottom: 2mm;
+  font-size: 9pt;
+  font-weight: 700;
+  color: var(--navy-900);
+}
+
+.worktypes__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1mm 0;
+}
+
+.worktypes__list li {
+  font-size: 9pt;
+}
+
+.worktypes__list li:not(:last-child)::after {
+  content: '／';
+  margin: 0 1.5mm;
+  color: var(--ink-50);
+}
+
+/* ─────────────────────────────────────────
+ * P5 強み
+ * ───────────────────────────────────────── */
+
+.strength {
+  padding: 10mm 0;
+  border-top: 0.25mm solid var(--line);
+}
+
+.strength__head {
+  display: flex;
+  align-items: baseline;
+  gap: 4mm;
+  margin-bottom: 2.5mm;
+}
+
+.strength__num {
+  font-family: var(--font-serif);
+  font-size: 24pt;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--navy-500);
+}
+
+.strength__title {
+  font-family: var(--font-serif);
+  font-size: 15pt;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--navy-900);
+}
+
+.strength__desc {
+  margin-bottom: 4mm;
+  font-size: 9.5pt;
+  text-align: justify;
+}
+
+.strength .checklist {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5mm 6mm;
+  padding: 4.5mm 5mm;
+  background: var(--navy-50);
+  font-size: 8.5pt;
+}
+
+/* ─────────────────────────────────────────
+ * P6 施工実績ピックアップ / P7〜 施工実績一覧
+ * ───────────────────────────────────────── */
+
+.pickup {
+  padding: 5mm 0;
+  border-top: 0.25mm solid var(--line);
+}
+
+.pickup:last-child {
+  padding-bottom: 0;
+}
+
+/* メイン写真（左・大）+ サブ写真2枚（右に縦積み） */
+.pickup__photos {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 2mm;
+  height: 64mm;
+  margin-bottom: 4mm;
+}
+
+.pickup__photos figure {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.pickup__photos figure:first-child,
+.pickup__photos figure:nth-child(2):last-child {
+  grid-row: 1 / 3;
+}
+
+.pickup__num {
+  font-size: 7pt;
+  letter-spacing: 0.35em;
+  color: var(--navy-500);
+}
+
+.pickup__name {
+  margin: 0.5mm 0 1mm;
+  font-family: var(--font-serif);
+  font-size: 14pt;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--navy-900);
+}
+
+.pickup__comment {
+  margin-top: 2.5mm;
+  font-size: 9pt;
+  text-align: justify;
+}
+
+.works {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7mm 8mm;
+}
+
+.work__photo {
+  height: 58mm;
+  margin-bottom: 2.5mm;
+}
+
+/* 件数が少ないページは写真を大きく */
+.works--1 .work__photo,
+.works--2 .work__photo {
+  height: 100mm;
+}
+
+.works--1,
+.works--2 {
+  grid-template-columns: 1fr;
+}
+
+.works--3 .work__photo,
+.works--4 .work__photo {
+  height: 80mm;
+}
+
+.work__name {
+  font-family: var(--font-serif);
+  font-size: 10.5pt;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--navy-900);
+}
+
+.work__meta {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0 3mm;
+  margin: 1mm 0 1.5mm;
+  font-size: 8pt;
+  color: var(--ink-70);
+}
+
+.work__meta dt {
+  color: var(--ink-50);
+}
+
+.tags li {
+  padding: 0 2mm;
+  border: 0.25mm solid var(--navy-100);
+  font-size: 7pt;
+  color: var(--navy-700);
+}
+
+/* ─────────────────────────────────────────
+ * 裏表紙 会社概要
+ * ───────────────────────────────────────── */
+
+.profile {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 0.25mm solid var(--navy-500);
+}
+
+.profile th,
+.profile td {
+  padding: 3.6mm 3mm;
+  border-bottom: 0.25mm solid var(--line);
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.profile th {
+  width: 36mm;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--navy-900);
+}
+
+.profile .en {
+  font-size: 7.5pt;
+  color: var(--ink-50);
+}
+
+.clients {
+  margin-top: 10mm;
+}
+
+.clients__title {
+  margin-bottom: 2.5mm;
+  font-size: 9.5pt;
+  font-weight: 700;
+  color: var(--navy-900);
+}
+
+.clients__title span {
+  font-size: 7.5pt;
+  font-weight: 400;
+  color: var(--ink-50);
+}
+
+.clients__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1mm 4mm;
+  font-size: 8.5pt;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(56mm + var(--bleed));
+  padding: 0 calc(var(--margin-x) + var(--bleed)) var(--bleed);
+  background: var(--navy-50);
+  color: var(--ink);
+}
+
+.contact .logo {
+  width: 70mm;
+  margin-bottom: 4mm;
+}
+
+.contact__address {
+  font-size: 8.5pt;
+}
+
+.contact__tel {
+  margin-top: 1mm;
+  font-family: var(--font-serif);
+  font-size: 21pt;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.3;
+  color: var(--navy-900);
+}
+
+.contact__tel span {
+  margin-right: 2mm;
+  font-family: var(--font-sans);
+  font-size: 8pt;
+  letter-spacing: 0.2em;
+  color: var(--navy-500);
+}
+
+.contact__sub {
+  font-size: 7.5pt;
+  color: var(--ink-50);
+}
+
+.contact__qr {
+  width: 24mm;
+  height: 24mm;
+  padding: 2mm;
+  background: var(--white);
+}
+
+.contact__qr svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.qr-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border: 0.25mm dashed var(--ink-50);
+  font-size: 6.5pt;
+  line-height: 1.4;
+  text-align: center;
+  color: var(--ink-50);
+}

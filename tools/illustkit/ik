@@ -1,0 +1,9 @@
+#!/bin/bash
+# illustkit のコマンド。使い方: bash tools/illustkit/ik <コマンド> ...（ik -h で一覧）
+KIT="$(cd "$(dirname "$0")" && pwd)"
+PY="${ILLUSTKIT_PYTHON:-$HOME/.local/share/illustkit/env/bin/python}"
+if [ ! -x "$PY" ]; then
+  echo "illustkit の環境がありません。先に bash \"$KIT/setup.sh\" を実行してください。" >&2
+  exit 1
+fi
+PYTHONPATH="$KIT" exec "$PY" -P -m illustkit "$@"

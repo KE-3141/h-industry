@@ -1,0 +1,3942 @@
+{
+  "items": [
+    {
+      "slug": "concrete-mixer",
+      "genre": "machines",
+      "file": "illust/machines/concrete-mixer.svg",
+      "ja": [
+        "ミキサー",
+        "コンクリート",
+        "打設",
+        "生コン"
+      ],
+      "en": [
+        "concrete mixer"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p35",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "crane-crate",
+      "genre": "machines",
+      "file": "illust/machines/crane-crate.svg",
+      "ja": [
+        "吊り荷",
+        "揚重",
+        "コンテナ",
+        "資材搬入"
+      ],
+      "en": [
+        "crane",
+        "crate",
+        "lifting",
+        "material delivery"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p23",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "crane-demolition",
+      "genre": "machines",
+      "file": "illust/machines/crane-demolition.svg",
+      "ja": [
+        "クレーン",
+        "鉄球",
+        "解体",
+        "ブロック"
+      ],
+      "en": [
+        "crane",
+        "wrecking ball",
+        "demolition"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p90",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "crane-gear",
+      "genre": "machines",
+      "file": "illust/machines/crane-gear.svg",
+      "ja": [
+        "クレーン",
+        "歯車",
+        "設備",
+        "メンテナンス",
+        "技術"
+      ],
+      "en": [
+        "crane",
+        "gear",
+        "engineering",
+        "maintenance"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p100",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "crane-hook",
+      "genre": "machines",
+      "file": "illust/machines/crane-hook.svg",
+      "ja": [
+        "フック",
+        "クレーン",
+        "揚重",
+        "吊り"
+      ],
+      "en": [
+        "crane hook"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p50",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "crane-hook-bricks",
+      "genre": "machines",
+      "file": "illust/machines/crane-hook-bricks.svg",
+      "ja": [
+        "クレーン",
+        "フック",
+        "吊り上げ",
+        "揚重",
+        "資材"
+      ],
+      "en": [
+        "crane hook",
+        "lifting",
+        "bricks"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p02",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "crane-jib-ball",
+      "genre": "machines",
+      "file": "illust/machines/crane-jib-ball.svg",
+      "ja": [
+        "クレーン",
+        "ジブ",
+        "鉄球",
+        "揚重"
+      ],
+      "en": [
+        "crane jib",
+        "wrecking ball"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p75",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "crane-jib-wrecking",
+      "genre": "machines",
+      "file": "illust/machines/crane-jib-wrecking.svg",
+      "ja": [
+        "クレーン",
+        "ジブ",
+        "鉄球",
+        "解体"
+      ],
+      "en": [
+        "crane jib",
+        "wrecking ball"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p93",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "crane-pipe",
+      "genre": "machines",
+      "file": "illust/machines/crane-pipe.svg",
+      "ja": [
+        "吊り上げ",
+        "配管",
+        "パイプ",
+        "揚重",
+        "クレーン"
+      ],
+      "en": [
+        "crane",
+        "pipe",
+        "lifting"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p27",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "crawler-crane",
+      "genre": "machines",
+      "file": "illust/machines/crawler-crane.svg",
+      "ja": [
+        "クローラークレーン",
+        "重機",
+        "揚重",
+        "施工"
+      ],
+      "en": [
+        "crawler crane",
+        "heavy machinery"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p31",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "crawler-crane-ball",
+      "genre": "machines",
+      "file": "illust/machines/crawler-crane-ball.svg",
+      "ja": [
+        "クローラークレーン",
+        "鉄球",
+        "解体",
+        "重機"
+      ],
+      "en": [
+        "crawler crane",
+        "wrecking ball",
+        "heavy machinery"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p83",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "crawler-wrecking-crane",
+      "genre": "machines",
+      "file": "illust/machines/crawler-wrecking-crane.svg",
+      "ja": [
+        "解体",
+        "鉄球",
+        "クローラークレーン",
+        "重機"
+      ],
+      "en": [
+        "crawler crane",
+        "wrecking ball"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p72",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "jackhammer",
+      "genre": "machines",
+      "file": "illust/machines/jackhammer.svg",
+      "ja": [
+        "削岩機",
+        "ブレーカー",
+        "はつり",
+        "解体"
+      ],
+      "en": [
+        "jackhammer",
+        "breaker",
+        "demolition"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p12",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "jackhammer-ground",
+      "genre": "machines",
+      "file": "illust/machines/jackhammer-ground.svg",
+      "ja": [
+        "削岩機",
+        "ブレーカー",
+        "はつり",
+        "コンクリート"
+      ],
+      "en": [
+        "jackhammer",
+        "breaker",
+        "concrete"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p81",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "lifting-beam",
+      "genre": "machines",
+      "file": "illust/machines/lifting-beam.svg",
+      "ja": [
+        "吊り上げ",
+        "揚重",
+        "鉄骨",
+        "梁",
+        "クレーン"
+      ],
+      "en": [
+        "lifting beam",
+        "hoist",
+        "steel beam"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p07",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "pulley-hook",
+      "genre": "machines",
+      "file": "illust/machines/pulley-hook.svg",
+      "ja": [
+        "滑車",
+        "フック",
+        "揚重"
+      ],
+      "en": [
+        "pulley",
+        "hook"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p32",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "scissor-lift",
+      "genre": "machines",
+      "file": "illust/machines/scissor-lift.svg",
+      "ja": [
+        "高所作業車",
+        "リフト",
+        "シザーリフト",
+        "高所作業"
+      ],
+      "en": [
+        "scissor lift",
+        "aerial work platform"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p94",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "spot-welder",
+      "genre": "machines",
+      "file": "illust/machines/spot-welder.svg",
+      "ja": [
+        "スポット溶接",
+        "溶接機",
+        "接合"
+      ],
+      "en": [
+        "spot welding"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p60",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "tower-crane",
+      "genre": "machines",
+      "file": "illust/machines/tower-crane.svg",
+      "ja": [
+        "タワークレーン",
+        "クレーン",
+        "揚重",
+        "施工",
+        "高層"
+      ],
+      "en": [
+        "tower crane",
+        "crane",
+        "lifting"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p87",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "tower-crane-city",
+      "genre": "machines",
+      "file": "illust/machines/tower-crane-city.svg",
+      "ja": [
+        "タワークレーン",
+        "ビル建設",
+        "都市",
+        "施工"
+      ],
+      "en": [
+        "tower crane",
+        "city",
+        "building construction"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p21",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "tower-crane-demolition",
+      "genre": "machines",
+      "file": "illust/machines/tower-crane-demolition.svg",
+      "ja": [
+        "タワークレーン",
+        "解体",
+        "ビル"
+      ],
+      "en": [
+        "tower crane",
+        "demolition"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p79",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "tower-crane-lattice",
+      "genre": "machines",
+      "file": "illust/machines/tower-crane-lattice.svg",
+      "ja": [
+        "タワークレーン",
+        "クレーン",
+        "揚重",
+        "施工"
+      ],
+      "en": [
+        "tower crane"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p42",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "tower-crane-site",
+      "genre": "machines",
+      "file": "illust/machines/tower-crane-site.svg",
+      "ja": [
+        "タワークレーン",
+        "建設現場",
+        "ビル建設",
+        "施工",
+        "揚重"
+      ],
+      "en": [
+        "tower crane",
+        "construction site",
+        "building"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p01",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "welding-machine",
+      "genre": "machines",
+      "file": "illust/machines/welding-machine.svg",
+      "ja": [
+        "溶接機",
+        "溶接",
+        "設備",
+        "機械"
+      ],
+      "en": [
+        "welding machine"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p29",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "winch",
+      "genre": "machines",
+      "file": "illust/machines/winch.svg",
+      "ja": [
+        "ウインチ",
+        "巻上げ",
+        "揚重"
+      ],
+      "en": [
+        "winch"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p30",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "wrecking-ball",
+      "genre": "machines",
+      "file": "illust/machines/wrecking-ball.svg",
+      "ja": [
+        "鉄球",
+        "解体"
+      ],
+      "en": [
+        "wrecking ball",
+        "demolition"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p78",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "wrecking-crane-wheeled",
+      "genre": "machines",
+      "file": "illust/machines/wrecking-crane-wheeled.svg",
+      "ja": [
+        "解体",
+        "鉄球",
+        "クレーン車",
+        "重機"
+      ],
+      "en": [
+        "wrecking crane",
+        "wrecking ball",
+        "mobile crane"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p70",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "arch",
+      "genre": "structures",
+      "file": "illust/structures/arch.svg",
+      "ja": [
+        "アーチ",
+        "アーチ橋",
+        "構造"
+      ],
+      "en": [
+        "arch"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p51",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "broken-wall",
+      "genre": "structures",
+      "file": "illust/structures/broken-wall.svg",
+      "ja": [
+        "解体",
+        "壁",
+        "ブロック",
+        "がれき"
+      ],
+      "en": [
+        "broken wall",
+        "demolition",
+        "debris"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p71",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "building-construction",
+      "genre": "structures",
+      "file": "illust/structures/building-construction.svg",
+      "ja": [
+        "建設中",
+        "ビル",
+        "足場",
+        "施工",
+        "新築"
+      ],
+      "en": [
+        "building under construction",
+        "new building"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p15",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "building-dust",
+      "genre": "structures",
+      "file": "illust/structures/building-dust.svg",
+      "ja": [
+        "ビル",
+        "解体",
+        "粉じん",
+        "建物"
+      ],
+      "en": [
+        "building",
+        "demolition",
+        "dust"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p86",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "building-explosion",
+      "genre": "structures",
+      "file": "illust/structures/building-explosion.svg",
+      "ja": [
+        "解体",
+        "爆破",
+        "ビル"
+      ],
+      "en": [
+        "building demolition",
+        "explosion"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p69",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "building-frame",
+      "genre": "structures",
+      "file": "illust/structures/building-frame.svg",
+      "ja": [
+        "躯体",
+        "ビル",
+        "建設中",
+        "鉄筋",
+        "骨組み",
+        "施工"
+      ],
+      "en": [
+        "building frame",
+        "structure",
+        "under construction",
+        "rebar"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p03",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "building-rejected",
+      "genre": "structures",
+      "file": "illust/structures/building-rejected.svg",
+      "ja": [
+        "ビル",
+        "却下",
+        "中止",
+        "建物"
+      ],
+      "en": [
+        "building",
+        "rejected",
+        "cancelled"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p99",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "building-renovation",
+      "genre": "structures",
+      "file": "illust/structures/building-renovation.svg",
+      "ja": [
+        "改修",
+        "足場",
+        "ビル",
+        "建物",
+        "施工"
+      ],
+      "en": [
+        "renovation",
+        "scaffolding",
+        "building"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p26",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "building-wrecking-ball",
+      "genre": "structures",
+      "file": "illust/structures/building-wrecking-ball.svg",
+      "ja": [
+        "ビル",
+        "鉄球",
+        "解体工事"
+      ],
+      "en": [
+        "building",
+        "wrecking ball",
+        "demolition"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p95",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "buildings",
+      "genre": "structures",
+      "file": "illust/structures/buildings.svg",
+      "ja": [
+        "ビル",
+        "建物",
+        "マンション",
+        "住宅",
+        "施工実績"
+      ],
+      "en": [
+        "buildings",
+        "apartment",
+        "house"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p13",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "buoy",
+      "genre": "structures",
+      "file": "illust/structures/buoy.svg",
+      "ja": [
+        "ブイ",
+        "灯標",
+        "港湾"
+      ],
+      "en": [
+        "buoy"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p33",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "cable-stayed-bridge",
+      "genre": "structures",
+      "file": "illust/structures/cable-stayed-bridge.svg",
+      "ja": [
+        "斜張橋",
+        "橋",
+        "橋梁",
+        "土木",
+        "高架橋"
+      ],
+      "en": [
+        "cable stayed bridge",
+        "bridge"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p28",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "cable-stayed-bridge-2",
+      "genre": "structures",
+      "file": "illust/structures/cable-stayed-bridge-2.svg",
+      "ja": [
+        "斜張橋",
+        "橋",
+        "橋梁"
+      ],
+      "en": [
+        "cable stayed bridge"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p43",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "canyon",
+      "genre": "structures",
+      "file": "illust/structures/canyon.svg",
+      "ja": [
+        "渓谷",
+        "谷",
+        "地形",
+        "ダム"
+      ],
+      "en": [
+        "canyon",
+        "valley"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p12",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "city-buildings",
+      "genre": "structures",
+      "file": "illust/structures/city-buildings.svg",
+      "ja": [
+        "街並み",
+        "ビル",
+        "都市",
+        "建物"
+      ],
+      "en": [
+        "city",
+        "buildings",
+        "skyline"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p74",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "collapsing-building",
+      "genre": "structures",
+      "file": "illust/structures/collapsing-building.svg",
+      "ja": [
+        "倒壊",
+        "解体",
+        "ビル"
+      ],
+      "en": [
+        "collapsing building",
+        "demolition"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p97",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "concrete-pillar",
+      "genre": "structures",
+      "file": "illust/structures/concrete-pillar.svg",
+      "ja": [
+        "柱",
+        "橋脚",
+        "コンクリート",
+        "躯体"
+      ],
+      "en": [
+        "pillar",
+        "pier",
+        "column"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p09",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "cracked-road",
+      "genre": "structures",
+      "file": "illust/structures/cracked-road.svg",
+      "ja": [
+        "道路",
+        "ひび割れ",
+        "補修",
+        "舗装"
+      ],
+      "en": [
+        "cracked road",
+        "road repair"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p23",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "demolished-building",
+      "genre": "structures",
+      "file": "illust/structures/demolished-building.svg",
+      "ja": [
+        "解体",
+        "骨組み",
+        "ビル",
+        "がれき"
+      ],
+      "en": [
+        "demolished building",
+        "frame"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p96",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "demolition-debris",
+      "genre": "structures",
+      "file": "illust/structures/demolition-debris.svg",
+      "ja": [
+        "解体",
+        "がれき",
+        "鉄球",
+        "解体工事"
+      ],
+      "en": [
+        "demolition",
+        "debris",
+        "wrecking ball"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p77",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "girder-bridge",
+      "genre": "structures",
+      "file": "illust/structures/girder-bridge.svg",
+      "ja": [
+        "橋",
+        "桁橋",
+        "高架橋",
+        "橋梁",
+        "土木"
+      ],
+      "en": [
+        "girder bridge",
+        "bridge",
+        "viaduct"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p58",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "house",
+      "genre": "structures",
+      "file": "illust/structures/house.svg",
+      "ja": [
+        "住宅",
+        "家",
+        "戸建"
+      ],
+      "en": [
+        "house"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 427414813,
+      "part": "p14",
+      "title": "Inspection and Quality Control line art icon set",
+      "author": "Shuvo7",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/inspection-quality-control-line-art-icon-set_427414813.htm"
+    },
+    {
+      "slug": "lighthouse",
+      "genre": "structures",
+      "file": "illust/structures/lighthouse.svg",
+      "ja": [
+        "灯台",
+        "港湾"
+      ],
+      "en": [
+        "lighthouse"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p20",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "river",
+      "genre": "structures",
+      "file": "illust/structures/river.svg",
+      "ja": [
+        "河川",
+        "川",
+        "水路",
+        "土木"
+      ],
+      "en": [
+        "river"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p16",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "road",
+      "genre": "structures",
+      "file": "illust/structures/road.svg",
+      "ja": [
+        "道路",
+        "高速道路",
+        "舗装",
+        "土木"
+      ],
+      "en": [
+        "road",
+        "highway"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p25",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "skyscrapers-dust",
+      "genre": "structures",
+      "file": "illust/structures/skyscrapers-dust.svg",
+      "ja": [
+        "ビル",
+        "高層ビル",
+        "解体",
+        "粉じん"
+      ],
+      "en": [
+        "skyscrapers",
+        "dust",
+        "demolition"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p82",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "stairs",
+      "genre": "structures",
+      "file": "illust/structures/stairs.svg",
+      "ja": [
+        "階段",
+        "手すり",
+        "構造物",
+        "施工"
+      ],
+      "en": [
+        "stairs",
+        "handrail"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p14",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "street-light",
+      "genre": "structures",
+      "file": "illust/structures/street-light.svg",
+      "ja": [
+        "街灯",
+        "道路",
+        "照明"
+      ],
+      "en": [
+        "street light"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p15",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "suspension-bridge",
+      "genre": "structures",
+      "file": "illust/structures/suspension-bridge.svg",
+      "ja": [
+        "吊り橋",
+        "橋",
+        "橋梁",
+        "土木",
+        "インフラ"
+      ],
+      "en": [
+        "suspension bridge",
+        "bridge"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p53",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "truss",
+      "genre": "structures",
+      "file": "illust/structures/truss.svg",
+      "ja": [
+        "トラス",
+        "鉄骨",
+        "橋",
+        "構造"
+      ],
+      "en": [
+        "truss"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p47",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "tunnel",
+      "genre": "structures",
+      "file": "illust/structures/tunnel.svg",
+      "ja": [
+        "トンネル",
+        "土木",
+        "地下"
+      ],
+      "en": [
+        "tunnel"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p34",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "wall-demolition",
+      "genre": "structures",
+      "file": "illust/structures/wall-demolition.svg",
+      "ja": [
+        "解体",
+        "鉄球",
+        "壁",
+        "解体工事"
+      ],
+      "en": [
+        "wall demolition",
+        "wrecking ball"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p67",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "angle-grinder",
+      "genre": "materials",
+      "file": "illust/materials/angle-grinder.svg",
+      "ja": [
+        "グラインダー",
+        "研削",
+        "切断",
+        "工具"
+      ],
+      "en": [
+        "angle grinder",
+        "grinding"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p78",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "arc-welding",
+      "genre": "materials",
+      "file": "illust/materials/arc-welding.svg",
+      "ja": [
+        "アーク溶接",
+        "溶接",
+        "火花",
+        "エンクローズ溶接",
+        "接合"
+      ],
+      "en": [
+        "arc welding",
+        "welding"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p76",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "bolt",
+      "genre": "materials",
+      "file": "illust/materials/bolt.svg",
+      "ja": [
+        "ボルト",
+        "ねじ",
+        "締結"
+      ],
+      "en": [
+        "bolt",
+        "screw"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p19",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "bolt-nut",
+      "genre": "materials",
+      "file": "illust/materials/bolt-nut.svg",
+      "ja": [
+        "ボルト",
+        "ナット",
+        "締結",
+        "接合"
+      ],
+      "en": [
+        "bolt",
+        "nut"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p54",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "boxes",
+      "genre": "materials",
+      "file": "illust/materials/boxes.svg",
+      "ja": [
+        "資材",
+        "箱",
+        "荷物",
+        "搬入",
+        "保管"
+      ],
+      "en": [
+        "boxes",
+        "materials",
+        "storage"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p32",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "bricklaying",
+      "genre": "materials",
+      "file": "illust/materials/bricklaying.svg",
+      "ja": [
+        "レンガ",
+        "ブロック積み",
+        "コテ",
+        "左官",
+        "施工"
+      ],
+      "en": [
+        "bricklaying",
+        "trowel",
+        "masonry"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p17",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "bricks",
+      "genre": "materials",
+      "file": "illust/materials/bricks.svg",
+      "ja": [
+        "レンガ",
+        "ブロック",
+        "資材",
+        "壁"
+      ],
+      "en": [
+        "bricks",
+        "blocks",
+        "materials"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p25",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "bucket",
+      "genre": "materials",
+      "file": "illust/materials/bucket.svg",
+      "ja": [
+        "バケツ",
+        "資材",
+        "道具"
+      ],
+      "en": [
+        "bucket",
+        "tool"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p30",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "c-clamp",
+      "genre": "materials",
+      "file": "illust/materials/c-clamp.svg",
+      "ja": [
+        "クランプ",
+        "固定",
+        "しゃこ万",
+        "溶接"
+      ],
+      "en": [
+        "c clamp",
+        "clamp"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p63",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "chain",
+      "genre": "materials",
+      "file": "illust/materials/chain.svg",
+      "ja": [
+        "チェーン",
+        "鎖",
+        "接合",
+        "つなぐ"
+      ],
+      "en": [
+        "chain",
+        "link"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p14",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "chipping-hammer",
+      "genre": "materials",
+      "file": "illust/materials/chipping-hammer.svg",
+      "ja": [
+        "チッピングハンマー",
+        "ハンマー",
+        "溶接",
+        "スラグ"
+      ],
+      "en": [
+        "chipping hammer"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p28",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "corner-welding",
+      "genre": "materials",
+      "file": "illust/materials/corner-welding.svg",
+      "ja": [
+        "すみ肉溶接",
+        "コーナー溶接",
+        "溶接",
+        "接合",
+        "鉄骨"
+      ],
+      "en": [
+        "corner welding",
+        "fillet weld"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p77",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "cutting-torch",
+      "genre": "materials",
+      "file": "illust/materials/cutting-torch.svg",
+      "ja": [
+        "切断トーチ",
+        "ガス切断",
+        "溶断",
+        "トーチ"
+      ],
+      "en": [
+        "cutting torch"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p61",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "electrode-cable",
+      "genre": "materials",
+      "file": "illust/materials/electrode-cable.svg",
+      "ja": [
+        "溶接ケーブル",
+        "ホルダ",
+        "溶接"
+      ],
+      "en": [
+        "welding cable",
+        "electrode holder"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p74",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "electrode-holder",
+      "genre": "materials",
+      "file": "illust/materials/electrode-holder.svg",
+      "ja": [
+        "溶接棒",
+        "ホルダ",
+        "溶接",
+        "電極"
+      ],
+      "en": [
+        "electrode holder"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p17",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "electrode-holder-clamp",
+      "genre": "materials",
+      "file": "illust/materials/electrode-holder-clamp.svg",
+      "ja": [
+        "溶接ホルダ",
+        "溶接",
+        "クランプ"
+      ],
+      "en": [
+        "electrode holder"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p45",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "electrode-holder-jaw",
+      "genre": "materials",
+      "file": "illust/materials/electrode-holder-jaw.svg",
+      "ja": [
+        "溶接ホルダ",
+        "溶接棒",
+        "溶接"
+      ],
+      "en": [
+        "electrode holder"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p64",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "electrodes",
+      "genre": "materials",
+      "file": "illust/materials/electrodes.svg",
+      "ja": [
+        "溶接棒",
+        "電極",
+        "溶接材料"
+      ],
+      "en": [
+        "electrodes",
+        "welding rods"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p18",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "gas-cylinders",
+      "genre": "materials",
+      "file": "illust/materials/gas-cylinders.svg",
+      "ja": [
+        "ガスボンベ",
+        "溶接",
+        "ボンベ",
+        "設備"
+      ],
+      "en": [
+        "gas cylinders"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p15",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "gas-regulator",
+      "genre": "materials",
+      "file": "illust/materials/gas-regulator.svg",
+      "ja": [
+        "レギュレーター",
+        "調整器",
+        "ガス",
+        "溶接"
+      ],
+      "en": [
+        "gas regulator"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p62",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "gas-torch",
+      "genre": "materials",
+      "file": "illust/materials/gas-torch.svg",
+      "ja": [
+        "ガス溶接",
+        "トーチ",
+        "炎",
+        "溶断",
+        "圧接"
+      ],
+      "en": [
+        "gas welding",
+        "torch",
+        "flame"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p16",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "gas-torch-hose",
+      "genre": "materials",
+      "file": "illust/materials/gas-torch-hose.svg",
+      "ja": [
+        "ガストーチ",
+        "溶接",
+        "バーナー",
+        "圧接"
+      ],
+      "en": [
+        "gas torch",
+        "welding torch"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p24",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "ground-clamp",
+      "genre": "materials",
+      "file": "illust/materials/ground-clamp.svg",
+      "ja": [
+        "アースクランプ",
+        "溶接",
+        "クランプ"
+      ],
+      "en": [
+        "ground clamp"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p27",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "hammer",
+      "genre": "materials",
+      "file": "illust/materials/hammer.svg",
+      "ja": [
+        "ハンマー",
+        "金槌",
+        "工具"
+      ],
+      "en": [
+        "hammer"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p57",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "ladder",
+      "genre": "materials",
+      "file": "illust/materials/ladder.svg",
+      "ja": [
+        "はしご",
+        "梯子",
+        "昇降"
+      ],
+      "en": [
+        "ladder"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p13",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "manometer",
+      "genre": "materials",
+      "file": "illust/materials/manometer.svg",
+      "ja": [
+        "圧力計",
+        "マノメーター",
+        "計測",
+        "点検"
+      ],
+      "en": [
+        "manometer",
+        "pressure gauge"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p44",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "paint-bucket",
+      "genre": "materials",
+      "file": "illust/materials/paint-bucket.svg",
+      "ja": [
+        "塗料",
+        "ペンキ",
+        "バケツ",
+        "仕上げ"
+      ],
+      "en": [
+        "paint bucket",
+        "finishing"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p16",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "paint-roller",
+      "genre": "materials",
+      "file": "illust/materials/paint-roller.svg",
+      "ja": [
+        "ローラー",
+        "塗装",
+        "仕上げ",
+        "リフォーム"
+      ],
+      "en": [
+        "paint roller",
+        "painting"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p22",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "pickaxe",
+      "genre": "materials",
+      "file": "illust/materials/pickaxe.svg",
+      "ja": [
+        "つるはし",
+        "掘削",
+        "土木"
+      ],
+      "en": [
+        "pickaxe"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p48",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "pliers",
+      "genre": "materials",
+      "file": "illust/materials/pliers.svg",
+      "ja": [
+        "ペンチ",
+        "工具",
+        "結束"
+      ],
+      "en": [
+        "pliers"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p11",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "scaffold-tower",
+      "genre": "materials",
+      "file": "illust/materials/scaffold-tower.svg",
+      "ja": [
+        "足場",
+        "仮設",
+        "枠組足場",
+        "支保工"
+      ],
+      "en": [
+        "scaffold",
+        "scaffolding"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p22",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "scaffolding",
+      "genre": "materials",
+      "file": "illust/materials/scaffolding.svg",
+      "ja": [
+        "足場",
+        "仮設",
+        "建設中",
+        "住宅",
+        "施工"
+      ],
+      "en": [
+        "scaffolding",
+        "temporary works"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p05",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "shovel",
+      "genre": "materials",
+      "file": "illust/materials/shovel.svg",
+      "ja": [
+        "スコップ",
+        "シャベル",
+        "土木",
+        "掘削",
+        "道具"
+      ],
+      "en": [
+        "shovel",
+        "digging",
+        "tool"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p10",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "sledgehammer",
+      "genre": "materials",
+      "file": "illust/materials/sledgehammer.svg",
+      "ja": [
+        "ハンマー",
+        "大ハンマー",
+        "解体",
+        "道具"
+      ],
+      "en": [
+        "sledgehammer",
+        "hammer",
+        "tool"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p85",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "spade",
+      "genre": "materials",
+      "file": "illust/materials/spade.svg",
+      "ja": [
+        "スコップ",
+        "シャベル",
+        "掘削",
+        "土木"
+      ],
+      "en": [
+        "spade",
+        "shovel"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p36",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "spirit-level",
+      "genre": "materials",
+      "file": "illust/materials/spirit-level.svg",
+      "ja": [
+        "水平器",
+        "水準器",
+        "計測",
+        "精度",
+        "品質"
+      ],
+      "en": [
+        "spirit level",
+        "level"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p46",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "steel-beam",
+      "genre": "materials",
+      "file": "illust/materials/steel-beam.svg",
+      "ja": [
+        "鉄骨",
+        "H鋼",
+        "梁",
+        "鋼材"
+      ],
+      "en": [
+        "steel beam",
+        "h beam"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p10",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "steel-girder",
+      "genre": "materials",
+      "file": "illust/materials/steel-girder.svg",
+      "ja": [
+        "鉄骨",
+        "H鋼",
+        "桁",
+        "鋼材"
+      ],
+      "en": [
+        "steel girder",
+        "i beam"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p44",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "steel-rolls",
+      "genre": "materials",
+      "file": "illust/materials/steel-rolls.svg",
+      "ja": [
+        "鋼材",
+        "コイル",
+        "資材"
+      ],
+      "en": [
+        "steel coils"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p45",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "tape-measure",
+      "genre": "materials",
+      "file": "illust/materials/tape-measure.svg",
+      "ja": [
+        "メジャー",
+        "巻尺",
+        "計測",
+        "寸法"
+      ],
+      "en": [
+        "tape measure"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p17",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "tig-welding",
+      "genre": "materials",
+      "file": "illust/materials/tig-welding.svg",
+      "ja": [
+        "溶接",
+        "TIG溶接",
+        "手元",
+        "火花",
+        "技術"
+      ],
+      "en": [
+        "tig welding",
+        "welding"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p59",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "toolbox",
+      "genre": "materials",
+      "file": "illust/materials/toolbox.svg",
+      "ja": [
+        "工具箱",
+        "道具箱",
+        "工具"
+      ],
+      "en": [
+        "toolbox"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p49",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "tools",
+      "genre": "materials",
+      "file": "illust/materials/tools.svg",
+      "ja": [
+        "工具",
+        "スパナ",
+        "ドライバー",
+        "整備",
+        "メンテナンス"
+      ],
+      "en": [
+        "tools",
+        "wrench",
+        "screwdriver",
+        "maintenance"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p11",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "trowel",
+      "genre": "materials",
+      "file": "illust/materials/trowel.svg",
+      "ja": [
+        "コテ",
+        "左官",
+        "モルタル",
+        "コンクリート",
+        "仕上げ"
+      ],
+      "en": [
+        "trowel",
+        "plastering",
+        "mortar",
+        "concrete"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p29",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "welding-torch-spark",
+      "genre": "materials",
+      "file": "illust/materials/welding-torch-spark.svg",
+      "ja": [
+        "溶接トーチ",
+        "溶接",
+        "火花",
+        "アーク溶接",
+        "フレア溶接"
+      ],
+      "en": [
+        "welding torch",
+        "arc welding"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p14",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "welding-wire",
+      "genre": "materials",
+      "file": "illust/materials/welding-wire.svg",
+      "ja": [
+        "溶接ワイヤ",
+        "ワイヤ",
+        "溶接材料"
+      ],
+      "en": [
+        "welding wire"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p75",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "wheelbarrow",
+      "genre": "materials",
+      "file": "illust/materials/wheelbarrow.svg",
+      "ja": [
+        "一輪車",
+        "ネコ車",
+        "運搬",
+        "土木"
+      ],
+      "en": [
+        "wheelbarrow"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p21",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "wire-brush",
+      "genre": "materials",
+      "file": "illust/materials/wire-brush.svg",
+      "ja": [
+        "ワイヤーブラシ",
+        "ブラシ",
+        "清掃",
+        "下地処理"
+      ],
+      "en": [
+        "wire brush"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p32",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "wrench",
+      "genre": "materials",
+      "file": "illust/materials/wrench.svg",
+      "ja": [
+        "スパナ",
+        "レンチ",
+        "工具"
+      ],
+      "en": [
+        "wrench"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p18",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "barricade",
+      "genre": "safety",
+      "file": "illust/safety/barricade.svg",
+      "ja": [
+        "バリケード",
+        "通行止め",
+        "安全"
+      ],
+      "en": [
+        "barricade"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p41",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "barricade-double",
+      "genre": "safety",
+      "file": "illust/safety/barricade-double.svg",
+      "ja": [
+        "バリケード",
+        "通行止め",
+        "工事中",
+        "安全"
+      ],
+      "en": [
+        "barricade",
+        "road closed",
+        "under construction"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p101",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "barricade-light",
+      "genre": "safety",
+      "file": "illust/safety/barricade-light.svg",
+      "ja": [
+        "バリケード",
+        "回転灯",
+        "工事中",
+        "安全管理"
+      ],
+      "en": [
+        "barricade",
+        "warning light"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p20",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "barrier-lamps",
+      "genre": "safety",
+      "file": "illust/safety/barrier-lamps.svg",
+      "ja": [
+        "バリケード",
+        "警告灯",
+        "工事中",
+        "安全"
+      ],
+      "en": [
+        "barrier",
+        "warning lamps"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p66",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "box-inspection",
+      "genre": "safety",
+      "file": "illust/safety/box-inspection.svg",
+      "ja": [
+        "検品",
+        "箱",
+        "チェック",
+        "不良"
+      ],
+      "en": [
+        "box inspection"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 427414813,
+      "part": "p06",
+      "title": "Inspection and Quality Control line art icon set",
+      "author": "Shuvo7",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/inspection-quality-control-line-art-icon-set_427414813.htm"
+    },
+    {
+      "slug": "caution-triangle",
+      "genre": "safety",
+      "file": "illust/safety/caution-triangle.svg",
+      "ja": [
+        "注意",
+        "警告",
+        "危険",
+        "ヒヤリハット",
+        "KY"
+      ],
+      "en": [
+        "caution",
+        "warning"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p40",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "check-circle",
+      "genre": "safety",
+      "file": "illust/safety/check-circle.svg",
+      "ja": [
+        "チェック",
+        "確認",
+        "合格",
+        "品質"
+      ],
+      "en": [
+        "check",
+        "approved"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 427414813,
+      "part": "p01",
+      "title": "Inspection and Quality Control line art icon set",
+      "author": "Shuvo7",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/inspection-quality-control-line-art-icon-set_427414813.htm"
+    },
+    {
+      "slug": "checklist",
+      "genre": "safety",
+      "file": "illust/safety/checklist.svg",
+      "ja": [
+        "チェックリスト",
+        "点検",
+        "検査",
+        "自主検査",
+        "品質管理"
+      ],
+      "en": [
+        "checklist",
+        "inspection"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 427414813,
+      "part": "p02",
+      "title": "Inspection and Quality Control line art icon set",
+      "author": "Shuvo7",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/inspection-quality-control-line-art-icon-set_427414813.htm"
+    },
+    {
+      "slug": "clipboard-approved",
+      "genre": "safety",
+      "file": "illust/safety/clipboard-approved.svg",
+      "ja": [
+        "承認",
+        "合格",
+        "検査",
+        "品質",
+        "クリップボード"
+      ],
+      "en": [
+        "clipboard",
+        "approved"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 427414813,
+      "part": "p15",
+      "title": "Inspection and Quality Control line art icon set",
+      "author": "Shuvo7",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/inspection-quality-control-line-art-icon-set_427414813.htm"
+    },
+    {
+      "slug": "face-shield",
+      "genre": "safety",
+      "file": "illust/safety/face-shield.svg",
+      "ja": [
+        "防災面",
+        "フェイスシールド",
+        "保護具"
+      ],
+      "en": [
+        "face shield"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p43",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "fence-panel",
+      "genre": "safety",
+      "file": "illust/safety/fence-panel.svg",
+      "ja": [
+        "フェンス",
+        "仮囲い",
+        "現場",
+        "安全"
+      ],
+      "en": [
+        "fence",
+        "hoarding"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p19",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "goggles",
+      "genre": "safety",
+      "file": "illust/safety/goggles.svg",
+      "ja": [
+        "ゴーグル",
+        "保護メガネ",
+        "保護具"
+      ],
+      "en": [
+        "goggles"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p52",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "hard-hat",
+      "genre": "safety",
+      "file": "illust/safety/hard-hat.svg",
+      "ja": [
+        "ヘルメット",
+        "保護帽",
+        "安全",
+        "安全管理"
+      ],
+      "en": [
+        "hard hat",
+        "helmet"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p31",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "helmet",
+      "genre": "safety",
+      "file": "illust/safety/helmet.svg",
+      "ja": [
+        "ヘルメット",
+        "保護帽",
+        "安全",
+        "安全管理",
+        "保護具"
+      ],
+      "en": [
+        "helmet",
+        "hard hat",
+        "safety",
+        "ppe"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p89",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "magnifier",
+      "genre": "safety",
+      "file": "illust/safety/magnifier.svg",
+      "ja": [
+        "虫めがね",
+        "確認",
+        "目視確認",
+        "検査",
+        "点検"
+      ],
+      "en": [
+        "magnifier",
+        "inspection"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 427414813,
+      "part": "p03",
+      "title": "Inspection and Quality Control line art icon set",
+      "author": "Shuvo7",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/inspection-quality-control-line-art-icon-set_427414813.htm"
+    },
+    {
+      "slug": "protective-apron",
+      "genre": "safety",
+      "file": "illust/safety/protective-apron.svg",
+      "ja": [
+        "エプロン",
+        "前掛け",
+        "保護具"
+      ],
+      "en": [
+        "protective apron"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p42",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "road-barrier",
+      "genre": "safety",
+      "file": "illust/safety/road-barrier.svg",
+      "ja": [
+        "バリケード",
+        "通行止め",
+        "安全",
+        "工事中"
+      ],
+      "en": [
+        "road barrier",
+        "barricade",
+        "under construction"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p18",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "safety-gloves",
+      "genre": "safety",
+      "file": "illust/safety/safety-gloves.svg",
+      "ja": [
+        "手袋",
+        "革手袋",
+        "保護具",
+        "安全"
+      ],
+      "en": [
+        "safety gloves"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p30",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "safety-goggles",
+      "genre": "safety",
+      "file": "illust/safety/safety-goggles.svg",
+      "ja": [
+        "保護メガネ",
+        "ゴーグル",
+        "保護具",
+        "安全"
+      ],
+      "en": [
+        "safety goggles",
+        "ppe"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p09",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "safety-vest",
+      "genre": "safety",
+      "file": "illust/safety/safety-vest.svg",
+      "ja": [
+        "安全ベスト",
+        "反射ベスト",
+        "保護具",
+        "安全"
+      ],
+      "en": [
+        "safety vest"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p56",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "traffic-cone",
+      "genre": "safety",
+      "file": "illust/safety/traffic-cone.svg",
+      "ja": [
+        "カラーコーン",
+        "パイロン",
+        "安全",
+        "現場"
+      ],
+      "en": [
+        "traffic cone"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p26",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "traffic-cones",
+      "genre": "safety",
+      "file": "illust/safety/traffic-cones.svg",
+      "ja": [
+        "カラーコーン",
+        "パイロン",
+        "安全",
+        "安全管理",
+        "現場"
+      ],
+      "en": [
+        "traffic cones",
+        "safety"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p04",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "traffic-cones-tilted",
+      "genre": "safety",
+      "file": "illust/safety/traffic-cones-tilted.svg",
+      "ja": [
+        "カラーコーン",
+        "パイロン",
+        "安全",
+        "現場"
+      ],
+      "en": [
+        "traffic cones",
+        "safety"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p68",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "warning-sign",
+      "genre": "safety",
+      "file": "illust/safety/warning-sign.svg",
+      "ja": [
+        "注意",
+        "警告",
+        "標識",
+        "安全",
+        "安全管理"
+      ],
+      "en": [
+        "warning sign",
+        "caution",
+        "safety"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p08",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "welding-gloves",
+      "genre": "safety",
+      "file": "illust/safety/welding-gloves.svg",
+      "ja": [
+        "溶接手袋",
+        "手袋",
+        "保護具"
+      ],
+      "en": [
+        "welding gloves"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p47",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "welding-goggles",
+      "genre": "safety",
+      "file": "illust/safety/welding-goggles.svg",
+      "ja": [
+        "溶接ゴーグル",
+        "保護メガネ",
+        "保護具"
+      ],
+      "en": [
+        "welding goggles"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p46",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "welding-goggles-flip",
+      "genre": "safety",
+      "file": "illust/safety/welding-goggles-flip.svg",
+      "ja": [
+        "溶接ゴーグル",
+        "保護メガネ",
+        "保護具"
+      ],
+      "en": [
+        "welding goggles"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p73",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "welding-helmet",
+      "genre": "safety",
+      "file": "illust/safety/welding-helmet.svg",
+      "ja": [
+        "溶接面",
+        "遮光面",
+        "保護具",
+        "安全"
+      ],
+      "en": [
+        "welding helmet",
+        "welding mask"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p13",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "welding-mask-front",
+      "genre": "safety",
+      "file": "illust/safety/welding-mask-front.svg",
+      "ja": [
+        "溶接面",
+        "遮光面",
+        "保護具"
+      ],
+      "en": [
+        "welding mask"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p31",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "welding-mask-simple",
+      "genre": "safety",
+      "file": "illust/safety/welding-mask-simple.svg",
+      "ja": [
+        "溶接面",
+        "保護具"
+      ],
+      "en": [
+        "welding mask"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p27",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "work-gloves",
+      "genre": "safety",
+      "file": "illust/safety/work-gloves.svg",
+      "ja": [
+        "軍手",
+        "手袋",
+        "保護具"
+      ],
+      "en": [
+        "work gloves"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p55",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "business-suit",
+      "genre": "people",
+      "file": "illust/people/business-suit.svg",
+      "ja": [
+        "スーツ",
+        "ビジネス",
+        "営業"
+      ],
+      "en": [
+        "business suit"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 427414813,
+      "part": "p05",
+      "title": "Inspection and Quality Control line art icon set",
+      "author": "Shuvo7",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/inspection-quality-control-line-art-icon-set_427414813.htm"
+    },
+    {
+      "slug": "engineer-helmet",
+      "genre": "people",
+      "file": "illust/people/engineer-helmet.svg",
+      "ja": [
+        "技術者",
+        "作業員",
+        "職長",
+        "施工管理",
+        "ヘルメット",
+        "採用"
+      ],
+      "en": [
+        "engineer",
+        "worker",
+        "foreman"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 427414813,
+      "part": "p10",
+      "title": "Inspection and Quality Control line art icon set",
+      "author": "Shuvo7",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/inspection-quality-control-line-art-icon-set_427414813.htm"
+    },
+    {
+      "slug": "inspector",
+      "genre": "people",
+      "file": "illust/people/inspector.svg",
+      "ja": [
+        "検査員",
+        "監督",
+        "係員"
+      ],
+      "en": [
+        "inspector",
+        "officer"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 427414813,
+      "part": "p08",
+      "title": "Inspection and Quality Control line art icon set",
+      "author": "Shuvo7",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/inspection-quality-control-line-art-icon-set_427414813.htm"
+    },
+    {
+      "slug": "office-staff",
+      "genre": "people",
+      "file": "illust/people/office-staff.svg",
+      "ja": [
+        "事務",
+        "スタッフ",
+        "担当者"
+      ],
+      "en": [
+        "staff",
+        "office worker"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 427414813,
+      "part": "p18",
+      "title": "Inspection and Quality Control line art icon set",
+      "author": "Shuvo7",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/inspection-quality-control-line-art-icon-set_427414813.htm"
+    },
+    {
+      "slug": "welder-apron",
+      "genre": "people",
+      "file": "illust/people/welder-apron.svg",
+      "ja": [
+        "溶接工",
+        "エプロン",
+        "職人",
+        "採用"
+      ],
+      "en": [
+        "welder",
+        "apron"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p05",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "welder-arms-crossed",
+      "genre": "people",
+      "file": "illust/people/welder-arms-crossed.svg",
+      "ja": [
+        "溶接工",
+        "職人",
+        "技術者",
+        "採用"
+      ],
+      "en": [
+        "welder",
+        "craftsman"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p03",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "welder-at-work",
+      "genre": "people",
+      "file": "illust/people/welder-at-work.svg",
+      "ja": [
+        "溶接工",
+        "溶接作業",
+        "施工",
+        "職人"
+      ],
+      "en": [
+        "welder at work",
+        "welding"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p04",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "welder-face-shield",
+      "genre": "people",
+      "file": "illust/people/welder-face-shield.svg",
+      "ja": [
+        "溶接工",
+        "作業員",
+        "職人",
+        "採用"
+      ],
+      "en": [
+        "welder",
+        "worker"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p06",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "welder-mask",
+      "genre": "people",
+      "file": "illust/people/welder-mask.svg",
+      "ja": [
+        "溶接工",
+        "溶接",
+        "遮光面",
+        "職人",
+        "採用"
+      ],
+      "en": [
+        "welder",
+        "welding mask"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p02",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "welder-torch",
+      "genre": "people",
+      "file": "illust/people/welder-torch.svg",
+      "ja": [
+        "溶接工",
+        "溶接",
+        "職人",
+        "作業員",
+        "採用"
+      ],
+      "en": [
+        "welder",
+        "welding"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 4341965,
+      "part": "p01",
+      "title": "Welder equipment icon set. Outline set of welder equipment vector icons",
+      "author": "nsit0108",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/welder-equipment-icon-set-outline-set-welder-equipment-vector-icons-web-design-isolated_4341965.htm"
+    },
+    {
+      "slug": "worker",
+      "genre": "people",
+      "file": "illust/people/worker.svg",
+      "ja": [
+        "作業員",
+        "職人",
+        "技術者",
+        "ヘルメット",
+        "採用",
+        "スタッフ"
+      ],
+      "en": [
+        "worker",
+        "craftsman",
+        "engineer",
+        "helmet",
+        "recruit",
+        "staff"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p80",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "worker-digging",
+      "genre": "people",
+      "file": "illust/people/worker-digging.svg",
+      "ja": [
+        "作業員",
+        "掘削",
+        "土木",
+        "スコップ",
+        "職人"
+      ],
+      "en": [
+        "worker",
+        "digging",
+        "civil engineering"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p06",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "award-badge",
+      "genre": "business",
+      "file": "illust/business/award-badge.svg",
+      "ja": [
+        "表彰",
+        "賞",
+        "実績",
+        "品質"
+      ],
+      "en": [
+        "award",
+        "badge"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 427414813,
+      "part": "p09",
+      "title": "Inspection and Quality Control line art icon set",
+      "author": "Shuvo7",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/inspection-quality-control-line-art-icon-set_427414813.htm"
+    },
+    {
+      "slug": "blueprint-rejected",
+      "genre": "business",
+      "file": "illust/business/blueprint-rejected.svg",
+      "ja": [
+        "図面",
+        "設計図",
+        "却下",
+        "修正"
+      ],
+      "en": [
+        "blueprint",
+        "rejected",
+        "revision"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p88",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "blueprint-roll",
+      "genre": "business",
+      "file": "illust/business/blueprint-roll.svg",
+      "ja": [
+        "図面",
+        "設計図",
+        "施工図",
+        "計画"
+      ],
+      "en": [
+        "blueprint",
+        "plan"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p39",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "blueprint-ruler",
+      "genre": "business",
+      "file": "illust/business/blueprint-ruler.svg",
+      "ja": [
+        "図面",
+        "設計図",
+        "定規",
+        "設計",
+        "計画"
+      ],
+      "en": [
+        "blueprint",
+        "ruler",
+        "design",
+        "plan"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p24",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "building-document",
+      "genre": "business",
+      "file": "illust/business/building-document.svg",
+      "ja": [
+        "書類",
+        "建物",
+        "資料",
+        "会社案内",
+        "仕様書"
+      ],
+      "en": [
+        "document",
+        "building",
+        "brochure",
+        "specification"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p84",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "contract",
+      "genre": "business",
+      "file": "illust/business/contract.svg",
+      "ja": [
+        "契約",
+        "契約書",
+        "書類",
+        "署名",
+        "受注"
+      ],
+      "en": [
+        "contract",
+        "agreement",
+        "signature",
+        "document"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p92",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "document-check",
+      "genre": "business",
+      "file": "illust/business/document-check.svg",
+      "ja": [
+        "書類",
+        "確認済み",
+        "報告書",
+        "施工図"
+      ],
+      "en": [
+        "document",
+        "approved"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 427414813,
+      "part": "p16",
+      "title": "Inspection and Quality Control line art icon set",
+      "author": "Shuvo7",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/inspection-quality-control-line-art-icon-set_427414813.htm"
+    },
+    {
+      "slug": "document-search",
+      "genre": "business",
+      "file": "illust/business/document-search.svg",
+      "ja": [
+        "書類",
+        "調査",
+        "監査",
+        "見積"
+      ],
+      "en": [
+        "document search",
+        "audit"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 427414813,
+      "part": "p07",
+      "title": "Inspection and Quality Control line art icon set",
+      "author": "Shuvo7",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/inspection-quality-control-line-art-icon-set_427414813.htm"
+    },
+    {
+      "slug": "document-settings",
+      "genre": "business",
+      "file": "illust/business/document-settings.svg",
+      "ja": [
+        "書類",
+        "仕様書",
+        "設定",
+        "却下",
+        "手続き"
+      ],
+      "en": [
+        "document",
+        "specification",
+        "rejected"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p73",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "envelope",
+      "genre": "business",
+      "file": "illust/business/envelope.svg",
+      "ja": [
+        "メール",
+        "封筒",
+        "連絡",
+        "報告",
+        "お問い合わせ"
+      ],
+      "en": [
+        "envelope",
+        "mail",
+        "report"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 427414813,
+      "part": "p12",
+      "title": "Inspection and Quality Control line art icon set",
+      "author": "Shuvo7",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/inspection-quality-control-line-art-icon-set_427414813.htm"
+    },
+    {
+      "slug": "floor-plan",
+      "genre": "business",
+      "file": "illust/business/floor-plan.svg",
+      "ja": [
+        "図面",
+        "間取り",
+        "平面図",
+        "設計"
+      ],
+      "en": [
+        "floor plan",
+        "drawing",
+        "design"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p28",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "house-document",
+      "genre": "business",
+      "file": "illust/business/house-document.svg",
+      "ja": [
+        "書類",
+        "住宅",
+        "契約",
+        "却下",
+        "手続き"
+      ],
+      "en": [
+        "document",
+        "house",
+        "contract",
+        "rejected"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p76",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "pen",
+      "genre": "business",
+      "file": "illust/business/pen.svg",
+      "ja": [
+        "ペン",
+        "記入",
+        "記録"
+      ],
+      "en": [
+        "pen"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 427414813,
+      "part": "p17",
+      "title": "Inspection and Quality Control line art icon set",
+      "author": "Shuvo7",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/inspection-quality-control-line-art-icon-set_427414813.htm"
+    },
+    {
+      "slug": "presentation-board",
+      "genre": "business",
+      "file": "illust/business/presentation-board.svg",
+      "ja": [
+        "説明",
+        "共有",
+        "朝礼",
+        "打合せ",
+        "ミーティング"
+      ],
+      "en": [
+        "presentation",
+        "briefing"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 427414813,
+      "part": "p11",
+      "title": "Inspection and Quality Control line art icon set",
+      "author": "Shuvo7",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/inspection-quality-control-line-art-icon-set_427414813.htm"
+    },
+    {
+      "slug": "smartphone",
+      "genre": "business",
+      "file": "illust/business/smartphone.svg",
+      "ja": [
+        "スマートフォン",
+        "携帯",
+        "連絡",
+        "報告"
+      ],
+      "en": [
+        "smartphone",
+        "phone"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 427414813,
+      "part": "p13",
+      "title": "Inspection and Quality Control line art icon set",
+      "author": "Shuvo7",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/inspection-quality-control-line-art-icon-set_427414813.htm"
+    },
+    {
+      "slug": "thumbs-up",
+      "genre": "business",
+      "file": "illust/business/thumbs-up.svg",
+      "ja": [
+        "いいね",
+        "評価",
+        "信頼",
+        "満足"
+      ],
+      "en": [
+        "thumbs up",
+        "approval"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 427414813,
+      "part": "p04",
+      "title": "Inspection and Quality Control line art icon set",
+      "author": "Shuvo7",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/inspection-quality-control-line-art-icon-set_427414813.htm"
+    },
+    {
+      "slug": "anchor",
+      "genre": "misc",
+      "file": "illust/misc/anchor.svg",
+      "ja": [
+        "錨",
+        "アンカー",
+        "港湾"
+      ],
+      "en": [
+        "anchor"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p08",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "hanging-bulb",
+      "genre": "misc",
+      "file": "illust/misc/hanging-bulb.svg",
+      "ja": [
+        "電球",
+        "アイデア",
+        "照明",
+        "吊り下げ"
+      ],
+      "en": [
+        "light bulb",
+        "idea",
+        "lighting"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 32413830,
+      "part": "p98",
+      "title": "100 construction icons set outline style",
+      "author": "yliv",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/100-construction-icons-set-outline-style_32413830.htm"
+    },
+    {
+      "slug": "mountains",
+      "genre": "misc",
+      "file": "illust/misc/mountains.svg",
+      "ja": [
+        "山",
+        "地形",
+        "山岳"
+      ],
+      "en": [
+        "mountains"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p37",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    },
+    {
+      "slug": "sailboat",
+      "genre": "misc",
+      "file": "illust/misc/sailboat.svg",
+      "ja": [
+        "ヨット",
+        "船"
+      ],
+      "en": [
+        "sailboat"
+      ],
+      "note": "",
+      "added": "2026-10-18",
+      "source": 429950390,
+      "part": "p29",
+      "title": "Fifty bridge design and civil engineering icons",
+      "author": "endofparves",
+      "license": "premium",
+      "url": "https://www.magnific.com/premium-vector/fifty-bridge-design-civil-engineering-icons-featuring-construction-tools-materials-structural-development-symbols-set_429950390.htm"
+    }
+  ]
+}

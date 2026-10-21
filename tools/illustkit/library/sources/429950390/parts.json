@@ -1,0 +1,733 @@
+{
+  "settings": {
+    "gap": 2.0,
+    "min_size": 12.0,
+    "bg_ratio": 0.5,
+    "whole": false
+  },
+  "sheets": {
+    "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set": {
+      "size": [
+        6000.0,
+        2600.0
+      ],
+      "elements": 74,
+      "background": [
+        0
+      ]
+    }
+  },
+  "parts": {
+    "p01": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        350.23,
+        117.17,
+        417.74,
+        217.88
+      ],
+      "elements": [
+        67
+      ]
+    },
+    "p02": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        427.87,
+        115.39,
+        493.05,
+        217.88
+      ],
+      "elements": [
+        68
+      ]
+    },
+    "p03": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        548.51,
+        115.8,
+        568.78,
+        216.17
+      ],
+      "elements": [
+        69
+      ]
+    },
+    "p04": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        584.52,
+        114.09,
+        671.96,
+        217.88
+      ],
+      "elements": [
+        70
+      ]
+    },
+    "p05": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        685.24,
+        114.09,
+        782.6,
+        217.88
+      ],
+      "elements": [
+        71
+      ]
+    },
+    "p06": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        798.62,
+        115.8,
+        878.25,
+        216.17
+      ],
+      "elements": [
+        72
+      ]
+    },
+    "p07": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        894.54,
+        114.09,
+        976.15,
+        217.95
+      ],
+      "elements": [
+        73
+      ]
+    },
+    "p08": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        1484.1,
+        129.49,
+        1760.51,
+        460.01
+      ],
+      "elements": [
+        38
+      ]
+    },
+    "p09": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        1979.21,
+        130.75,
+        2176.15,
+        464.8
+      ],
+      "elements": [
+        7
+      ]
+    },
+    "p10": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        2365.5,
+        132.25,
+        2698.51,
+        462.1
+      ],
+      "elements": [
+        8
+      ]
+    },
+    "p11": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        2820.22,
+        130.45,
+        3149.46,
+        463.54
+      ],
+      "elements": [
+        33
+      ]
+    },
+    "p12": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        3271.47,
+        172.35,
+        3597.82,
+        416.14
+      ],
+      "elements": [
+        41
+      ]
+    },
+    "p13": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        3801.17,
+        131.01,
+        3980.59,
+        466.17
+      ],
+      "elements": [
+        29
+      ]
+    },
+    "p14": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        4177.25,
+        131.07,
+        4511.44,
+        464.83
+      ],
+      "elements": [
+        24
+      ]
+    },
+    "p15": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        4702.0,
+        130.29,
+        4890.67,
+        463.43
+      ],
+      "elements": [
+        45
+      ]
+    },
+    "p16": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        5084.86,
+        141.77,
+        5417.61,
+        449.98
+      ],
+      "elements": [
+        35
+      ]
+    },
+    "p17": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        5538.05,
+        176.95,
+        5864.02,
+        412.08
+      ],
+      "elements": [
+        32
+      ]
+    },
+    "p18": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        1458.52,
+        631.92,
+        1793.25,
+        966.03
+      ],
+      "elements": [
+        13
+      ]
+    },
+    "p19": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        1980.68,
+        631.59,
+        2174.68,
+        965.74
+      ],
+      "elements": [
+        11
+      ]
+    },
+    "p20": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        2364.14,
+        632.05,
+        2697.56,
+        963.71
+      ],
+      "elements": [
+        39
+      ]
+    },
+    "p21": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        2816.99,
+        687.16,
+        3148.13,
+        910.27
+      ],
+      "elements": [
+        28
+      ]
+    },
+    "p22": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        3280.94,
+        631.17,
+        3597.71,
+        967.73
+      ],
+      "elements": [
+        30
+      ]
+    },
+    "p23": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        3724.94,
+        633.04,
+        4059.82,
+        966.9
+      ],
+      "elements": [
+        43
+      ]
+    },
+    "p24": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        4175.46,
+        647.66,
+        4496.52,
+        938.51
+      ],
+      "elements": [
+        50
+      ]
+    },
+    "p25": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        4631.61,
+        632.11,
+        4953.94,
+        956.04
+      ],
+      "elements": [
+        44
+      ]
+    },
+    "p26": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        5110.12,
+        632.02,
+        5380.98,
+        953.9
+      ],
+      "elements": [
+        17
+      ]
+    },
+    "p27": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        5563.85,
+        632.21,
+        5837.46,
+        957.63
+      ],
+      "elements": [
+        51
+      ]
+    },
+    "p28": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        1458.83,
+        1134.87,
+        1791.11,
+        1466.36
+      ],
+      "elements": [
+        49
+      ]
+    },
+    "p29": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        1910.39,
+        1135.69,
+        2244.45,
+        1465.5
+      ],
+      "elements": [
+        36
+      ]
+    },
+    "p30": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        2365.31,
+        1202.2,
+        2698.88,
+        1397.08
+      ],
+      "elements": [
+        22
+      ]
+    },
+    "p31": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        2818.36,
+        1179.06,
+        3149.67,
+        1417.73
+      ],
+      "elements": [
+        15
+      ]
+    },
+    "p32": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        3344.96,
+        1134.41,
+        3534.36,
+        1467.94
+      ],
+      "elements": [
+        21
+      ]
+    },
+    "p33": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        3722.43,
+        1134.48,
+        4058.67,
+        1465.87
+      ],
+      "elements": [
+        37
+      ]
+    },
+    "p34": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        4178.52,
+        1137.6,
+        4508.31,
+        1462.73
+      ],
+      "elements": [
+        42
+      ]
+    },
+    "p35": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        4631.56,
+        1149.18,
+        4965.01,
+        1463.89
+      ],
+      "elements": [
+        25
+      ]
+    },
+    "p36": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        5085.35,
+        1134.49,
+        5416.29,
+        1468.62
+      ],
+      "elements": [
+        26
+      ]
+    },
+    "p37": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        5538.16,
+        1187.28,
+        5866.11,
+        1408.56
+      ],
+      "elements": [
+        40
+      ]
+    },
+    "p38": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        0.0,
+        317.0,
+        1294.0,
+        2600.0
+      ],
+      "elements": [
+        1,
+        2,
+        3,
+        4,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ]
+    },
+    "p39": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        1458.17,
+        1661.43,
+        1783.21,
+        1935.78
+      ],
+      "elements": [
+        14
+      ]
+    },
+    "p40": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        1905.7,
+        1653.25,
+        2230.02,
+        1935.5
+      ],
+      "elements": [
+        19
+      ]
+    },
+    "p41": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        2364.28,
+        1646.19,
+        2684.24,
+        1939.08
+      ],
+      "elements": [
+        18
+      ]
+    },
+    "p42": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        2819.52,
+        1636.08,
+        3149.66,
+        1968.32
+      ],
+      "elements": [
+        20
+      ]
+    },
+    "p43": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        3271.93,
+        1635.66,
+        3602.58,
+        1966.6
+      ],
+      "elements": [
+        48
+      ]
+    },
+    "p44": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        3724.05,
+        1655.08,
+        4043.7,
+        1935.15
+      ],
+      "elements": [
+        10
+      ]
+    },
+    "p45": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        4177.13,
+        1693.51,
+        4508.59,
+        1907.04
+      ],
+      "elements": [
+        47
+      ]
+    },
+    "p46": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        4631.08,
+        1635.77,
+        4963.02,
+        1967.73
+      ],
+      "elements": [
+        31
+      ]
+    },
+    "p47": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        5081.82,
+        1634.08,
+        5418.43,
+        1968.28
+      ],
+      "elements": [
+        9
+      ]
+    },
+    "p48": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        5539.2,
+        1636.36,
+        5869.11,
+        1969.04
+      ],
+      "elements": [
+        27
+      ]
+    },
+    "p49": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        1458.42,
+        2170.05,
+        1785.58,
+        2432.68
+      ],
+      "elements": [
+        54
+      ]
+    },
+    "p50": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        1994.64,
+        2137.65,
+        2161.43,
+        2475.94
+      ],
+      "elements": [
+        23
+      ]
+    },
+    "p51": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        2365.36,
+        2211.25,
+        2699.16,
+        2395.02
+      ],
+      "elements": [
+        6
+      ]
+    },
+    "p52": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        2818.27,
+        2185.5,
+        3144.73,
+        2422.6
+      ],
+      "elements": [
+        52
+      ]
+    },
+    "p53": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        3271.66,
+        2177.77,
+        3607.17,
+        2432.29
+      ],
+      "elements": [
+        5
+      ]
+    },
+    "p54": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        3727.42,
+        2137.76,
+        4057.83,
+        2470.22
+      ],
+      "elements": [
+        12
+      ]
+    },
+    "p55": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        4174.29,
+        2149.17,
+        4499.46,
+        2444.27
+      ],
+      "elements": [
+        53
+      ]
+    },
+    "p56": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        4644.81,
+        2135.65,
+        4935.15,
+        2454.81
+      ],
+      "elements": [
+        16
+      ]
+    },
+    "p57": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        5081.98,
+        2145.5,
+        5414.55,
+        2458.55
+      ],
+      "elements": [
+        34
+      ]
+    },
+    "p58": {
+      "sheet": "Fifty bridge design and civil engineering icons featuring construction tools materials and structural development symbols set",
+      "bbox": [
+        5536.59,
+        2201.8,
+        5869.89,
+        2403.93
+      ],
+      "elements": [
+        46
+      ]
+    }
+  }
+}

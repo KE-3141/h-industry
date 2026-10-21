@@ -3,43 +3,9 @@ const heroImageUrl = usePublicUrl('/images/hero_1.JPG')
 const rebarWorkUrl = usePublicUrl('/images/kutai.JPG')
 const strengthsImageUrl = usePublicUrl('/images/strengths.png')
 const presidentSignUrl = usePublicUrl('/images/president_sign.png')
-const presidentFaceUrl = usePublicUrl('/images/president_face.png')
-const presidentBgUrl = usePublicUrl('/images/president_bg.png')
-const { company, strengths, workTypes, projects, businesses } = useSiteContent()
-const featuredProjects = projects.slice(0, 4)
+const presidentFaceUrl = usePublicUrl('/images/president_face.jpg')
+const { company, strengths, workTypes, featuredProjects, businesses, history } = useSiteContent()
 
-const historySteps = [
-  {
-    step: '1974',
-    title: '有限会社平山工業 設立',
-    description: '東京都江東区にて有限会社平山工業を設立。鉄筋工事業を中心に関東圏での施工を開始する。',
-  },
-  {
-    step: '1980',
-    title: '杭頭補強筋の半自動溶接化技術を開発',
-    description: '従来は熟練溶接工のみが担っていた杭頭補強筋溶接を半自動化。施工品質の均一化と工期短縮を同時に実現し、業界に先駆けた独自技術として注目を集める。',
-  },
-  {
-    step: '1990',
-    title: '関東全域への対応エリア拡大',
-    description: '東京都内にとどまらず神奈川・埼玉・千葉など関東全域の現場に対応。高速道路・高架橋・地下鉄拡幅工事など大型インフラ案件の受注が増加する。',
-  },
-  {
-    step: '2001',
-    title: '平山工業株式会社 増資設立',
-    description: '事業規模の拡大に伴い株式会社化。資本金1,000万円にて平山工業株式会社を設立し、組織体制をさらに強化する。',
-  },
-  {
-    step: '2010',
-    title: 'J-BAR溶接・エンクローズ溶接（CB工法）を本格導入',
-    description: '新工法の積極的な採用により、従来工法では困難だった複雑な継手や狭所施工にも対応。多様化する現場ニーズへの対応力をさらに高める。',
-  },
-  {
-    step: '現在',
-    title: '従業員25名体制で関東全域を支える',
-    description: '鉄筋工・溶接工・管理職を含む25名の体制で、あらゆる規模・工種の現場に対応。創業50年超の実績と技術力を次世代へ継承しながら、さらなる品質向上に取り組んでいる。',
-  },
-]
 const strengthItems = strengths.map(s => ({ ...s, to: `/about/#${s.key}` }))
 
 
@@ -52,7 +18,7 @@ const companyRows = [
   },
   { label: '設立', value: company.established },
   { label: '従業員数', value: company.employees },
-  { label: '営業エリア', value: company.area },
+  { label: '営業エリア', value: company.areaLabel },
 ]
 </script>
 
@@ -75,8 +41,8 @@ const companyRows = [
       </div>
       <!-- 可読性用オーバーレイ（モバイル：下暗め縦グラデ / デスクトップ：左暗め横グラデ） -->
       <div
-        class="absolute inset-0 bg-gradient-to-b from-primary-950/30 via-primary-950/50 to-primary-950/85
-               md:bg-gradient-to-r md:from-primary-950/85 md:from-[28%] md:via-primary-950/50 md:to-primary-900/15"
+        class="absolute inset-0 bg-gradient-to-b from-primary-950/45 via-primary-950/65 to-primary-950/85
+               md:bg-gradient-to-r md:from-primary-950/90 md:via-primary-950/60 md:to-primary-950/25"
       />
       <!-- グリッド装飾 -->
       <div
@@ -90,16 +56,13 @@ const companyRows = [
                pointer-events-none mix-blend-soft-light"
       />
 
-      <div class="relative z-10 max-w-6xl mx-auto px-6 py-24 md:py-32 text-white">
-        <p class="text-accent-400 text-sm font-medium tracking-[0.2em] uppercase mb-5">
-          Hirayama INDUSTRY .Inc
-        </p>
-        <h1 class="text-4xl md:text-5xl lg:text-[3.5rem] font-black leading-tight mb-7">
+      <div class="relative z-10 w-full max-w-6xl mx-auto px-6 py-24 md:py-32 text-white">
+        <h1 class="text-4xl md:text-5xl lg:text-[3.5rem] font-black leading-tight mb-7 text-balance">
           {{ company.tagline }}
         </h1>
         <p class="text-neutral-200 text-base md:text-lg max-w-xl mb-10 leading-relaxed">
           関東全域の建設現場で50年超の実績。<br>
-          鉄筋・土木・溶接・圧接工事の専門集団として、<br class="hidden sm:block">
+          躯体構築一式工事の専門集団として<br class="hidden sm:block">
           あらゆる規模・工種の現場に対応します。
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
@@ -118,7 +81,6 @@ const companyRows = [
         class="absolute bottom-8 left-1/2 z-10 -translate-x-1/2
                flex flex-col items-center gap-2 text-white/70 text-xs tracking-widest"
       >
-        <span>SCROLL</span>
         <div class="w-px h-8 bg-gradient-to-b from-white/40 to-transparent" />
       </div>
     </section>
@@ -127,10 +89,9 @@ const companyRows = [
     <section class="py-20 md:py-28 bg-white">
       <div v-reveal class="max-w-4xl mx-auto px-6 text-center">
         <SectionHeading
-          label="About Us"
           class="mb-6"
         >
-          良い製品は<br>良い人がつくる。
+          誠実な人が、<br>確かな施工をする。
         </SectionHeading>
         <p class="text-neutral-600 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
           {{ company.description }}
@@ -168,25 +129,22 @@ const companyRows = [
         style="background-image: linear-gradient(rgba(0,0,0,1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,1) 1px, transparent 1px); background-size: 64px 64px;"
       />
       <div class="relative z-10 max-w-2xl mx-auto px-6 text-center">
-        <h2 v-reveal class="text-2xl md:text-3xl font-bold leading-relaxed mb-8 text-primary-900">
+        <h2 v-reveal class="text-2xl md:text-3xl font-bold leading-relaxed mb-8 text-primary-900 text-balance">
           人のために、未来のために。
         </h2>
         <p v-reveal class="text-neutral-800 text-base leading-relaxed mb-5 text-left">
-          平山工業株式会社は1974年の創業以来、躯体構築一式工事・土木工事を中心に、人々と地域に貢献してまいりました。ダム、発電所、橋——こうした構造物は、見えないところで多くの人々の暮らしを支えています。
+          平山工業株式会社は1974年の創業以来、躯体構築一式工事を中心に、人々と地域に貢献してまいりました。ダム、発電所、橋——こうした構造物は、見えないところで多くの人々の暮らしを支えています。
         </p>
         <p v-reveal class="text-neutral-600 text-base leading-relaxed mb-10 text-left">
-          50年以上こうして事業を続けてこられたのは、信頼して任せてくださったお客様と、現場を守り続けてくれた職人たちのおかげです。「良い製品は良い人がつくる」——創業からのこの言葉を胸に、これからも地域に必要とされる会社であり続けます。
+          50年以上こうして事業を続けてこられたのは、信頼して任せてくださったお客様と、現場を守り続けてくれた作業員たちのおかげです。「誠実な人が、確かな施工をする」——創業からのこの言葉を胸に、これからも地域に必要とされる会社であり続けます。
         </p>
         <div v-reveal class="flex flex-col items-center gap-3">
-          <!-- アバター -->
-          <div class="w-32 h-32 rounded-full overflow-hidden">
-            <img
-              :src="presidentFaceUrl"
-              alt="代表取締役社長 平山 和彦"
-              class="w-full h-full object-cover object-[50%_15%]"
-              loading="lazy"
-            />
-          </div>
+          <img
+            :src="presidentFaceUrl"
+            :alt="`代表取締役社長 ${company.ceo}`"
+            class="size-32 rounded-full object-cover"
+            loading="lazy"
+          />
           <span class="text-neutral-400 text-xs tracking-widest">代表取締役社長</span>
           <img
             :src="presidentSignUrl"
@@ -202,7 +160,6 @@ const companyRows = [
     <SplitListSection
       :image-src="strengthsImageUrl"
       image-alt="平山工業の強み"
-      label="Our Strengths"
       title="平山工業の強み"
       description="50年超の施工実績が培った技術・対応力・品質安全。3つの強みをご紹介します。"
       link-to="/about/"
@@ -214,17 +171,15 @@ const companyRows = [
     <section class="py-20 md:py-28 bg-primary-900">
       <div class="max-w-6xl mx-auto px-6">
         <SectionHeading
-          label="Our Business"
           title="事業内容"
           title-class="text-white"
           class="mb-14"
         />
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 gap-6 max-w-xl mx-auto">
           <BusinessCard
             v-for="biz in businesses"
             :key="biz.key"
-            :label="biz.label"
             :title="biz.title"
             :description="biz.shortDescription"
             to="/business/"
@@ -242,15 +197,7 @@ const companyRows = [
         <p class="text-center text-white text-sm font-medium mb-8 tracking-wide">
           対応工種・施工実績
         </p>
-        <div class="flex flex-wrap justify-center gap-3">
-          <TagBadge
-            v-for="work in workTypes"
-            :key="work"
-            variant="ghost"
-          >
-            {{ work }}
-          </TagBadge>
-        </div>
+        <TagRows :items="workTypes" variant="ghost" />
       </div>
     </section>
 
@@ -258,7 +205,7 @@ const companyRows = [
     <section class="py-20 md:py-24 bg-neutral-50">
       <div class="max-w-6xl mx-auto px-6">
         <div class="flex items-end justify-between mb-10">
-          <SectionHeading label="Achievements" title="施工実績" align="left" class="mb-0" />
+          <SectionHeading title="施工実績" align="left" class="mb-0" />
           <SlideLink
             to="/achievements/"
             class="hidden sm:inline-flex items-center text-primary-600 font-semibold text-sm
@@ -273,16 +220,19 @@ const companyRows = [
             :key="project.key"
             class="group"
           >
-            <div class="relative overflow-hidden rounded-xl aspect-[4/3] mb-3 bg-neutral-200">
-              <img
-                :src="project.images[0]"
-                :alt="project.name"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                loading="lazy"
-              />
-            </div>
-            <p class="text-sm font-bold text-primary-900 leading-snug mb-1">{{ project.name }}</p>
-            <p class="text-xs text-neutral-400">{{ project.location }}</p>
+            <NuxtLink :to="`/achievements/#${project.key}`" class="block">
+              <div class="relative overflow-hidden rounded-xl aspect-[4/3] mb-3 bg-neutral-200 cursor-zoom-in">
+                <img
+                  :src="project.images[0]"
+                  :alt="project.name"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-primary-950/0 group-hover:bg-primary-950/20 transition-colors duration-300" />
+              </div>
+              <p class="text-sm font-bold text-primary-900 leading-snug mb-1">{{ project.name }}</p>
+              <p class="text-xs text-neutral-400">{{ project.location }}</p>
+            </NuxtLink>
           </li>
         </ul>
         <div class="mt-8 text-center sm:hidden">
@@ -296,9 +246,8 @@ const companyRows = [
 
     <!-- ===== 7. 会社沿革 ===== -->
     <StepsSection
-      label="History"
       title="会社沿革"
-      :steps="historySteps"
+      :steps="history"
     />
 
     <!-- ===== 7. 会社概要スニペット ===== -->
@@ -307,7 +256,6 @@ const companyRows = [
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           <div>
             <SectionHeading
-              label="Company"
               title="会社概要"
               align="left"
               class="mb-8"
@@ -351,14 +299,11 @@ const companyRows = [
       <div class="max-w-6xl mx-auto px-6">
         <div class="md:flex items-center justify-between gap-8">
           <div class="mb-8 md:mb-0">
-            <p class="text-accent-400 text-sm font-medium tracking-[0.2em] uppercase mb-2">
-              Recruitment
-            </p>
-            <h2 class="text-2xl md:text-3xl font-black mb-3">
-              「良い製品は良い人がつくる」
+            <h2 class="text-2xl md:text-3xl font-black mb-3 text-balance">
+              「誠実な人が、確かな施工をする」
             </h2>
             <p class="text-neutral-300 text-sm md:text-base leading-relaxed max-w-xl">
-              鉄筋工・溶接工を随時募集しています。未経験者歓迎。
+              鳶工・土工・型枠工・鉄筋工・現場管理を随時募集しています。未経験者歓迎。
               資格取得支援制度・単身用寮完備。あなたの成長を全力でサポートします。
             </p>
           </div>

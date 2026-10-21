@@ -7,7 +7,6 @@ interface Item {
 }
 
 interface Props {
-  label: string
   title: string
   description: string
   items: Item[]
@@ -53,7 +52,7 @@ withDefaults(defineProps<Props>(), {
         <!-- 左：見出し＋説明＋任意リンク -->
         <div v-reveal="'from-left'" class="mb-12 md:mb-0">
           <SectionHeading
-            :label="label"
+           
             :title="title"
             :title-class="theme === 'dark' ? 'text-white' : 'text-primary-800'"
             align="left"

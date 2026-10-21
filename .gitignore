@@ -21,3 +21,9 @@ node_modules
 .env
 .env.*
 !.env.example
+
+# illustkit: ダウンロードした原本と作業用ファイル（meta.json・parts/ は残す）
+tools/illustkit/library/sources/*/original.*
+tools/illustkit/library/sources/*/files/
+tools/illustkit/library/sources/*/work/
+tools/illustkit/illustkit/__pycache__/
