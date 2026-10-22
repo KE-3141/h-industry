@@ -10,7 +10,6 @@ interface Step {
 }
 
 interface Props {
-  label: string
   title: string
   steps: Step[]
 }
@@ -21,7 +20,7 @@ defineProps<Props>()
 <template>
   <section class="py-20 md:py-28 bg-white">
     <div class="max-w-3xl mx-auto px-6">
-      <SectionHeading :label="label" :title="title" class="mb-14" />
+      <SectionHeading :title="title" class="mb-14" />
       <ol class="relative space-y-0">
         <!-- 縦ライン -->
         <div
@@ -29,8 +28,9 @@ defineProps<Props>()
           aria-hidden="true"
         />
         <li
-          v-for="(step, index) in steps"
+          v-for="(step, i) in steps"
           :key="step.step"
+          v-reveal="{ delay: i * 100 }"
           class="relative flex gap-8 pb-10 last:pb-0"
         >
           <!-- ステップ番号 -->
@@ -38,7 +38,7 @@ defineProps<Props>()
             class="relative z-10 flex-shrink-0 w-14 h-14 rounded-full bg-primary-800
                    flex items-center justify-center"
           >
-            <span class="text-white text-base leading-none">{{ index + 1 }}</span>
+            <span class="text-white text-xs font-bold leading-none text-center whitespace-nowrap">{{ step.step }}</span>
           </div>
           <!-- 内容 -->
           <div class="pt-3 pb-2">

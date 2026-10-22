@@ -44,7 +44,6 @@ async function handleSubmit(event: Event) {
   <main>
     <!-- ===== 1. ページヒーロー ===== -->
     <PageHero
-      label="Contact"
       title="お問い合わせ"
       description="鉄筋工事・溶接工事のご依頼・ご相談はお気軽にご連絡ください。お電話またはフォームにてお受けしています。"
     />
@@ -57,6 +56,7 @@ async function handleSubmit(event: Event) {
           <!-- 左：お問い合わせフォーム -->
           <div class="lg:col-span-3">
             <h2 class="text-xl font-black text-primary-900 mb-8">お問い合わせフォーム</h2>
+
             <!-- 送信完了メッセージ -->
             <div
               v-if="status === 'success'"
@@ -202,7 +202,7 @@ async function handleSubmit(event: Event) {
             <!-- お電話 -->
             <div class="bg-primary-950 rounded-2xl p-8 text-white">
               <p class="text-accent-400 text-xs font-medium tracking-[0.2em] uppercase mb-4">
-                Phone
+                お電話
               </p>
               <a
                 :href="`tel:${company.telRaw}`"
@@ -220,7 +220,7 @@ async function handleSubmit(event: Event) {
             <!-- 所在地 -->
             <div class="border border-neutral-200 rounded-2xl p-8">
               <p class="text-primary-900 text-xs font-medium tracking-[0.2em] uppercase mb-4">
-                Address
+                所在地
               </p>
               <dl class="space-y-3 text-sm">
                 <div>
@@ -237,7 +237,7 @@ async function handleSubmit(event: Event) {
             <!-- 地図 -->
             <div class="rounded-2xl overflow-hidden border border-neutral-200">
               <iframe
-                :src="`https://maps.google.com/maps?q=${encodeURIComponent(company.addressFull)}&output=embed&hl=ja`"
+                :src="`https://maps.google.com/maps?q=${encodeURIComponent(company.addressMap)}&output=embed&hl=ja`"
                 :title="`${company.name} 所在地マップ`"
                 class="w-full h-56"
                 loading="lazy"

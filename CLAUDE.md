@@ -39,7 +39,7 @@ pages/          Nuxt の pages/ ディレクトリ
 | 1ファイル内に同パターンが2回以上出現する | `v-for` + データ配列に統一する |
 | ページ末尾の CTA ブロック | `<CtaSection />` を使う（直書き禁止） |
 | 内部ページのヒーローヘッダー | `<PageHero />` を使う（直書き禁止） |
-| セクション見出し（英語ラベル + h2） | `<SectionHeading />` を使う（直書き禁止） |
+| セクション見出し（h2） | `<SectionHeading />` を使う（直書き禁止） |
 | コンテンツ内の別ページ誘導リンク | `<SlideLink />` を使う（`NuxtLink` + `IconArrow` 直書き禁止） |
 
 ### 既存の共通コンポーネント
@@ -50,9 +50,11 @@ pages/          Nuxt の pages/ ディレクトリ
 | `SlideLink` | コンテンツ内の別ページ誘導テキストリンク（ホバーで右スライド） |
 | `IconArrow` | 右矢印アイコン |
 | `IconPhone` | 電話アイコン |
-| `SectionHeading` | セクション見出し（英語ラベル + h2） |
+| `IllustIcon` | 線画アイコン（`tools/illustkit` で登録したもの。`name="machines/tower-crane"`） |
+| `SectionHeading` | セクション見出し（h2） |
 | `FeatureCard` | アイコン付き特長カード |
-| `BusinessCard` | 事業紹介カード（画像・タイトル・説明・リンク） |
+| `BusinessCard` | 事業内容カード（画像・タイトル・説明・リンク） |
+| `TagRows` | タグ一覧を中央揃えの2行に均等配分（`items` + `variant`） |
 | `PageHero` | 内部ページ共通ヒーロー（ダーク背景 + h1 + 説明文） |
 | `CtaSection` | ページ末尾 CTA（電話番号 + お問い合わせボタン） |
 | `AppHeader` | グローバルヘッダー |
@@ -165,6 +167,13 @@ const props = withDefaults(defineProps<Props>(), {
 - 大容量 PNG は `@nuxt/image`（IPX）を経由せず直接 `<img>` タグで配信する
   （dev 環境でのメモリ不足・IPC切断を防ぐため）
 
+### 線画アイコン（Magnific 素材）
+
+- Magnific の素材は `tools/illustkit` で取得・登録する（手順とルールは `tools/illustkit/README.md`）。**ダウンロード前に必ずユーザーに確認する。**
+- テイストは**線画アイコン**に統一し、色は登録時にテーマ色（primary / accent）へ自動変換される。
+- `public/images/illust/`・`assets/illust/` は自動で書き出されるので直接編集しない。
+- サイトでは `<IllustIcon name="<ジャンル>/<名前>" class="size-12 text-primary-700" />` を使う（色は `text-*` で指定）。
+
 ```vue
 <script setup lang="ts">
 const imageUrl = usePublicUrl('/images/rebar_work.png')
@@ -196,7 +205,7 @@ useSeoMeta({
 ```
 
 - タイトル形式: `ページ名 | 平山工業株式会社`
-- トップページのみ: `平山工業株式会社 | 鉄筋工事・溶接工事の専門企業`
+- トップページのみ: `平山工業株式会社 | 躯体構築一式工事・土木工事の専門企業`
 
 ---
 
@@ -227,7 +236,7 @@ useSeoMeta({
 | コンポーネント | PascalCase | `AppButton.vue`, `SectionHeading.vue` |
 | Composable | camelCase, `use` プレフィックス | `useSiteContent.ts`, `usePublicUrl.ts` |
 | ページ | kebab-case（Nuxt 規約） | `index.vue`, `about.vue` |
-| 画像ファイル | snake_case | `hero_1.png`, `rebar_work.png` |
+| 画像ファイル | snake_case | `hero_1.JPG`, `rebar_work.png` |
 
 ---
 
@@ -244,8 +253,9 @@ h-industry/
       AppButton.vue             ボタン（variant: primary / secondary / ghost）
       IconArrow.vue             右矢印アイコン
       IconPhone.vue             電話アイコン
+      IllustIcon.vue            線画アイコン（assets/illust/ をインライン SVG で表示）
     molecules/
-      SectionHeading.vue        セクション見出し（英語ラベル + h2）
+      SectionHeading.vue        セクション見出し（h2）
       FeatureCard.vue           特長カード（アイコン + タイトル + 説明）
       PageHero.vue              内部ページ共通ヒーロー
     organisms/
@@ -254,5 +264,8 @@ h-industry/
       CtaSection.vue            ページ末尾 CTA（電話番号 + お問い合わせボタン）
   pages/                        各ページ（index / about / business / ...）
   public/images/                静的画像ファイル
+  public/images/illust/         線画アイコン（テーマ色固定・自動書き出し）
+  assets/illust/                線画アイコン（currentColor・自動書き出し）
+  tools/illustkit/              Magnific 素材の取得・切り分け・登録キット
   docs/                         設計ドキュメント
 ```

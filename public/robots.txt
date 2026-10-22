@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://h-industry.co.jp/sitemap.xml

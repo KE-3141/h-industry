@@ -1,4 +1,10 @@
 <script setup lang="ts">
+const { company } = useSiteContent()
+const { siteUrl } = useRuntimeConfig().public
+
+/** 03-3646-7450 → +81-3-3646-7450 */
+const toIntlTel = (tel: string) => tel.replace(/^0/, '+81-')
+
 useHead({
   script: [
     {
@@ -6,29 +12,30 @@ useHead({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: '平山工業株式会社',
-        alternateName: 'Hirayama Kogyo Co., Ltd.',
-        url: 'https://h-industry.co.jp',
-        telephone: '+81-3-3646-7450',
-        faxNumber: '+81-3-3615-6522',
+        name: company.name,
+        alternateName: company.nameEn,
+        url: siteUrl,
+        logo: `${siteUrl}/images/logo.svg`,
+        telephone: toIntlTel(company.tel),
+        faxNumber: toIntlTel(company.fax),
         address: {
           '@type': 'PostalAddress',
-          streetAddress: '北砂6-7-13 ヒラヤマビル2階',
-          addressLocality: '江東区',
-          addressRegion: '東京都',
-          postalCode: '136-0073',
+          streetAddress: company.addressParts.street,
+          addressLocality: company.addressParts.locality,
+          addressRegion: company.addressParts.region,
+          postalCode: company.postalCode,
           addressCountry: 'JP',
         },
         openingHoursSpecification: [
           {
             '@type': 'OpeningHoursSpecification',
-            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-            opens: '08:00',
-            closes: '17:00',
+            dayOfWeek: company.openingHours.days,
+            opens: company.openingHours.opens,
+            closes: company.openingHours.closes,
           },
         ],
-        description: '平山工業株式会社は、1974年の創業以来、鉄筋工事・溶接工事の専門企業として関東全域の建設現場を支え続けています。',
-        areaServed: '関東全域',
+        description: company.description,
+        areaServed: `${company.area}全域`,
       }),
     },
   ],

@@ -10,21 +10,26 @@ export default defineNuxtConfig({
     },
   },
 
+  // @nuxtjs/sitemap（nuxt-site-config）用
+  site: {
+    url: 'https://h-industry.co.jp',
+    name: '平山工業株式会社',
+    trailingSlash: true,
+  },
+
   css: ['~/assets/css/app.css'],
 
   app: {
     head: {
       htmlAttrs: { lang: 'ja' },
       link: [
-        // ファビコン（SVGはモダンブラウザ対応、ico/pngは別途 public/ に配置が必要）
         { rel: 'icon', type: 'image/svg+xml', href: '/images/simple_logo.svg' },
-        { rel: 'icon', href: '/favicon.ico', sizes: '32x32' },
-        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
       ],
       meta: [
         {
           name: 'description',
-          content: '平山工業株式会社｜鉄筋工事・溶接工事の専門企業。関東全域対応、50年超の実績。',
+          content:
+            '平山工業株式会社｜躯体構築一式工事の専門集団。関東全域対応、50年超の実績。',
         },
         // モバイルブラウザのUI色（primary-950）
         { name: 'theme-color', content: '#070f1e' },
@@ -32,12 +37,7 @@ export default defineNuxtConfig({
         { property: 'og:type', content: 'website' },
         { property: 'og:locale', content: 'ja_JP' },
         { property: 'og:site_name', content: '平山工業株式会社' },
-        // OGP シェア画像（public/og-image.png を 1200×630px で別途用意）
-        { property: 'og:image', content: 'https://h-industry.co.jp/og-image.png' },
-        { property: 'og:image:width', content: '1200' },
-        { property: 'og:image:height', content: '630' },
-        // Twitter Card
-        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:card', content: 'summary' },
       ],
     },
   },
@@ -61,9 +61,14 @@ export default defineNuxtConfig({
   fonts: {
     families: [
       {
-        name: 'Noto Sans JP',
+        name: 'BIZ UDPGothic',
         provider: 'google',
-        weights: [400, 700, 900],
+        weights: [400, 700],
+      },
+      {
+        name: 'Shippori Mincho',
+        provider: 'google',
+        weights: [400, 700, 800],
       },
     ],
   },

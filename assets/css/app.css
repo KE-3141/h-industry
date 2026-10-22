@@ -41,15 +41,42 @@
   --color-neutral-900: #31363f;
   --color-neutral-950: #1e2229;
 
+  /* Brand */
+  --color-logo: #4c8fcd;
+
   /* Typography */
   --font-sans:
-    'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans',
+    'BIZ UDPGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans',
     'Yu Gothic', 'Meiryo', sans-serif;
+  --font-serif:
+    'Shippori Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+}
+
+/* ── スクロールアニメーション ── */
+.reveal {
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal.from-bottom { transform: translateY(32px); }
+.reveal.from-left   { transform: translateX(-32px); }
+.reveal.from-right  { transform: translateX(32px); }
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { transition: none; opacity: 1; transform: none; }
 }
 
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
 }
 
 body {

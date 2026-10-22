@@ -23,8 +23,8 @@ const companyRows = [
   },
   { label: 'FAX', value: company.fax },
   { label: '受付時間', value: `${company.hours}（${company.holidays}定休）` },
-  { label: '営業エリア', value: `${company.area}全域` },
-  { label: '事業内容', value: company.businessServices.join(' / ') },
+  { label: '営業エリア', value: company.areaLabel },
+  { label: '事業内容', value: company.businessTypes },
   { label: '建設業許可', value: company.license },
 ]
 </script>
@@ -33,7 +33,6 @@ const companyRows = [
   <main>
     <!-- ===== 1. ページヒーロー ===== -->
     <PageHero
-      label="Company"
       title="会社概要"
       description=""
     />
@@ -44,7 +43,7 @@ const companyRows = [
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <!-- 左：会社概要テーブル -->
           <div>
-            <SectionHeading label="Overview" title="会社概要" align="left" class="mb-8" />
+            <SectionHeading title="会社概要" align="left" class="mb-8" />
             <dl class="space-y-0 text-sm">
               <div
                 v-for="row in companyRows"
@@ -61,7 +60,7 @@ const companyRows = [
           <div class="lg:sticky lg:top-24">
             <div class="rounded-sm overflow-hidden border border-neutral-200 shadow-sm">
               <iframe
-                :src="`https://maps.google.com/maps?q=${encodeURIComponent(company.addressFull)}&output=embed&hl=ja`"
+                :src="`https://maps.google.com/maps?q=${encodeURIComponent(company.addressMap)}&output=embed&hl=ja`"
                 :title="`${company.name} 所在地マップ`"
                 class="w-full h-72 lg:h-96"
                 loading="lazy"

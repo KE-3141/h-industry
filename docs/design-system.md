@@ -137,7 +137,7 @@ export default defineNuxtConfig({
 - H2 セクション見出しには **左ボーダーアクセント**（Accent 500）を使用
   ```html
   <h2 class="border-l-4 border-accent-500 pl-4 text-3xl font-bold text-primary-700">
-    事業紹介
+    事業内容
   </h2>
   ```
 - ページタイトル（H1）は白テキストでヒーロー画像上に配置（ページヘッダーセクション）
@@ -240,7 +240,7 @@ export default defineNuxtConfig({
 ### カード
 
 ```html
-<!-- 標準カード（事業紹介・強み等） -->
+<!-- 標準カード（事業内容・強み等） -->
 <div class="bg-white border border-neutral-100 rounded-sm shadow-card p-6 md:p-8
             hover:shadow-card-hover transition-shadow duration-200">
   <div class="text-accent-500 mb-4"><!-- アイコン --></div>
@@ -467,7 +467,7 @@ export default defineNuxtConfig({
 
 ## チェックリスト（実装前確認）
 
-- [ ] 施工写真の素材を確認・準備（ヒーロー・事業紹介・技術紹介用）
+- [ ] 施工写真の素材を確認・準備（ヒーロー・事業内容・技術紹介用）
 - [ ] ロゴ（SVG形式）の入手または再制作
 - [ ] Google Fonts の Noto Sans JP 読み込み確認
 - [ ] `app.css` に `@import "tailwindcss"` と `@import "@nuxt/ui"` を追加

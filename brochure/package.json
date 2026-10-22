@@ -1,0 +1,18 @@
+{
+  "name": "h-industry-brochure",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "render": "node scripts/render.mjs",
+    "build": "npm run render && vivliostyle build && npm run spread",
+    "build:press": "npm run render && PRESS=1 vivliostyle build",
+    "preview": "npm run render && vivliostyle preview build/airy/index.html",
+    "spread": "node scripts/spread.mjs",
+    "netprint": "npm run render && node scripts/netprint.mjs"
+  },
+  "devDependencies": {
+    "@vivliostyle/cli": "^11.0.0",
+    "pdf-lib": "^1.17.1",
+    "qrcode": "^1.5.4"
+  }
+}

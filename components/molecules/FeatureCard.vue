@@ -1,8 +1,4 @@
 <script setup lang="ts">
-/**
- * 特長・強みカード。
- * icon スロットにアイコン SVG を渡す。
- */
 defineProps<{
   title: string
   description: string
@@ -11,6 +7,7 @@ defineProps<{
 
 <template>
   <article
+    v-reveal
     class="bg-white border border-neutral-100 rounded-2xl p-8"
   >
     <div

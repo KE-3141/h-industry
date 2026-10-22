@@ -1,0 +1,27 @@
+{
+  "authors": [],
+  "sets": [32413830],
+  "search_words": [
+    "line icons",
+    "outline"
+  ],
+  "env": "~/.local/share/illustkit/env",
+  "palette": {
+    "line": "#173460",
+    "accent": "#e85d0a",
+    "tint": "#d5e0ee"
+  },
+  "export": {
+    "public": "public/images/illust",
+    "inline": "assets/illust"
+  },
+  "genres": {
+    "machines": "重機・車両（クレーン・ショベル・ミキサー車など）",
+    "structures": "構造物・建物（橋・ダム・ビル・トンネル・擁壁など）",
+    "materials": "資材・工具（鉄筋・型枠・足場・コンクリート・工具）",
+    "safety": "安全・品質（ヘルメット・標識・点検・チェック）",
+    "people": "人（作業員・技術者・スタッフ）",
+    "business": "業務・会社（図面・契約・会議・電話・書類）",
+    "misc": "その他"
+  }
+}
