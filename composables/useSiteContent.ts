@@ -17,12 +17,24 @@ export const useSiteContent = () => {
     address: '東京都江東区北砂6-7-13 ヒラヤマビル2階',
     addressFull: '〒136-0073 東京都江東区北砂6-7-13 ヒラヤマビル2階',
     addressMap: '東京都江東区北砂6-7-13',
+    // 構造化データ（JSON-LD）用の住所分割
+    addressParts: {
+      region: '東京都',
+      locality: '江東区',
+      street: '北砂6-7-13 ヒラヤマビル2階',
+    },
     tel: '03-3646-7450',
     telRaw: '0336467450', // href="tel:" 用
     fax: '03-3615-6522',
     hours: '9:00〜17:00',
     holidays: '土曜・日曜・祝日',
     hoursLabel: '受付時間 9:00〜17:00（土・日・祝定休）',
+    // 構造化データ（JSON-LD）用の営業日・時間
+    openingHours: {
+      days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '17:00',
+    },
     established: '1974年（昭和49年）4月23日 有限会社平山工業設立<br>2001年（平成13年）12月23日 平山工業株式会社として増資設立',
     capital: '1,000万円',
     employees: '25',

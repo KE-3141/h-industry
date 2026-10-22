@@ -1,4 +1,6 @@
 <script setup lang="ts">
+useHead({ title: '平山工業株式会社 | 躯体構築一式工事・土木工事の専門企業' })
+
 const heroImageUrl = usePublicUrl('/images/hero_1.JPG')
 const rebarWorkUrl = usePublicUrl('/images/kutai.JPG')
 const strengthsImageUrl = usePublicUrl('/images/strengths.png')

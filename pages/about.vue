@@ -1,4 +1,9 @@
 <script setup lang="ts">
+useHead({ title: '平山工業の強み | 平山工業株式会社' })
+useSeoMeta({
+  description: '創業50年超の実績が培った技術力・現場対応力・品質安全管理。平山工業が現場で大切にする3つの強みをご紹介します。',
+})
+
 const { strengths, stats, workTypes } = useSiteContent()
 
 </script>

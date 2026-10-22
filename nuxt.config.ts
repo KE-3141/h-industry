@@ -4,17 +4,40 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
 
+  runtimeConfig: {
+    public: {
+      siteUrl: 'https://h-industry.co.jp',
+    },
+  },
+
+  // @nuxtjs/sitemap（nuxt-site-config）用
+  site: {
+    url: 'https://h-industry.co.jp',
+    name: '平山工業株式会社',
+    trailingSlash: true,
+  },
+
   css: ['~/assets/css/app.css'],
 
   app: {
     head: {
       htmlAttrs: { lang: 'ja' },
+      link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/images/simple_logo.svg' },
+      ],
       meta: [
         {
           name: 'description',
           content:
             '平山工業株式会社｜躯体構築一式工事の専門集団。関東全域対応、50年超の実績。',
         },
+        // モバイルブラウザのUI色（primary-950）
+        { name: 'theme-color', content: '#070f1e' },
+        // OGP デフォルト
+        { property: 'og:type', content: 'website' },
+        { property: 'og:locale', content: 'ja_JP' },
+        { property: 'og:site_name', content: '平山工業株式会社' },
+        { name: 'twitter:card', content: 'summary' },
       ],
     },
   },
@@ -32,6 +55,7 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/image',
     '@vueuse/nuxt',
+    '@nuxtjs/sitemap',
   ],
 
   fonts: {
