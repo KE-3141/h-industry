@@ -12,26 +12,33 @@ import { PDFDocument } from 'pdf-lib'
 import { root, repo } from './lib.mjs'
 import { patternNames } from './patterns.mjs'
 
-/** 縮小後の長辺（px）。いちばん大きい表紙の写真でも 180dpi 程度になる */
-const maxPixels = 1400
+/** 縮小後の長辺（px）。表紙の写真で 120dpi 程度（コンビニのコピー機なら十分） */
+const maxPixels = 1000
 const imagesDir = resolve(root, 'build/netprint-images')
 
-/** public/images の写真を縮小して imagesDir に置く（作成済みならそのまま使う） */
+/**
+ * public/images の写真を縮小して imagesDir に置き、HTML から参照するパスを返す（作成済みならそのまま使う）。
+ * 透過のない PNG（写真）は JPEG にする（PNG のままだと容量が大きい）
+ */
 const shrink = (path) => {
   const src = resolve(repo, 'public', path)
-  const dest = resolve(imagesDir, path.replace(/^images\//, ''))
-  if (existsSync(dest)) return
+  const [width, height, alpha] = execFileSync('sips', ['-g', 'pixelWidth', '-g', 'pixelHeight', '-g', 'hasAlpha', src], { encoding: 'utf8' })
+    .match(/\S+$/gm).slice(1)
+  const toJpeg = /\.png$/i.test(path) && alpha === 'no'
+  const outPath = toJpeg ? `${path}.jpg` : path
+  const dest = resolve(imagesDir, outPath.replace(/^images\//, ''))
+  if (existsSync(dest)) return outPath
   mkdirSync(dirname(dest), { recursive: true })
-  const [width, height] = execFileSync('sips', ['-g', 'pixelWidth', '-g', 'pixelHeight', src], { encoding: 'utf8' })
-    .match(/\d+$/gm).map(Number)
-  const args = Math.max(width, height) > maxPixels ? ['-Z', String(maxPixels)] : []
-  execFileSync('sips', [...args, '-s', 'formatOptions', '70', src, '--out', dest], { stdio: 'ignore' })
+  const args = Math.max(Number(width), Number(height)) > maxPixels ? ['-Z', String(maxPixels)] : []
+  if (toJpeg) args.push('-s', 'format', 'jpeg')
+  execFileSync('sips', [...args, '-s', 'formatOptions', '60', src, '--out', dest], { stdio: 'ignore' })
+  return outPath
 }
 
 // 1. 縮小した写真を参照する HTML を build/<パターン>-netprint/ に作る
 for (const name of patternNames) {
   const html = readFileSync(resolve(root, `build/${name}/index.html`), 'utf8')
-  for (const [, src] of html.matchAll(/src="(images\/[^"]+)"/g)) shrink(decodeURI(src))
+    .replace(/src="(images\/[^"]+)"/g, (_, src) => `src="${encodeURI(shrink(decodeURI(src)))}"`)
 
   const dir = resolve(root, `build/${name}-netprint`)
   mkdirSync(dir, { recursive: true })

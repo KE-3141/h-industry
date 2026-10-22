@@ -130,6 +130,15 @@ export const useSiteContent = () => {
     { value: '2', unit: '名', label: '2級土木施工管理技士' },
   ]
 
+  /** 代表挨拶（トップページ・パンフレットで共用） */
+  const greeting = {
+    title: '人のために、未来のために。',
+    paragraphs: [
+      '平山工業株式会社は1974年の創業以来、躯体構築一式工事を中心に、人々と地域に貢献してまいりました。ダム、発電所、橋——こうした構造物は、見えないところで多くの人々の暮らしを支えています。',
+      '50年以上こうして事業を続けてこられたのは、信頼して任せてくださったお客様と、現場を守り続けてくれた作業員たちのおかげです。「誠実な人が、確かな施工をする」——創業からのこの言葉を胸に、これからも地域に必要とされる会社であり続けます。',
+    ],
+  }
+
   /** 会社沿革（トップページ・パンフレットで共用） */
   const history = [
     {
@@ -193,6 +202,15 @@ export const useSiteContent = () => {
   // ─────────────────────────────────────────
   // 求人情報
   // ─────────────────────────────────────────
+
+  /** 採用メッセージ（求人情報ページ・パンフレットで共用）。titleLines は行ごとに改行させたい区切り */
+  const recruitmentMessage = {
+    titleLines: ['次の50年を、', 'ともにつくる人へ。'],
+    paragraphs: [
+      '平山工業は、経験・未経験を問わず採用しています。大切にしているのは「一緒に現場をつくれるか」という一点です。現場の技術はゼロから身につけられます。先輩作業員が丁寧に指導しますので、まずは「やってみたい」という気持ちがあれば十分です。',
+      '資格取得支援・単身用寮・社会保険完備など、長く安心して働ける環境も整えています。「話を聞いてみたい」という段階でもお気軽にご連絡ください。',
+    ],
+  }
 
   /** 募集職種 */
   const jobs = [
@@ -369,7 +387,7 @@ export const useSiteContent = () => {
       businessTypes: ['鉄筋工事', '型枠工事', '足場工事', 'コンクリート打設工事'],
       images: [
         '/images/projects/三島ダム洪水吐改修工事_1.JPG',
-        '/images/projects/三島ダム洪水吐改修工事_2.JPG',
+        '/images/projects/三島ダム洪水吐改修工事_2.jpg',
       ],
     },
     {
@@ -643,6 +661,7 @@ export const useSiteContent = () => {
     footerNavItems,
     strengths,
     stats,
+    greeting,
     history,
     clients,
     projects,
@@ -656,5 +675,6 @@ export const useSiteContent = () => {
     benefits,
     applicationSteps,
     recruitmentPoints,
+    recruitmentMessage,
   }
 }

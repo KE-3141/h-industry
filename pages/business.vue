@@ -17,7 +17,6 @@ const otherServices = (services: Service[]) => services.filter(s => !s.primary)
     <!-- ===== 1. ページヒーロー ===== -->
     <PageHero
       title="事業内容"
-      description="躯体構築工事を一式で。一式でのご依頼はもちろん、必要な工種だけのスポット対応も可能です。"
     />
 
     <!-- ===== 2. 事業内容（交互レイアウト） ===== -->
@@ -41,12 +40,6 @@ const otherServices = (services: Service[]) => services.filter(s => !s.primary)
                 class="w-full h-full object-cover"
                 loading="lazy"
               />
-              <!-- ラベル -->
-              <div class="absolute top-5 left-5">
-                <span class="bg-primary-900/80 text-accent-400 text-xs font-medium tracking-widest uppercase px-3 py-1.5 rounded-full">
-                  {{ biz.label }}
-                </span>
-              </div>
             </div>
 
             <!-- テキスト -->

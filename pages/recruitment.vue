@@ -4,7 +4,7 @@ useSeoMeta({
   description: '平山工業株式会社の求人情報。鳶工・土工・型枠工・鉄筋工・現場管理を随時募集中。未経験者歓迎・資格取得支援・単身用寮完備。関東全域の建設現場で技術を磨きませんか。',
 })
 
-const { company, jobs, benefits, applicationSteps, recruitmentPoints } = useSiteContent()
+const { company, jobs, benefits, applicationSteps, recruitmentPoints, recruitmentMessage } = useSiteContent()
 const recruitmentBgUrl = usePublicUrl('/images/recruitment_bg.jpg')
 </script>
 
@@ -39,7 +39,11 @@ const recruitmentBgUrl = usePublicUrl('/images/recruitment_bg.jpg')
               align="left"
               class="mb-6"
             >
-              <span class="inline-block">次の50年を、</span><span class="inline-block">ともにつくる人へ。</span>
+              <span
+                v-for="line in recruitmentMessage.titleLines"
+                :key="line"
+                class="inline-block"
+              >{{ line }}</span>
             </SectionHeading>
             <SlideLink
               to="/contact/"
@@ -49,11 +53,13 @@ const recruitmentBgUrl = usePublicUrl('/images/recruitment_bg.jpg')
             </SlideLink>
           </div>
           <div>
-            <p class="text-neutral-200 leading-relaxed">
-              平山工業は、経験・未経験を問わず採用しています。大切にしているのは「一緒に現場をつくれるか」という一点です。現場の技術はゼロから身につけられます。先輩作業員が丁寧に指導しますので、まずは「やってみたい」という気持ちがあれば十分です。
-            </p>
-            <p class="text-neutral-200 leading-relaxed mt-4">
-              資格取得支援・単身用寮・社会保険完備など、長く安心して働ける環境も整えています。「話を聞いてみたい」という段階でもお気軽にご連絡ください。
+            <p
+              v-for="(paragraph, index) in recruitmentMessage.paragraphs"
+              :key="index"
+              class="text-neutral-200 leading-relaxed"
+              :class="{ 'mt-4': index > 0 }"
+            >
+              {{ paragraph }}
             </p>
           </div>
         </div>

@@ -26,9 +26,9 @@ const gridDeco = ({ width = 216, height = 303, step = 12 } = {}) => {
 
 const greeting = () => `
   <div class="content">
-    ${heading('Message', brochure.greeting.title)}
+    ${heading('Message', site.greeting.title)}
     <div class="greeting__body">
-      ${brochure.greeting.paragraphs.map(p => `<p>${esc(p)}</p>`).join('')}
+      ${site.greeting.paragraphs.map(p => `<p>${esc(p)}</p>`).join('')}
     </div>
     <div class="greeting__sign">
       <img class="greeting__face" src="${img(brochure.greeting.faceImage)}" alt="">
@@ -61,26 +61,29 @@ const history = () => `
     </ol>
   </div>`
 
+/** 写真の組（先頭を大きく、残りを右に縦積み）。事業内容と施工実績ピックアップで使う */
+const photoSet = images => `
+  <div class="photo-set">
+    ${images.map(src => `<figure><img src="${img(src)}" alt=""></figure>`).join('')}
+  </div>`
+
 const business = () => {
-  const [structure, civil] = site.businesses
-  const block = (b, image) => `
-    <article class="biz">
-      <figure class="biz__photo"><img src="${img(image)}" alt=""></figure>
-      <div class="biz__text">
-        <p class="biz__label">${esc(b.label)}</p>
-        <h3 class="biz__title">${esc(b.title)}</h3>
-        <p class="biz__desc">${esc(b.description)}</p>
-        ${b.services.length ? `<ul class="chips">${b.services.map(s => `<li class="chip${s.primary ? ' chip--primary' : ''}">${esc(s.name)}</li>`).join('')}</ul>` : ''}
-      </div>
-    </article>`
+  const [biz] = site.businesses
+  const primary = biz.services.filter(s => s.primary)
+  const others = biz.services.filter(s => !s.primary)
   return `
   <div class="content">
     ${heading('Business', '事業内容')}
     <p class="lead">${esc(brochure.business.lead)}</p>
-    ${block(structure, brochure.business.images.structure)}
-    ${block(civil, brochure.business.images.civil)}
+    ${photoSet(brochure.business.images)}
+    <article class="biz">
+      <h3 class="biz__title">${esc(biz.title)}</h3>
+      <p class="biz__desc">${esc(biz.description)}</p>
+      <ul class="chips">${primary.map(s => `<li class="chip chip--primary">${esc(s.name)}</li>`).join('')}</ul>
+      ${others.length ? `<p class="biz__others">その他：${others.map(s => esc(s.name)).join('・')}</p>` : ''}
+    </article>
     <div class="worktypes">
-      <p class="worktypes__title">主な対応工種</p>
+      <p class="worktypes__title">対応工種・施工実績</p>
       <ul class="worktypes__list">${site.workTypes.map(w => `<li>${esc(w)}</li>`).join('')}</ul>
     </div>
   </div>`
@@ -110,18 +113,19 @@ const workMeta = p => `
   </dl>
   <ul class="tags">${p.businessTypes.map(t => `<li>${esc(t)}</li>`).join('')}</ul>`
 
+/** 施工実績のタイトル。content.ts の nameLines の区切りごとに折り返さない塊にする */
+const projectName = p => (brochure.nameLines[p.key] ?? [p.name]).map(s => `<span>${esc(s.trimEnd())}</span>${s.endsWith(' ') ? ' ' : ''}`).join('')
+
 /** 大きく見せる施工実績（メイン写真 + サブ写真2枚 + 紹介文） */
 const pickup = ({ coverImage }) => `
   <div class="content">
     ${heading('Works', '施工実績')}
     ${pickupProjects(coverImage).map((p, i) => `
       <article class="pickup">
-        <div class="pickup__photos">
-          ${p.images.map(src => `<figure><img src="${img(src)}" alt=""></figure>`).join('')}
-        </div>
+        ${photoSet(p.images)}
         <div class="pickup__text">
           <p class="pickup__num">PICK UP ${String(i + 1).padStart(2, '0')}</p>
-          <h3 class="pickup__name">${esc(p.name)}</h3>
+          <h3 class="pickup__name">${projectName(p)}</h3>
           ${workMeta(p)}
           <p class="pickup__comment">${esc(p.comment)}</p>
         </div>
@@ -133,14 +137,14 @@ const works = items => `
     <div class="works works--${items.length}">
       ${items.map(p => `
         <article class="work">
-          <figure class="work__photo"><img src="${img(p.image)}" alt=""></figure>
-          <h3 class="work__name">${esc(p.name)}</h3>
+          <figure class="work__photo"><img src="${img(p.image)}" alt=""${p.focus ? ` style="object-position:${p.focus}"` : ''}></figure>
+          <h3 class="work__name">${projectName(p)}</h3>
           ${workMeta(p)}
         </article>`).join('')}
     </div>
   </div>`
 
-const backCover = () => {
+const companyProfile = () => {
   const rows = [
     ['社名', `${esc(company.name)}<br><span class="en">${esc(company.nameEn)}</span>`],
     ['代表取締役社長', esc(company.ceo)],
@@ -149,7 +153,7 @@ const backCover = () => {
     ['資本金', esc(company.capital)],
     ['従業員数', `${esc(company.employees)}名`],
     ['所在地（本社）', `〒${esc(company.postalCode)}<br>${esc(company.address)}`],
-    ['営業エリア', `${esc(company.area)}全域`],
+    ['営業エリア', esc(company.areaLabel)],
     ['事業内容', esc(company.businessTypes)],
     ['建設業許可', esc(company.license)],
   ]
@@ -163,17 +167,20 @@ const backCover = () => {
       <h3 class="clients__title">主要取引先<span>（順不同・敬称略）</span></h3>
       <ul class="clients__list">${site.clients.map(c => `<li>${esc(c)}</li>`).join('')}</ul>
     </div>
-  </div>
-  <div class="bleed-bottom contact">
-    <div class="contact__main">
-      ${logo}
-      <p class="contact__address">${esc(company.addressFull)}</p>
-      <p class="contact__tel"><span>TEL</span>${esc(company.tel)}</p>
-      <p class="contact__sub">FAX ${esc(company.fax)} ／ ${esc(company.hoursLabel)}</p>
-    </div>
-    <div class="contact__qr">${qr}</div>
   </div>`
 }
+
+/** 裏表紙（連絡先だけを全面に） */
+const backCover = () => `
+  <div class="bleed contact contact--back">
+    <p class="contact__tagline">${esc(company.tagline)}</p>
+    ${logo}
+    <p class="contact__address">${esc(company.addressFull)}</p>
+    <p class="contact__tel"><span>TEL</span>${esc(company.tel)}</p>
+    <p class="contact__sub">FAX ${esc(company.fax)} ／ ${esc(company.hoursLabel)}</p>
+    <div class="contact__qr">${qr}</div>
+    ${brochure.siteUrl ? `<p class="contact__url">${esc(brochure.siteUrl.replace(/^https?:\/\/|\/$/g, ''))}</p>` : ''}
+  </div>`
 
 // ─────────────────────────────────────────
 // ページ割り付け（施工実績の一覧ページは残り枠に自動で割り付ける）
@@ -191,13 +198,21 @@ const pickupProjects = coverImage => brochure.pickupProjects.map(({ key, images,
   return { ...p, comment, images: images.map(n => p.images[n]).filter(src => src && img(src) !== img(coverImage)) }
 })
 
-const projects = brochure.featuredProjects.map(({ key, image }) => {
-  const p = findProject(key)
-  return { ...p, image: p.images[image] ?? p.images[0] }
+/** ピックアップ以外の実績をすべて一覧に出す */
+const pickupKeys = new Set(brochure.pickupProjects.map(p => p.key))
+for (const key of Object.keys(brochure.projectPhotos)) findProject(key)
+for (const [key, lines] of Object.entries(brochure.nameLines)) {
+  if (lines.join('') !== findProject(key).name) {
+    throw new Error(`content.ts: nameLines "${key}" をつなげてもサイトのタイトル「${findProject(key).name}」と一致しません`)
+  }
+}
+const projects = site.projects.filter(p => !pickupKeys.has(p.key)).map((p) => {
+  const { image = 0, focus } = brochure.projectPhotos[p.key] ?? {}
+  return { ...p, image: p.images[image] ?? p.images[0], focus }
 })
 
 const before = [greeting, history, business, strengths, pickup] // 表紙の後ろ
-const after = [backCover]
+const after = [companyProfile, backCover]
 const { totalPages, projectsPerPage } = brochure
 const worksPageCount = totalPages - 1 - before.length - after.length
 
@@ -207,7 +222,7 @@ if (totalPages % 4 !== 0) {
 if (worksPageCount < 1 || projects.length > worksPageCount * projectsPerPage) {
   throw new Error(
     `施工実績 ${projects.length}件 が ${worksPageCount}ページ（最大 ${worksPageCount * projectsPerPage}件）に収まりません。`
-    + ' content.ts の totalPages を4ページ増やすか、featuredProjects を減らしてください。',
+    + ' content.ts の totalPages を4ページ増やすか、projectsPerPage を増やしてください。',
   )
 }
 
@@ -236,13 +251,14 @@ const render = async (patternName) => {
   const body = pages.map(({ name, html }, i) => {
     const num = i + 1
     const isFrontCover = num === 1
+    const isBackCover = num === totalPages
     // 中綴じ（左綴じ）: 偶数ページが見開きの左、奇数ページが右
     const side = num % 2 === 0 ? 'left' : 'right'
     sideLabel = html.match(/class="heading__label">([^<]+)</)?.[1] ?? sideLabel
     // 方眼の地紋は代表挨拶だけ
     const ground = name === 'greeting' ? gridDeco() : ''
-    const deco = isFrontCover ? '' : `${ground}<p class="side-label">${esc(sideLabel)}</p>`
-    const nombre = isFrontCover || num === totalPages ? '' : `<p class="nombre">${String(num).padStart(2, '0')}</p>`
+    const deco = isFrontCover || isBackCover ? '' : `${ground}<p class="side-label">${esc(sideLabel)}</p>`
+    const nombre = isFrontCover || isBackCover ? '' : `<p class="nombre">${String(num).padStart(2, '0')}</p>`
     return `<section class="page page--${name} page--${side}">${deco}${html}${nombre}</section>`
   }).join('\n')
 

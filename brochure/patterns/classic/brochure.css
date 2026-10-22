@@ -475,10 +475,6 @@ figure img {
  * P3 会社沿革（代表挨拶と見開きで揃えるため、見出しの高さを合わせる）
  * ───────────────────────────────────────── */
 
-.page--history .content {
-  padding-top: 48mm;
-}
-
 .page--history .heading {
   margin-bottom: 10mm;
 }
@@ -503,14 +499,14 @@ figure img {
   display: grid;
   grid-template-columns: 22mm 1fr;
   gap: 10mm;
-  padding: 8mm 0;
+  padding: 5mm 0;
 }
 
 /* 縦線上の丸 */
 .timeline__item::before {
   content: '';
   position: absolute;
-  top: 10mm;
+  top: 7mm;
   left: 25.6mm;
   width: 3mm;
   height: 3mm;
@@ -548,25 +544,14 @@ figure img {
  * P4 事業内容
  * ───────────────────────────────────────── */
 
+/* 事業内容は1事業なので写真を大きく */
+.page--business .photo-set {
+  height: 92mm;
+}
+
 .biz {
-  display: flex;
-  gap: 6mm;
   padding: 7mm 0;
   border-top: 0.25mm solid var(--line);
-}
-
-.biz__photo {
-  flex: none;
-  width: 76mm;
-  height: 76mm;
-}
-
-.biz__label {
-  font-size: 7.5pt;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--orange);
 }
 
 .biz__title {
@@ -580,6 +565,12 @@ figure img {
 .biz__desc {
   margin-bottom: 3mm;
   text-align: justify;
+}
+
+.biz__others {
+  margin-top: 2.5mm;
+  font-size: 8.5pt;
+  color: var(--ink-70);
 }
 
 .worktypes {
@@ -670,8 +661,8 @@ figure img {
   padding-bottom: 0;
 }
 
-/* メイン写真（左・大）+ サブ写真2枚（右に縦積み） */
-.pickup__photos {
+/* 写真の組：メイン写真（左・大）+ サブ写真2枚（右に縦積み）。事業内容・ピックアップで共用 */
+.photo-set {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: repeat(2, minmax(0, 1fr));
@@ -680,13 +671,13 @@ figure img {
   margin-bottom: 4mm;
 }
 
-.pickup__photos figure {
+.photo-set figure {
   min-height: 0;
   overflow: hidden;
 }
 
-.pickup__photos figure:first-child,
-.pickup__photos figure:nth-child(2):last-child {
+.photo-set figure:first-child,
+.photo-set figure:nth-child(2):last-child {
   grid-row: 1 / 3;
 }
 
@@ -715,7 +706,10 @@ figure img {
 .works {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  /* 段の高さを版面いっぱいに均等割りし、名称の行数に関係なく写真の位置をページ間でそろえる */
+  grid-auto-rows: 1fr;
   gap: 7mm 8mm;
+  height: calc(297mm - var(--margin-top) - var(--margin-bottom) - 6mm);
 }
 
 .work__photo {
@@ -734,9 +728,57 @@ figure img {
   grid-template-columns: 1fr;
 }
 
-.works--3 .work__photo,
 .works--4 .work__photo {
-  height: 80mm;
+  height: 92mm;
+}
+
+/* 3件のページは横長のカードを3段（写真左・文字右） */
+.works--3 {
+  grid-template-columns: 1fr;
+}
+
+.works--3 .work {
+  display: grid;
+  grid-template-columns: 104mm 1fr;
+  grid-template-rows: auto auto 1fr;
+  column-gap: 6mm;
+}
+
+.works--3 .work__photo {
+  grid-row: 1 / 4;
+  height: 79mm;
+  margin-bottom: 0;
+}
+
+.works--3 .tags {
+  align-self: start;
+}
+
+.works--3 .work__name {
+  font-size: 12pt;
+}
+
+.works--5,
+.works--6,
+.works--7,
+.works--8,
+.works--9 {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6mm 5mm;
+}
+
+.works--5 .work__photo,
+.works--6 .work__photo,
+.works--7 .work__photo,
+.works--8 .work__photo,
+.works--9 .work__photo {
+  height: 44mm;
+}
+
+/* タイトルは content.ts の nameLines の区切りで折り返す */
+.work__name span,
+.pickup__name span {
+  display: inline-block;
 }
 
 .work__name {
@@ -768,7 +810,7 @@ figure img {
 }
 
 /* ─────────────────────────────────────────
- * 裏表紙 会社概要
+ * 会社概要 / 裏表紙
  * ───────────────────────────────────────── */
 
 .profile {
@@ -867,6 +909,47 @@ figure img {
   height: 24mm;
   padding: 2mm;
   background: var(--white);
+}
+
+/* 裏表紙：連絡先を全面に（.contact の帯を塗り足しまで広げる） */
+.contact--back {
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  padding: 0;
+  text-align: center;
+}
+
+.contact--back .logo {
+  width: 90mm;
+  margin: 0 auto 8mm;
+}
+
+.contact__tagline {
+  margin-bottom: 10mm;
+  font-family: var(--font-serif);
+  font-size: 12pt;
+  letter-spacing: 0.6em;
+  color: var(--orange);
+}
+
+.contact--back .contact__qr {
+  margin-top: 12mm;
+}
+
+/* QR コード（qrcode の SVG は RGB の色属性なので、K 版の黒と白に置き換える） */
+.contact__qr svg [stroke] {
+  stroke: var(--ink);
+}
+
+.contact__qr svg [fill='#ffffff'] {
+  fill: var(--white);
+}
+
+.contact__url {
+  margin-top: 2.5mm;
+  font-size: 8pt;
+  letter-spacing: 0.08em;
 }
 
 .contact__qr svg {

@@ -4,7 +4,7 @@ const rebarWorkUrl = usePublicUrl('/images/kutai.JPG')
 const strengthsImageUrl = usePublicUrl('/images/strengths.png')
 const presidentSignUrl = usePublicUrl('/images/president_sign.png')
 const presidentFaceUrl = usePublicUrl('/images/president_face.jpg')
-const { company, strengths, workTypes, featuredProjects, businesses, history } = useSiteContent()
+const { company, strengths, workTypes, featuredProjects, businesses, history, greeting } = useSiteContent()
 
 const strengthItems = strengths.map(s => ({ ...s, to: `/about/#${s.key}` }))
 
@@ -130,13 +130,16 @@ const companyRows = [
       />
       <div class="relative z-10 max-w-2xl mx-auto px-6 text-center">
         <h2 v-reveal class="text-2xl md:text-3xl font-bold leading-relaxed mb-8 text-primary-900 text-balance">
-          人のために、未来のために。
+          {{ greeting.title }}
         </h2>
-        <p v-reveal class="text-neutral-800 text-base leading-relaxed mb-5 text-left">
-          平山工業株式会社は1974年の創業以来、躯体構築一式工事を中心に、人々と地域に貢献してまいりました。ダム、発電所、橋——こうした構造物は、見えないところで多くの人々の暮らしを支えています。
-        </p>
-        <p v-reveal class="text-neutral-600 text-base leading-relaxed mb-10 text-left">
-          50年以上こうして事業を続けてこられたのは、信頼して任せてくださったお客様と、現場を守り続けてくれた作業員たちのおかげです。「誠実な人が、確かな施工をする」——創業からのこの言葉を胸に、これからも地域に必要とされる会社であり続けます。
+        <p
+          v-for="(paragraph, index) in greeting.paragraphs"
+          :key="index"
+          v-reveal
+          class="text-base leading-relaxed text-left"
+          :class="index === 0 ? 'text-neutral-800 mb-5' : 'text-neutral-600 mb-10'"
+        >
+          {{ paragraph }}
         </p>
         <div v-reveal class="flex flex-col items-center gap-3">
           <img
