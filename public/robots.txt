@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://h-industry.co.jp/sitemap.xml
+Sitemap: https://www.hirayama-industry.jp/sitemap.xml

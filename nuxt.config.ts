@@ -6,13 +6,13 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      siteUrl: 'https://h-industry.co.jp',
+      siteUrl: 'https://www.hirayama-industry.jp',
     },
   },
 
   // @nuxtjs/sitemap（nuxt-site-config）用
   site: {
-    url: 'https://h-industry.co.jp',
+    url: 'https://www.hirayama-industry.jp',
     name: '平山工業株式会社',
     trailingSlash: true,
   },
