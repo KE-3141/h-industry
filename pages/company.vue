@@ -60,11 +60,12 @@ const companyRows = [
           <div class="lg:sticky lg:top-24">
             <div class="rounded-sm overflow-hidden border border-neutral-200 shadow-sm">
               <iframe
-                :src="`https://maps.google.com/maps?q=${encodeURIComponent(company.addressMap)}&output=embed&hl=ja`"
+                :src="company.mapEmbedUrl"
                 :title="`${company.name} 所在地マップ`"
                 class="w-full h-72 lg:h-96"
                 loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
               />
             </div>
             <p class="mt-3 text-xs text-neutral-400 leading-relaxed">

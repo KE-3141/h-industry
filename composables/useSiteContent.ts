@@ -16,7 +16,9 @@ export const useSiteContent = () => {
     postalCode: '136-0073',
     address: '東京都江東区北砂6-7-13 ヒラヤマビル2階',
     addressFull: '〒136-0073 東京都江東区北砂6-7-13 ヒラヤマビル2階',
-    addressMap: '東京都江東区北砂6-7-13',
+    // Google マップの「共有 → 地図を埋め込む」で出る iframe の src。住所が変わったら取り直す
+    mapEmbedUrl:
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.7882543383803!2d139.83368377662492!3d35.68221547258687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018888c8360eef9%3A0xe8908cb170fbb5cd!2z44CSMTM2LTAwNzMg5p2x5Lqs6YO95rGf5p2x5Yy65YyX56CC77yW5LiB55uu77yX4oiS77yR77yT!5e0!3m2!1sja!2sjp!4v1793262679430!5m2!1sja!2sjp',
     // 構造化データ（JSON-LD）用の住所分割
     addressParts: {
       region: '東京都',
