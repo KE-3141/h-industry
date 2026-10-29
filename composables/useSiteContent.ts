@@ -505,6 +505,7 @@ export const useSiteContent = () => {
         '/images/projects/館山電源室新設建築その他工事_1.JPG',
         '/images/projects/館山電源室新設建築その他工事_2.JPG',
         '/images/projects/館山電源室新設建築その他工事_3.JPG',
+        '/images/projects/館山電源室新設建築その他工事_4.JPG',
       ],
     },
     {
