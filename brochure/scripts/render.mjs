@@ -74,7 +74,6 @@ const business = () => {
   return `
   <div class="content">
     ${heading('Business', '事業内容')}
-    <p class="lead">${esc(brochure.business.lead)}</p>
     ${photoSet(brochure.business.images)}
     <article class="biz">
       <h3 class="biz__title">${esc(biz.title)}</h3>
