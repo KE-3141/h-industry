@@ -1,16 +1,15 @@
 /*
  * 平山工業 会社案内パンフレット（A4 中綴じ）— パターン B「エアリー」
  * 白地の表紙に合わせて中面も軽くする：明朝は細め、罫線は細く、紺の塗りは淡い紺に、
- * オレンジは使わず、細い線・沿革の印も紺にする（サイトのデザインからは少し離れる）。
+ * オレンジは使わず、見出しの英字・細い線・沿革の印はロゴの青にする（サイトのデザインからは少し離れる）。
  * 色は device-cmyk() で指定し、--cmyk ビルドでそのまま CMYK として PDF に出力する。
  * 対応する Web の色は assets/css/app.css の @theme。
  */
 
 :root {
-  /* Primary — Navy（≒ primary-900 / 700 / 500 / 100 / 50） */
+  /* Primary — Navy（≒ primary-900 / 700 / 100 / 50）。中くらいの青はロゴの青（--logo-blue）を使う */
   --navy-900: device-cmyk(1 0.85 0.45 0.55);
   --navy-700: device-cmyk(1 0.8 0.3 0.2);
-  --navy-500: device-cmyk(0.9 0.62 0.1 0);
   --navy-100: device-cmyk(0.18 0.08 0 0);
   --navy-50: device-cmyk(0.06 0.02 0 0);
   /* Neutral — 文字は K 版のみ */
@@ -175,16 +174,6 @@ figure img {
   color: var(--navy-100);
 }
 
-/* 頭に短い線 */
-.side-label::before {
-  content: '';
-  display: inline-block;
-  width: 0.25mm;
-  height: 8mm;
-  margin-bottom: 3mm;
-  background: var(--navy-500);
-}
-
 .page--left .side-label {
   left: 6mm;
 }
@@ -202,20 +191,10 @@ figure img {
 }
 
 .heading__label {
-  display: flex;
-  align-items: center;
-  gap: 3mm;
   font-size: 7.5pt;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: var(--navy-500);
-}
-
-.heading__label::before {
-  content: '';
-  width: 10mm;
-  height: 0.25mm;
-  background: var(--navy-500);
+  color: var(--logo-blue);
 }
 
 .heading__title {
@@ -271,8 +250,8 @@ figure img {
   top: 1.6mm;
   width: 2.4mm;
   height: 1.3mm;
-  border-left: 0.35mm solid var(--navy-500);
-  border-bottom: 0.35mm solid var(--navy-500);
+  border-left: 0.35mm solid var(--logo-blue);
+  border-bottom: 0.35mm solid var(--logo-blue);
   transform: rotate(-45deg);
 }
 
@@ -336,7 +315,7 @@ figure img {
 .cover__label {
   font-size: 8pt;
   letter-spacing: 0.4em;
-  color: var(--navy-500);
+  color: var(--logo-blue);
 }
 
 /* 頭に細い線 */
@@ -347,7 +326,7 @@ figure img {
   height: 0.25mm;
   margin-right: 3mm;
   vertical-align: middle;
-  background: var(--navy-500);
+  background: var(--logo-blue);
 }
 
 .cover__business {
@@ -460,7 +439,7 @@ figure img {
 .stats__value span {
   margin-left: 1mm;
   font-size: 10pt;
-  color: var(--navy-500);
+  color: var(--logo-blue);
 }
 
 .stats__label {
@@ -510,7 +489,7 @@ figure img {
   width: 2.2mm;
   height: 2.2mm;
   transform: rotate(45deg);
-  background: var(--navy-500);
+  background: var(--logo-blue);
 }
 
 .timeline__year {
@@ -623,7 +602,7 @@ figure img {
   font-size: 24pt;
   font-weight: 500;
   line-height: 1;
-  color: var(--navy-500);
+  color: var(--logo-blue);
 }
 
 .strength__title {
@@ -685,7 +664,7 @@ figure img {
 .pickup__num {
   font-size: 7pt;
   letter-spacing: 0.35em;
-  color: var(--navy-500);
+  color: var(--logo-blue);
 }
 
 .pickup__name {
@@ -816,7 +795,7 @@ figure img {
 .profile {
   width: 100%;
   border-collapse: collapse;
-  border-top: 0.25mm solid var(--navy-500);
+  border-top: 0.25mm solid var(--logo-blue);
 }
 
 .profile th,
@@ -898,7 +877,7 @@ figure img {
   font-family: var(--font-sans);
   font-size: 8pt;
   letter-spacing: 0.2em;
-  color: var(--navy-500);
+  color: var(--logo-blue);
 }
 
 .contact__sub {
@@ -932,7 +911,7 @@ figure img {
   font-family: var(--font-serif);
   font-size: 12pt;
   letter-spacing: 0.6em;
-  color: var(--navy-500);
+  color: var(--logo-blue);
 }
 
 .contact--back .contact__qr {
