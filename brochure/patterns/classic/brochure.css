@@ -1,6 +1,6 @@
 /*
  * 平山工業 会社案内パンフレット（A4 中綴じ）— パターン A「クラシック」
- * サイトのデザイン（紺・オレンジ）に沿った、紺地の力強い表紙。
+ * サイトのデザイン（紺）に沿った、紺地の力強い表紙。オレンジは使わず、差し色はロゴの青。
  * 色は device-cmyk() で指定し、--cmyk ビルドでそのまま CMYK として PDF に出力する。
  * 対応する Web の色は assets/css/app.css の @theme。
  */
@@ -12,9 +12,6 @@
   --navy-500: device-cmyk(0.9 0.62 0.1 0);
   --navy-100: device-cmyk(0.18 0.08 0 0);
   --navy-50: device-cmyk(0.06 0.02 0 0);
-  /* Accent — Steel Orange（≒ accent-500 / 50） */
-  --orange: device-cmyk(0 0.75 1 0);
-  --orange-50: device-cmyk(0 0.06 0.1 0);
   /* Neutral — 文字は K 版のみ */
   --ink: device-cmyk(0 0 0 1);
   --ink-70: device-cmyk(0 0 0 0.75);
@@ -178,16 +175,6 @@ figure img {
   color: var(--navy-100);
 }
 
-/* 頭に短い線 */
-.side-label::before {
-  content: '';
-  display: inline-block;
-  width: 0.5mm;
-  height: 8mm;
-  margin-bottom: 3mm;
-  background: var(--orange);
-}
-
 .page--left .side-label {
   left: 6mm;
 }
@@ -205,21 +192,11 @@ figure img {
 }
 
 .heading__label {
-  display: flex;
-  align-items: center;
-  gap: 2.5mm;
   font-size: 8pt;
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--orange);
-}
-
-.heading__label::before {
-  content: '';
-  width: 8mm;
-  height: 0.6mm;
-  background: var(--orange);
+  color: var(--logo-blue);
 }
 
 .heading__title {
@@ -256,11 +233,10 @@ figure img {
   color: var(--ink-70);
 }
 
+/* 工種はサイトと同じくグレー */
 .chip--primary {
-  border-color: var(--navy-700);
-  background: var(--navy-700);
-  color: var(--white);
-  font-weight: 700;
+  border-color: var(--line);
+  color: var(--ink-70);
 }
 
 .checklist li {
@@ -275,8 +251,8 @@ figure img {
   top: 1.6mm;
   width: 2.4mm;
   height: 1.3mm;
-  border-left: 0.5mm solid var(--orange);
-  border-bottom: 0.5mm solid var(--orange);
+  border-left: 0.5mm solid var(--logo-blue);
+  border-bottom: 0.5mm solid var(--logo-blue);
   transform: rotate(-45deg);
 }
 
@@ -311,7 +287,7 @@ figure img {
 /* 写真と紺地は境目をはっきり分ける（グラデーションは CMYK 変換されないため使わない） */
 .cover__photo {
   bottom: 132mm;
-  border-bottom: 1.2mm solid var(--orange);
+  border-bottom: 1.2mm solid var(--logo-blue);
 }
 
 .cover__photo img {
@@ -330,7 +306,7 @@ figure img {
   font-size: 9pt;
   font-weight: 700;
   letter-spacing: 0.3em;
-  color: var(--orange);
+  color: var(--logo-blue);
 }
 
 .cover__copy {
@@ -346,7 +322,7 @@ figure img {
   width: 20mm;
   height: 0.8mm;
   margin: 7mm 0 4mm;
-  background: var(--orange);
+  background: var(--logo-blue);
 }
 
 .cover__business {
@@ -461,7 +437,7 @@ figure img {
 .stats__value span {
   margin-left: 1mm;
   font-size: 11pt;
-  color: var(--orange);
+  color: var(--logo-blue);
 }
 
 .stats__label {
@@ -483,50 +459,49 @@ figure img {
   position: relative;
 }
 
-/* 年の右にある縦線 */
-.timeline::before {
-  content: '';
-  position: absolute;
-  top: 2mm;
-  bottom: 2mm;
-  left: 27mm;
-  width: 0.3mm;
-  background: var(--navy-100);
-}
-
 .timeline__item {
   position: relative;
   display: grid;
-  grid-template-columns: 22mm 1fr;
-  gap: 10mm;
-  padding: 5mm 0;
+  grid-template-columns: 12mm 1fr;
+  gap: 7mm;
+  padding: 4mm 0;
 }
 
-/* 縦線上の丸 */
-.timeline__item::before {
+/* 丸の中心から次の丸の中心までのグレーの縦線 */
+.timeline__item:not(:last-child)::before {
   content: '';
   position: absolute;
-  top: 7mm;
-  left: 25.6mm;
-  width: 3mm;
-  height: 3mm;
-  border-radius: 50%;
-  background: var(--white);
-  border: 0.6mm solid var(--orange);
+  top: 10mm;
+  bottom: -10mm;
+  left: 5.875mm;
+  width: 0.25mm;
+  background: var(--line);
 }
 
+/* 年は紺の丸の中に白で */
 .timeline__year {
-  font-family: var(--font-serif);
-  font-size: 16pt;
-  font-weight: 800;
-  line-height: 1.3;
-  text-align: right;
-  color: var(--navy-900);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12mm;
+  height: 12mm;
+  border-radius: 50%;
+  background: var(--navy-900);
+  font-size: 7.5pt;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--white);
+}
+
+.timeline__body {
+  padding-top: 2mm;
 }
 
 .timeline__title {
   margin-bottom: 1mm;
-  font-family: var(--font-serif);
   font-size: 11pt;
   font-weight: 700;
   line-height: 1.6;
@@ -623,7 +598,7 @@ figure img {
   font-size: 28pt;
   font-weight: 800;
   line-height: 1;
-  color: var(--orange);
+  color: var(--logo-blue);
 }
 
 .strength__title {
@@ -685,7 +660,7 @@ figure img {
   font-size: 7.5pt;
   font-weight: 700;
   letter-spacing: 0.2em;
-  color: var(--orange);
+  color: var(--logo-blue);
 }
 
 .pickup__name {
@@ -803,10 +778,10 @@ figure img {
 }
 
 .tags li {
-  padding: 0.2mm 2mm;
-  background: var(--navy-50);
+  padding: 0 2mm;
+  border: 0.25mm solid var(--line);
   font-size: 7pt;
-  color: var(--navy-700);
+  color: var(--ink-70);
 }
 
 /* ─────────────────────────────────────────
@@ -896,7 +871,7 @@ figure img {
   margin-right: 2mm;
   font-family: var(--font-sans);
   font-size: 9pt;
-  color: var(--orange);
+  color: var(--logo-blue);
 }
 
 .contact__sub {
@@ -930,7 +905,7 @@ figure img {
   font-family: var(--font-serif);
   font-size: 12pt;
   letter-spacing: 0.6em;
-  color: var(--orange);
+  color: var(--logo-blue);
 }
 
 .contact--back .contact__qr {

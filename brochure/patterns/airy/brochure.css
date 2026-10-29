@@ -318,17 +318,6 @@ figure img {
   color: var(--logo-blue);
 }
 
-/* 頭に細い線 */
-.cover__label::before {
-  content: '';
-  display: inline-block;
-  width: 10mm;
-  height: 0.25mm;
-  margin-right: 3mm;
-  vertical-align: middle;
-  background: var(--logo-blue);
-}
-
 .cover__business {
   margin-top: 3mm;
   font-size: 9.5pt;
