@@ -191,14 +191,6 @@ figure img {
   margin-bottom: 6mm;
 }
 
-.heading__label {
-  font-size: 8pt;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--logo-blue);
-}
-
 .heading__title {
   margin-top: 1.5mm;
   font-family: var(--font-serif);
@@ -302,13 +294,6 @@ figure img {
   color: var(--white);
 }
 
-.cover__label {
-  font-size: 9pt;
-  font-weight: 700;
-  letter-spacing: 0.3em;
-  color: var(--logo-blue);
-}
-
 .cover__copy {
   margin-top: 4mm;
   font-family: var(--font-serif);
@@ -316,13 +301,6 @@ figure img {
   font-weight: 800;
   line-height: 1.35;
   letter-spacing: 0.06em;
-}
-
-.cover__rule {
-  width: 20mm;
-  height: 0.8mm;
-  margin: 7mm 0 4mm;
-  background: var(--logo-blue);
 }
 
 .cover__business {
@@ -353,7 +331,7 @@ figure img {
 .cover__area {
   font-size: 8pt;
   letter-spacing: 0.1em;
-  color: var(--navy-100);
+  color: var(--white);
 }
 
 /* ─────────────────────────────────────────
@@ -871,12 +849,12 @@ figure img {
   margin-right: 2mm;
   font-family: var(--font-sans);
   font-size: 9pt;
-  color: var(--logo-blue);
+  color: var(--white);
 }
 
 .contact__sub {
   font-size: 7.5pt;
-  color: var(--navy-100);
+  color: var(--white);
 }
 
 .contact__qr {
@@ -905,7 +883,7 @@ figure img {
   font-family: var(--font-serif);
   font-size: 12pt;
   letter-spacing: 0.6em;
-  color: var(--logo-blue);
+  color: var(--white);
 }
 
 .contact--back .contact__qr {

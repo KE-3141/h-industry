@@ -9,9 +9,7 @@ export const coverImage = brochure.cover.image.classic
 export const cover = () => `
   <figure class="bleed cover__photo"><img src="${img(coverImage)}" alt=""></figure>
   <div class="cover__body">
-    <p class="cover__label">${esc(brochure.cover.label)}</p>
     <h1 class="cover__copy">${brochure.cover.catchcopy.map(esc).join('<br>')}</h1>
-    <div class="cover__rule"></div>
     <p class="cover__business">${esc(company.businessTypes)}</p>
   </div>
   <div class="cover__foot">

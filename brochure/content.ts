@@ -15,7 +15,6 @@ export const brochure = {
   cover: {
     /** トップページの見出しと同じ言葉 */
     catchcopy: ['誠実な人が、', '確かな施工をする。'],
-    label: 'COMPANY PROFILE',
     /** パターンごとの表紙写真（A = classic / B = airy） */
     image: {
       classic: '/images/kutai.JPG',

@@ -23,9 +23,9 @@ export const { company } = site
 export const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c])
 export const img = path => encodeURI(path.replace(/^\//, ''))
 
+/** 見出し。英字の label は見出しには出さず、小口の縦書き（side-label）にだけ使う */
 export const heading = (label, title, { invert = false } = {}) => `
-  <header class="heading${invert ? ' heading--invert' : ''}">
-    <p class="heading__label">${esc(label)}</p>
+  <header class="heading${invert ? ' heading--invert' : ''}" data-side-label="${esc(label)}">
     <h2 class="heading__title">${esc(title)}</h2>
   </header>`
 

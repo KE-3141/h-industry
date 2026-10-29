@@ -10,7 +10,6 @@ export const cover = () => `
   <figure class="cover__photo"><img src="${img(coverImage)}" alt=""></figure>
   <h1 class="cover__copy">${brochure.cover.catchcopy.map(esc).join('<br>')}</h1>
   <div class="cover__body">
-    <p class="cover__label">${esc(brochure.cover.label)}</p>
     <p class="cover__business">${esc(company.businessTypes)}</p>
   </div>
   <div class="cover__foot">

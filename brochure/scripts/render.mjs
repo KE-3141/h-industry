@@ -253,7 +253,7 @@ const render = async (patternName) => {
     const isBackCover = num === totalPages
     // 中綴じ（左綴じ）: 偶数ページが見開きの左、奇数ページが右
     const side = num % 2 === 0 ? 'left' : 'right'
-    sideLabel = html.match(/class="heading__label">([^<]+)</)?.[1] ?? sideLabel
+    sideLabel = html.match(/data-side-label="([^"]+)"/)?.[1] ?? sideLabel
     // 方眼の地紋は代表挨拶だけ
     const ground = name === 'greeting' ? gridDeco() : ''
     const deco = isFrontCover || isBackCover ? '' : `${ground}<p class="side-label">${esc(sideLabel)}</p>`
