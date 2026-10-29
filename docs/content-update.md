@@ -20,7 +20,7 @@
 | トップに出す施工実績 | 同じファイルの `featuredProjectKeys` | `key` の並び。この順でトップに出る |
 | 会社情報・数字・沿革・求人など | 同じファイルの `company`・`stats`・`history`・`jobs` など | ページには値を書かない（CLAUDE.md の 3.） |
 | 施工実績の写真 | `public/images/projects/<工事名>_<番号>.JPG` | `<工事名>` は `projects` の `name` と同じ文字。番号は 1 から |
-| パンフレット | `brochure/content.ts` | 共有データは `useSiteContent.ts` から読むが、表紙などに写真のパスを直接書いているところがある（例 `館山電源室新設建築その他工事_1.JPG`）。写真の名前を変える・消すときは、ここも grep する |
+| パンフレット | `brochure/content.ts` | 共有データは `useSiteContent.ts` から読むが、表紙などに写真のパスを直接書いているところがある（例 `館山電源室新設建築その他工事_1.JPG`）。写真の名前を変える・消すときは、ここも grep する。作り直す手順は [brochure/README.md](../brochure/README.md)（下の「パンフレットを作り直す」） |
 | もとの写真・依頼の材料 | 平山工業 の共有ドライブ `$CLAUDE_TOOLS_HOME/../平山工業/平山工業_共有フォルダ/` | `現場写真一覧/【<元請け>】<現場>/`（もとの写真）・`施工実績データ`（スプレッドシート）・`平山工業株式会社ウェブサイトに関する共有情報`。ドライブの `サイト制作について` もある |
 | 会社情報のメモ | `docs/company-info.md` | 制作のときに前のサイトから集めた内部資料。サイトの値の正本ではない（正本は `useSiteContent.ts`） |
 | 公開の設定 | `amplify.yml` | `npm ci` → `npm run build`。ただし Amplify の上では Nitro の preset が `aws-amplify` に自動で切りかわり、実際に公開されるのは `.amplify-hosting/static`（`.output/public` ではない）。下の 3. で同じ形でも組み立てて確かめる |
@@ -163,6 +163,10 @@ git switch staging
 ### 8. 本番で確かめる
 
 https://www.hirayama-industry.jp/achievements/ をブラウザで開き、一覧と写真を見る（キャッシュがあるので、強めの再読み込み）。
+
+## パンフレットを作り直す
+
+パンフレット（`brochure/`）は、サイトと同じ `useSiteContent.ts` と `public/images/` を読む。そのため、サイトの写真・会社情報を変えたら、パンフレットも作り直すかを人に聞く（頼みに書いてあれば作り直す）。作り直す手順・確かめ方・知っておくこと（ネットプリント用の縮小写真のキャッシュを消す・写真の番号は 0 から など）は [brochure/README.md](../brochure/README.md)。デザインは変えない。
 
 ## わかっていないこと
 
