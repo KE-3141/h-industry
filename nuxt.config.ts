@@ -87,6 +87,8 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: ['/'],
+      // Amplify では preset が aws-amplify になり、リンクをたどる設定が切れるので明示する
+      crawlLinks: true,
     },
   },
 })
