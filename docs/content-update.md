@@ -24,7 +24,7 @@
 | もとの写真・依頼の材料 | 平山工業 の共有ドライブ `$CLAUDE_TOOLS_HOME/../平山工業/平山工業_共有フォルダ/` | `現場写真一覧/【<元請け>】<現場>/`（もとの写真）・`施工実績データ`（スプレッドシート）・`平山工業株式会社ウェブサイトに関する共有情報`。ドライブの `サイト制作について` もある |
 | 会社情報のメモ | `docs/company-info.md` | 制作のときに前のサイトから集めた内部資料。サイトの値の正本ではない（正本は `useSiteContent.ts`） |
 | 公開の設定 | `amplify.yml` | `npm ci` → `npm run build`。ただし Amplify の上では Nitro の preset が `aws-amplify` に自動で切りかわり、実際に公開されるのは `.amplify-hosting/static`（`.output/public` ではない）。下の 3. で同じ形でも組み立てて確かめる |
-| ブランチと環境 | AWS Amplify | `main` = 本番（https://www.hirayama-industry.jp/）。`staging` = 平山工業が確認するための別の環境。**どちらも、プッシュすると外から見える**（staging は平山工業が見る） |
+| ブランチと環境 | AWS Amplify | `main` = 本番（https://www.hirayama-industry.jp/）。`staging` = 平山工業が確認するための別の環境（https://staging.d1ean13kac5jc7.amplifyapp.com/）。**どちらも、プッシュすると外から見える**（staging は平山工業が見る） |
 
 ## 流れ
 
@@ -139,6 +139,14 @@ git push origin staging
 ```
 
 - 平山工業の確認の環境に出る。平山工業に見てもらうか・知らせるかは人が決める（知らせのメールが要るときは mail-writer）。
+- デプロイが終わったら（人に知らせてもらう）、staging の URL で各ページを直接開けるか・直したところが出ているかを確かめる。
+
+```bash
+B=https://staging.d1ean13kac5jc7.amplifyapp.com
+for p in / /about/ /business/ /achievements/ /company/ /recruitment/ /contact/ /privacy/; do
+  printf "%-14s %s\n" $p $(curl -s -m 60 -o /dev/null -w '%{http_code}' "$B$p")
+done                                           # どれも 200。000 は応答待ちの切れなので、もう一度試す
+```
 
 ### 7. 本番に公開（人の OK のあと）
 
@@ -158,7 +166,9 @@ https://www.hirayama-industry.jp/achievements/ をブラウザで開き、一覧
 
 ## わかっていないこと
 
-- staging の確認の環境の URL（Amplify のコンソールで分かる）。分かったら上の「どこに何があるか」に足す。
+- いまはなし。
+
+URL の末尾の `/` を省いたページ（例 `/company`）は 404 になる（2026-10-29 の staging で確かめた）。サイトの中のリンクはどれも `/` 付きなので、ふだんは困らない。
 
 前のサイトのドメイン `http://h-industry.co.jp/` は `docs/company-info.md` にあるが、いまの本番は https://www.hirayama-industry.jp/（`brochure/content.ts` の `siteUrl` と同じ）。
 
