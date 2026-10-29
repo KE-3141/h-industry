@@ -8,13 +8,18 @@ type RevealBinding =
   | { dir?: Direction; delay?: number }
   | undefined
 
+function toDirection(value: RevealBinding): Direction {
+  return typeof value === 'string' ? value : value?.dir ?? 'from-bottom'
+}
+
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.directive<HTMLElement, RevealBinding>('reveal', {
+    // サーバー側の組み立てでも同じクラスを付け、ブラウザで動き出したときのちらつきを防ぐ
+    getSSRProps(binding) {
+      return { class: ['reveal', toDirection(binding.value)] }
+    },
     mounted(el, binding) {
-      const dir: Direction =
-        typeof binding.value === 'string'
-          ? binding.value
-          : binding.value?.dir ?? 'from-bottom'
+      const dir = toDirection(binding.value)
       const delay: number =
         typeof binding.value === 'object' && binding.value !== null
           ? (binding.value.delay ?? 0)
