@@ -1,7 +1,7 @@
 /*
  * 平山工業 会社案内パンフレット（A4 中綴じ）— パターン B「エアリー」
  * 白地の表紙に合わせて中面も軽くする：明朝は細め、罫線は細く、紺の塗りは淡い紺に、
- * オレンジは細い線だけに使う（サイトのデザインからは少し離れる）。
+ * オレンジは使わず、細い線・沿革の印も紺にする（サイトのデザインからは少し離れる）。
  * 色は device-cmyk() で指定し、--cmyk ビルドでそのまま CMYK として PDF に出力する。
  * 対応する Web の色は assets/css/app.css の @theme。
  */
@@ -13,9 +13,6 @@
   --navy-500: device-cmyk(0.9 0.62 0.1 0);
   --navy-100: device-cmyk(0.18 0.08 0 0);
   --navy-50: device-cmyk(0.06 0.02 0 0);
-  /* Accent — Steel Orange（≒ accent-500 / 50） */
-  --orange: device-cmyk(0 0.75 1 0);
-  --orange-50: device-cmyk(0 0.06 0.1 0);
   /* Neutral — 文字は K 版のみ */
   --ink: device-cmyk(0 0 0 1);
   --ink-70: device-cmyk(0 0 0 0.75);
@@ -185,7 +182,7 @@ figure img {
   width: 0.25mm;
   height: 8mm;
   margin-bottom: 3mm;
-  background: var(--orange);
+  background: var(--navy-500);
 }
 
 .page--left .side-label {
@@ -218,7 +215,7 @@ figure img {
   content: '';
   width: 10mm;
   height: 0.25mm;
-  background: var(--orange);
+  background: var(--navy-500);
 }
 
 .heading__title {
@@ -256,9 +253,10 @@ figure img {
   color: var(--ink-70);
 }
 
+/* 工種はサイトと同じくグレー */
 .chip--primary {
-  border-color: var(--navy-500);
-  color: var(--navy-700);
+  border-color: var(--line);
+  color: var(--ink-70);
 }
 
 .checklist li {
@@ -349,7 +347,7 @@ figure img {
   height: 0.25mm;
   margin-right: 3mm;
   vertical-align: middle;
-  background: var(--orange);
+  background: var(--navy-500);
 }
 
 .cover__business {
@@ -503,17 +501,16 @@ figure img {
   padding: 5mm 0;
 }
 
-/* 縦線上の丸 */
+/* 縦線上の菱形 */
 .timeline__item::before {
   content: '';
   position: absolute;
-  top: 7.3mm;
-  left: 25.9mm;
-  width: 2.4mm;
-  height: 2.4mm;
-  border-radius: 50%;
-  background: var(--white);
-  border: 0.35mm solid var(--orange);
+  top: 7.4mm;
+  left: 26mm;
+  width: 2.2mm;
+  height: 2.2mm;
+  transform: rotate(45deg);
+  background: var(--navy-500);
 }
 
 .timeline__year {
@@ -807,9 +804,9 @@ figure img {
 
 .tags li {
   padding: 0 2mm;
-  border: 0.25mm solid var(--navy-100);
+  border: 0.25mm solid var(--line);
   font-size: 7pt;
-  color: var(--navy-700);
+  color: var(--ink-70);
 }
 
 /* ─────────────────────────────────────────
